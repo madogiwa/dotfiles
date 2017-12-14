@@ -1,0 +1,119 @@
+
+## ============================================================================
+## general
+## ============================================================================
+
+## 文字コード(utf8 + LF)
+utf8 on on
+defutf8 on
+defencoding utf8
+encoding utf utf8
+crlf off
+
+## 各シェルをログインシェルとして実行
+shell -$SHELL
+
+## TERMをscreen-256colorに設定
+## 最近の環境ならこの設定でよさそう
+## xterm-256colorとかでもよいかも
+term screen-256color
+
+## 起動時のメッセージを非表示
+startup_message off
+
+## Visual Bellを無効化
+vbell off
+bell_msg "\007"
+
+## screen起動時にホームディレクトリに移動
+chdir
+
+## 端末終了時に自動的にdetach状態にする
+autodetach on
+
+## 画面変化のモニター機能を有効化
+defmonitor on
+
+## フロー制御を無効化
+## emacsでのC-sなどをフロー制御として扱ってしまうのを防ぐためにoffがよいらしい
+defflow off
+
+## スクロールバックの行数
+defscrollback 10000
+
+## 何となく昔から書いてるけど意味がわかってない
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
+## viなどのコマンド実行時に別画面を利用する
+## 結果、終了時にコマンドの表示結果が残らない
+altscreen on
+
+
+## ============================================================================
+## log
+## ============================================================================
+
+## ログを自動的に保存する
+## ファイル名の形式 [ホスト名]-[日付]-[時刻]-[ウィンドウ番号]
+logfile "$HOME/var/screen/log/screen-%H-%Y%m%d-%c:%s.%n.log"
+deflog on
+
+## timestmapをidleから15分後に出力
+logtstamp on
+logtstamp after 900
+logtstamp string "\n#-------------------- SCREEN [%Y%m%d %c:%s] --------------------#\n"
+
+## ハードコピーの保存ディレクトリ設定
+hardcopydir "$HOME/var/screen/hardcopy"
+
+## ハードコピーを毎回異なるファイルに保存
+## offの場合は同じファイルに上書きされるらしい
+hardcopy_append on
+
+
+## =============================================================================
+## window
+## =============================================================================
+
+## メッセージ表示の色指定
+## 縦分割時の線も同じ色
+sorendition "+rb .G"
+
+## shellからの書き換え用にpromptの末尾と同じ文字"$ "を入れておくらしい
+## コマンド実行後はコマンド名、何も実行していない時は(new)になる
+shelltitle "$ |(new)"
+
+caption always "%{= kw} %-w%{=bu kB}%n %t%{-}%+w %=%{= kC}%H "
+
+## ホイールスクロールを有効化(?)
+termcapinfo xterm* ti@:te@
+
+hardstatus string "[screen %n%?: %t%?] %h"
+
+
+## =============================================================================
+## key bind
+## =============================================================================
+escape ^t^t
+bind t other
+
+bind u time
+bind ^u time
+
+## reload config file
+bind R eval "source ~/.screenrc" "echo '.screenrc reloaded'"
+
+## start at window 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+
+
+## =============================================================================
+## local
+## =============================================================================
+
+## ローカル用設定の読み込み
+source .screenrc.local
+

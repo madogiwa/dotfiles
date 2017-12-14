@@ -1,0 +1,46 @@
+
+## ===========================================================================
+## extras
+## ===========================================================================
+
+cask "bettertouchtool"
+cask "jetbrains-toolbox"
+cask "atok"
+cask "skype"
+cask "dropbox"
+cask "tresorit"
+cask "microsoft-office"
+cask "calibre"
+
+mas 'Slack', id: 803453959
+mas 'LINE', id: 539883307
+mas 'Twitter', id: 409789998
+mas 'Tweetbot', id: 557168941
+
+mas 'Quiver', id: 866773894
+mas 'Pocket', id: 568494494
+
+mas 'Growl', id: 467939042
+mas 'HardwareGrowler', id: 475260933
+
+mas 'Yoink', id: 457622435
+mas 'PopClip', id: 445189367
+mas 'Magnet', id: 441258766
+
+mas 'Pixelmator', id: 407963104
+mas 'Affinity Designer', id: 824171161
+mas 'PDF Expert', id: 1055273043
+
+mas 'OneDrive', id: 823766827 
+
+mas '1Password', id: 443987910
+
+mas 'Final Cut Pro', id: 424389933
+mas 'Motion', id: 434290957
+mas 'Compressor', id: 424390742
+
+mas 'Transmit', id: 403388562
+mas 'ChronoSync Express', id: 904801687
+
+mas 'WiFi Explorer', id: 494803304
+
