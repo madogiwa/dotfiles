@@ -143,3 +143,28 @@ map <silent> [Buffer]n :bn<CR>
 map <silent> [Buffer]p :bp<CR>
 
 
+"" ============================================================================
+"" key remap
+"" ============================================================================
+
+"" ----------------------------------------------------------------------------
+"" command mode
+"" ----------------------------------------------------------------------------
+
+"" emacs like keys
+cnoremap <C-g> <Esc>
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
+cnoremap <C-d> <Del>
+cnoremap <C-h> <BS>
+
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+
