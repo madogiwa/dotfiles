@@ -13,7 +13,13 @@ syntax on
 
 "" http://vimwiki.net/?vimrc%2F9
 set hidden
-set wildmenu
+
+"" 補完結果のビジュアル表示を無効化
+set nowildmenu
+
+"" ファイル名の補完時に入力文字にリスト表示+一致した部分までを補完
+set wildmode=list:longest
+
 set showcmd
 set hlsearch
 set autoindent
