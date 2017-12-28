@@ -24,6 +24,9 @@ brew "rust"
 cask "java"
 brew "sbt"
 
+## http client
+brew "httpie"
+
 brew "global", args:["with-ctags", "with-pygments"]
 
 ## newer screen + utf8 patch
