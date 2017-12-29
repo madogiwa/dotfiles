@@ -20,6 +20,16 @@ set nowildmenu
 "" ファイル名の補完時に入力文字にリスト表示+一致した部分までを補完
 set wildmode=list:longest
 
+"" 現在行を表示する
+"" 下線を削除、行番号の背景色を変更
+set cursorline
+hi clear CursorLine
+hi CursorLineNr ctermbg=4 ctermfg=0
+
+"" 行番号を表示
+set number
+hi LineNr ctermbg=0 ctermfg=6
+
 set showcmd
 set hlsearch
 set autoindent
@@ -28,7 +38,6 @@ set ruler
 set confirm
 set mouse=a
 set cmdheight=2
-set number
 set notimeout ttimeout ttimeoutlen=120
 nnoremap <C-L> :nohl<CR><C-L>
 
