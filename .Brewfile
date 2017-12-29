@@ -5,6 +5,7 @@
 
 ## better grep
 brew "ack"
+brew "ripgrep"
 
 ## git & git tools
 brew "git"
