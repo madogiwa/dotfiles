@@ -234,19 +234,17 @@ update_window_title() {
 
 ## set screen window title to last command
 preexec() {
-    hostname=`hostname`
-    title="${hostname%%.*}:${1%% *}*"
+    title="${1%% *}*"
     update_window_title "$title"
 }
 
 ## set screen window title to currenty directory
 precmd() {
-    hostname=`hostname`
     dir="${PWD/#$HOME/~}"
     if [ ! "~" = "$dir" ]; then
         dir=`basename "${dir}"`
     fi 
-    title="${hostname%%.*}:${dir}"
+    title="${dir}"
     update_window_title "$title"
 }
 
