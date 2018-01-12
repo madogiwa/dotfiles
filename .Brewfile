@@ -30,6 +30,9 @@ brew "httpie"
 
 brew "global", args:["with-ctags", "with-pygments"]
 
+## aws client
+brew "awscli"
+
 ## newer screen + utf8 patch
 tap "rcmdnk/rcmdnkpac"
 brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
