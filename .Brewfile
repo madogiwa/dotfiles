@@ -53,6 +53,7 @@ cask "wireshark"
 cask "visual-studio-code"
 cask "virtualbox"
 cask "docker"
+cask "kitematic"
 
 ## Java 8
 tap "caskroom/versions"
