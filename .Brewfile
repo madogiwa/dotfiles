@@ -33,6 +33,10 @@ brew "global", args:["with-ctags", "with-pygments"]
 ## aws client
 brew "awscli"
 
+## DB client
+brew "mycli"
+brew "pgcli"
+
 ## newer screen + utf8 patch
 tap "rcmdnk/rcmdnkpac"
 brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
