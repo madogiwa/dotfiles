@@ -70,6 +70,8 @@ hardcopydir "$HOME/var/screen/hardcopy"
 ## offの場合は同じファイルに上書きされるらしい
 hardcopy_append on
 
+## copyモードでコピー結果をwritebufした際の書き込み先
+bufferfile "$HOME/var/screen/buffer"
 
 ## =============================================================================
 ## window
@@ -108,6 +110,14 @@ bind c screen 1
 bind ^c screen 1
 bind 0 select 10
 screen 1
+
+## hardcopy (with scrollback)
+bind H hardcopy -h
+
+## copy to clipboard
+bindkey -m ' ' eval 'stuff \040' 'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME/var/screen/buffer"'
+bindkey -m Y   eval 'stuff Y'    'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME/var/screen/buffer"'
+bindkey -m W   eval 'stuff W'    'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME/var/screen/buffer"'
 
 
 ## =============================================================================
