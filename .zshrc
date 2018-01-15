@@ -22,6 +22,9 @@ if [ -d ~/.zplug/ ]; then
     ## enhanced cd command 
     zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
 
+    ## theme
+    zplug "themes/ys", from:oh-my-zsh, as:theme
+
     ## Install plugins if there are plugins that have not been installed
     if ! zplug check --verbose; then
         printf "Install? [y/N]: "
@@ -184,47 +187,8 @@ setopt hist_reduce_blanks
 
 
 ## ============================================================================
-## vcs_info
-## ============================================================================
-
-## enable vcs_info
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn hg
-zstyle ':vcs_info:*' formats '(%b)'
-zstyle ':vcs_info:*' actionformats '(%b|%a)'
-
-#autoload -Uz is-at-least
-if is-at-least 4.3.10; then
-    zstyle ':vcs_info:git:*' check-for-changes true
-    #zstyle ':vcs_info:git:*' check-for-changes false
-    zstyle ':vcs_info:git:*' stagedstr "+"
-    zstyle ':vcs_info:git:*' unstagedstr "-"
-    zstyle ':vcs_info:git:*' formats '(%b[%c%u])'
-    zstyle ':vcs_info:git:*' actionformats '(%b|%a[%c%u])'
-fi
-
-function update_vcs_info_msg() {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-add-zsh-hook precmd update_vcs_info_msg
-
-
-## ============================================================================
 ## prompt 
 ## ============================================================================
-
-## ローカルとリモートで色を変える
-if [ -z "$SSH_CONNECTION" ]; then
-    PROMPT="["$'%{\e[$[32]m%}'"%m"$'%{\e[$[37]m%}'"]$ "  # local session (blue)
-else
-    PROMPT="["$'%{\e[$[31]m%}'"%m"$'%{\e[$[37]m%}'"]$ "  # remote session (red)
-fi
-
-## 現在のディレクトリパスを表示
-## 29文字を超えた場合は省略
-RPROMPT="%1(v|%F{green}%1v%f|) [%29<...<%~]"
 
 update_window_title() {
     if [ -n "$TMUX" ]; then
