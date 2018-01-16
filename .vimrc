@@ -33,7 +33,7 @@ call plug#end()
 "" lightline
 "" ----------------------------------------------------------------------------
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
+      \ 'colorscheme': 'solarized_dark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
