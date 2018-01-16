@@ -10,7 +10,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
+"" Clipboardからのペースト時に自動的にpasteモードにする
 Plug 'ConradIrwin/vim-bracketed-paste'
+
+"" コメントアウトを便利にする
+Plug 'tomtom/tcomment_vim'
+
 call plug#end()
 
 
