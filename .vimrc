@@ -17,8 +17,21 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 "" コメントアウトを便利にする
 Plug 'tomtom/tcomment_vim'
 
+"" ステータスラインを便利にする
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
 
+"" ============================================================================
+"" plugins config
+"" ============================================================================
+
+"" ----------------------------------------------------------------------------
+"" lightline
+"" ----------------------------------------------------------------------------
+let g:lightline = {
+      \ 'colorscheme': 'Dracula',
+      \ }
 
 "" ============================================================================
 "" general
@@ -51,6 +64,10 @@ hi CursorLineNr ctermbg=4 ctermfg=0
 "" 行番号を表示
 set number
 hi LineNr ctermbg=0 ctermfg=6
+
+"" ステータスラインに-- INSERT --などを表示しない
+"" lightline.vimで代用できるため
+set noshowmode
 
 set showcmd
 set hlsearch
