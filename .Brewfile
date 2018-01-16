@@ -10,6 +10,8 @@ brew "ripgrep"
 ## git & git tools
 brew "git"
 brew "tig"
+brew "git-flow"
+brew "hub"
 
 ## gnu version tar
 brew "gnu-tar"
