@@ -20,6 +20,9 @@ Plug 'tomtom/tcomment_vim'
 "" ステータスラインを便利にする
 Plug 'itchyny/lightline.vim'
 
+"" ステータスラインにgit branch名を表示する
+Plug 'itchyny/vim-gitbranch'
+
 call plug#end()
 
 "" ============================================================================
@@ -31,7 +34,15 @@ call plug#end()
 "" ----------------------------------------------------------------------------
 let g:lightline = {
       \ 'colorscheme': 'Dracula',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
       \ }
+
 
 "" ============================================================================
 "" general
