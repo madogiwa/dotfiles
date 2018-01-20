@@ -23,7 +23,18 @@ if [ -d ~/.zplug/ ]; then
     zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
 
     ## theme
-    zplug "themes/ys", from:oh-my-zsh, as:theme
+    zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+    POWERLEVEL9K_PROMPT_ADD_NEWLINE=true  # Promptの前に1行空ける
+    POWERLEVEL9K_PROMPT_ON_NEWLINE=true   # Promptを2行にする
+    POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""    # 1行目の先頭
+    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "   # 2行目の先頭
+    POWERLEVEL9K_DIR_SHOW_WRITABLE=true   # 書き込み不可のディレクトリの場合にマーカーを表示
+
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+    POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
+    POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='green'
 
     ## Install plugins if there are plugins that have not been installed
     if ! zplug check --verbose; then
@@ -207,7 +218,7 @@ preexec() {
 }
 
 ## set screen window title to currenty directory
-precmd() {
+precmd_title() {
     dir="${PWD/#$HOME/~}"
     if [ ! "~" = "$dir" ]; then
         dir=`basename "${dir}"`
@@ -215,6 +226,7 @@ precmd() {
     title="${dir}"
     update_window_title "$title"
 }
+add-zsh-hook preexec precmd_title
 
 
 ## ============================================================================
