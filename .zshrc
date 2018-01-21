@@ -16,6 +16,8 @@ if [ -d ~/.zplug/ ]; then
     ## Additional completion definitions for Zsh
     zplug "zsh-users/zsh-completions", lazy:true
 
+    zplug "docker/compose", use:contrib/completion/zsh
+
     ## fuzzy matcher
     zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf, lazy:true
 
