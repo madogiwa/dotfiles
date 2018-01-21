@@ -23,6 +23,11 @@ if [ -d ~/.zplug/ ]; then
     zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
 
     ## theme
+    #zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme, defer:3
+    #BULLETTRAIN_PROMPT_ORDER=(
+    #  time status custom context dir screen aws git hg cmd_exec_time
+    #)
+
     zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
     POWERLEVEL9K_PROMPT_ADD_NEWLINE=true  # Promptの前に1行空ける
@@ -236,5 +241,14 @@ add-zsh-hook preexec precmd_title
 ## zshenvの読み込みが遅くならないようにzshrcでinitを実施
 if [ -d "${ANYENV_ROOT}" ]; then
     eval "$(anyenv init - --no-rehash)"
+fi
+
+
+## ============================================================================
+## tmux
+## ============================================================================
+
+if [ ! -e ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 

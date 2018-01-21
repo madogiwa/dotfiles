@@ -43,6 +43,11 @@ brew "pgcli"
 tap "rcmdnk/rcmdnkpac"
 brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
 
+## tmux
+brew "tmux", args:["with-utf8proc"]
+brew "gawk"
+brew "ansifilter"
+
 ## fonts
 tap "caskroom/fonts"
 cask "font-noto-sans-cjk-jp"

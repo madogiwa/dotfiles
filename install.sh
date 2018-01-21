@@ -11,6 +11,7 @@ dotfiles=(
   ".zshenv"
   ".inputrc"
   ".screenrc"
+  ".tmux.conf"
   ".my.cnf"
   ".vimrc"
   ".gitconfig"
