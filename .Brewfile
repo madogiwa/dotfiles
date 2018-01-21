@@ -36,6 +36,7 @@ brew "global", args:["with-ctags", "with-pygments"]
 brew "awscli"
 
 ## DB client
+brew "mysql"
 brew "mycli"
 brew "pgcli"
 
