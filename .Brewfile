@@ -16,6 +16,10 @@ brew "hub"
 ## gnu version tar
 brew "gnu-tar"
 
+## compress & decompress
+brew "lzop"
+brew "lz4"
+
 ## ip address calculator
 brew "ipcalc"
 
