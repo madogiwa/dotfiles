@@ -41,9 +41,12 @@ if [ -d ~/.zplug/ ]; then
     #POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
     #POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='green'
 
-    zplug "geometry-zsh/geometry"
-    GEOMETRY_PROMPT_PLUGINS=(jobs exec_time virtualenv node rustup git hg)
-    PROMPT_GEOMETRY_GIT_TIME=false       # gitで日付チェックを無効化
+    #zplug "geometry-zsh/geometry"
+    #GEOMETRY_PROMPT_PLUGINS=(jobs exec_time virtualenv node rustup git hg)
+    #PROMPT_GEOMETRY_GIT_TIME=false       # gitで日付チェックを無効化
+
+    zplug mafredri/zsh-async, from:github
+    zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
     ## Install plugins if there are plugins that have not been installed
     if ! zplug check --verbose; then
