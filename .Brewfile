@@ -39,8 +39,10 @@ brew "httpie"
 
 brew "global", args:["with-ctags", "with-pygments"]
 
-## aws client
+## infrastructure
 brew "awscli"
+brew "terraform"
+brew "ansible"
 
 ## DB client
 brew "mysql"
