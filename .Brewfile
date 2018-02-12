@@ -49,6 +49,9 @@ brew "mysql"
 brew "mycli"
 brew "pgcli"
 
+## json, yaml converter
+brew "remarshal"
+
 ## newer screen + utf8 patch
 tap "rcmdnk/rcmdnkpac"
 brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
