@@ -16,6 +16,9 @@ brew "hub"
 ## gnu version tar
 brew "gnu-tar"
 
+## gnu version utils(date, etc)
+brew "coreutils"
+
 ## compress & decompress
 brew "lzop"
 brew "lz4"
