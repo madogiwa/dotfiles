@@ -4,7 +4,6 @@
 ## ===========================================================================
 
 cask "bettertouchtool"
-cask "cheatsheet"
 cask "jetbrains-toolbox"
 cask "atok"
 cask "skype"
