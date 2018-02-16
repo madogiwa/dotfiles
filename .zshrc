@@ -68,6 +68,9 @@ fi
 ## don't use interactive filter when specifing a double dot (..)
 ENHANCD_DISABLE_DOT=1
 
+## change command name of enhancd from default
+ENHANCD_COMMAND=cde
+
 
 ## ============================================================================
 ## general
