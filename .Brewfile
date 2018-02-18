@@ -37,6 +37,9 @@ brew "sbt"
 ## http client
 brew "httpie"
 
+## http debugging proxy
+brew "mitmproxy"
+
 brew "global", args:["with-ctags", "with-pygments"]
 
 ## infrastructure
