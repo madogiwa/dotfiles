@@ -40,6 +40,9 @@ brew "httpie"
 ## http debugging proxy
 brew "mitmproxy"
 
+## monitoring tools
+brew "iftop"
+
 brew "global", args:["with-ctags", "with-pygments"]
 
 ## infrastructure
