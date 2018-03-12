@@ -123,6 +123,10 @@ if [ ! -x /usr/bin/tac ]; then
     alias tac='tail -r'
 fi
 
+## interactive filter
+mkdir -p "$HOME/bin"
+ln -sf `which fzf` "$HOME/bin/choice"
+
 
 ## ============================================================================
 ## completion
