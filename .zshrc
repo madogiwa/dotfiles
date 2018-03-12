@@ -231,10 +231,11 @@ update_window_title() {
 }
 
 ## set screen window title to last command
-preexec() {
+preexec_title() {
     title="${1%% *}*"
     update_window_title "$title"
 }
+add-zsh-hook preexec preexec_title
 
 ## set screen window title to currenty directory
 precmd_title() {
@@ -245,7 +246,7 @@ precmd_title() {
     title="${dir}"
     update_window_title "$title"
 }
-add-zsh-hook preexec precmd_title
+add-zsh-hook precmd precmd_title
 
 
 ## ============================================================================
