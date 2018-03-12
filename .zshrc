@@ -69,7 +69,7 @@ fi
 ENHANCD_DISABLE_DOT=1
 
 ## change command name of enhancd from default
-ENHANCD_COMMAND=cde
+ENHANCD_COMMAND=j
 
 
 ## ============================================================================
