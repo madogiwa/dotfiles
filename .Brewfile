@@ -49,6 +49,7 @@ brew "global", args:["with-ctags", "with-pygments"]
 brew "awscli"
 brew "terraform"
 brew "ansible"
+cask "google-cloud-sdk"
 
 ## DB client
 brew "mysql"
