@@ -22,6 +22,9 @@
     ## さらにブランチ名が同じ場合のみpushする
     default = simple
 
+    ## pushするブランチに関連するタグを同時にプッシュする
+    followTags = true
+
 [pull]
     ## git pull時にfast forwardのみ行う
     ## できない場合はエラーとなるので下記のようなコマンドで手動解消が必要
@@ -58,6 +61,8 @@
     x-rollback = reset --soft HEAD^
 
     x-status-sb = status -sb
+
+    cob = !"git branch -r|sed -e 's/origin\\///'|choice|xargs git checkout"
 
 [filter "media"]
     required = true
