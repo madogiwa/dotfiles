@@ -258,6 +258,11 @@ if [ -d "${ANYENV_ROOT}" ]; then
     eval "$(anyenv init - --no-rehash)"
 fi
 
+## goenvを利用する場合にIDE等にGOROOTを認識させるためのアドホックな対応
+if [ -n "`go env GOROOT 2>/dev/null`" ]; then
+    export GOROOT=`go env GOROOT`
+fi
+
 
 ## ============================================================================
 ## tmux
