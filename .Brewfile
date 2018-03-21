@@ -47,6 +47,8 @@ brew "global", args:["with-ctags", "with-pygments"]
 
 ## infrastructure
 brew "awscli"
+brew "amazon-ecs-cli"
+brew "aws-elasticbeanstalk"
 brew "terraform"
 brew "ansible"
 cask "google-cloud-sdk"
