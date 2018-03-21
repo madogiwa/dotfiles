@@ -97,6 +97,7 @@ cask "wireshark"
 cask "visual-studio-code"
 cask "virtualbox"
 cask "docker"
+cask "minikube"
 cask "kitematic"
 
 ## Java 8
