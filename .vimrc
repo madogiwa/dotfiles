@@ -23,6 +23,10 @@ Plug 'itchyny/lightline.vim'
 "" ステータスラインにgit branch名を表示する
 Plug 'itchyny/vim-gitbranch'
 
+"" Terraform
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+Plug 'juliosueiras/vim-terraform-completion', { 'for': 'terraform' }
+
 call plug#end()
 
 "" ============================================================================
@@ -42,6 +46,13 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
+
+"" ----------------------------------------------------------------------------
+"" Terraform
+"" ----------------------------------------------------------------------------
+
+"" 保存時に自動的にfmtを実行する
+let g:terraform_fmt_on_save = 1
 
 
 "" ============================================================================
