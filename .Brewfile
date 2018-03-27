@@ -33,6 +33,7 @@ brew "jq"
 brew "rust"
 cask "java"
 brew "sbt"
+brew "maven"
 
 ## build tool
 brew "bazel"
