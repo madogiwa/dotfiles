@@ -34,6 +34,9 @@ brew "rust"
 cask "java"
 brew "sbt"
 
+## build tool
+brew "bazel"
+
 ## http client
 brew "httpie"
 
