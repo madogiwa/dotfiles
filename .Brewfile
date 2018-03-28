@@ -85,6 +85,14 @@ cask "font-roboto-mono-for-powerline"
 cask "qlstephen"
 cask "qlmarkdown"
 
+## Containers
+cask "virtualbox"
+cask "docker"
+cask "minikube"
+brew "kompose"
+brew "kubernetes-helm"
+brew "skaffold"
+
 
 ## ===========================================================================
 ## brew cask
@@ -99,10 +107,6 @@ cask "firefox"
 cask "gas-mask"
 cask "wireshark"
 cask "visual-studio-code"
-cask "virtualbox"
-cask "docker"
-cask "minikube"
-cask "kitematic"
 
 ## Java 8
 tap "caskroom/versions"
