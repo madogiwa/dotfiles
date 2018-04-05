@@ -94,6 +94,8 @@ brew "kubernetes-helm"
 brew "skaffold"
 brew "kops"
 
+tap "c-bata/kube-prompt"
+brew "kube-prompt"
 
 ## ===========================================================================
 ## brew cask
