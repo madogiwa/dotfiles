@@ -92,6 +92,7 @@ cask "minikube"
 brew "kompose"
 brew "kubernetes-helm"
 brew "skaffold"
+brew "kops"
 
 
 ## ===========================================================================
