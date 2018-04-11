@@ -97,12 +97,15 @@ brew "kops"
 tap "c-bata/kube-prompt"
 brew "kube-prompt"
 
+
 ## ===========================================================================
 ## brew cask
 ## ===========================================================================
 cask "karabiner-elements"
 cask "hyperswitch"
 cask "iterm2"
+
+cask "bitbar"
 
 cask "google-chrome"
 cask "firefox"
