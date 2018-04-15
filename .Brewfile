@@ -62,6 +62,7 @@ brew "packer"
 brew "mysql"
 brew "mycli"
 brew "pgcli"
+brew "percona-toolkit"
 
 ## json, yaml converter
 brew "remarshal"
