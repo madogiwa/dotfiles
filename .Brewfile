@@ -56,6 +56,7 @@ brew "aws-elasticbeanstalk"
 brew "tfenv"
 brew "ansible"
 cask "google-cloud-sdk"
+brew "packer"
 
 ## DB client
 brew "mysql"
