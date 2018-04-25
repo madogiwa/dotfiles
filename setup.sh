@@ -25,3 +25,6 @@ if [ $? -ne 0 ]; then
     sudo sh -c 'echo `which fish` >> /etc/shells'
 fi
 
+## install anyenv
+git clone https://github.com/riywo/anyenv ~/.anyenv
+
