@@ -99,6 +99,10 @@ brew "kops"
 tap "c-bata/kube-prompt"
 brew "kube-prompt"
 
+## dotfile management
+tap "thoughtbot/formulae"
+brew "rcm"
+
 
 ## ===========================================================================
 ## brew cask
