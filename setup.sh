@@ -19,3 +19,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher
 
+## add fish into /etc/shells
+`grep fish /etc/shells`
+if [ $? -ne 0 ]; then
+    sudo sh -c 'echo `which fish` >> /etc/shells'
+fi
+
