@@ -3,6 +3,9 @@
 ## brew
 ## ===========================================================================
 
+## fish shell
+brew "fish"
+
 ## better grep
 brew "ack"
 brew "ripgrep"
