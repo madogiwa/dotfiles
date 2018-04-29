@@ -102,6 +102,10 @@ brew "kops"
 tap "c-bata/kube-prompt"
 brew "kube-prompt"
 
+## docker manager
+tap "moncho/dry"
+brew "dry"
+
 ## dotfile management
 tap "thoughtbot/formulae"
 brew "rcm"
