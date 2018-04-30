@@ -260,11 +260,3 @@ if [ -n "`go env GOROOT 2>/dev/null`" ]; then
 fi
 
 
-## ============================================================================
-## tmux
-## ============================================================================
-
-if [ ! -e ~/.tmux/plugins/tpm ]; then
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
-
