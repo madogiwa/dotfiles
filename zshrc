@@ -5,20 +5,20 @@
 if [ -d ~/.zplug/ ]; then
     source ~/.zplug/init.zsh
 
-    zplug "zsh-users/zsh-syntax-highlighting", defer:2
+    zplug "zsh-users/zsh-syntax-highlighting", defer:2, lazy:true
 
     zplug "zsh-users/zsh-history-substring-search", lazy:true
 
     ## Additional completion definitions for Zsh
     zplug "zsh-users/zsh-completions", lazy:true
 
-    zplug "docker/compose", use:contrib/completion/zsh
+    zplug "docker/compose", use:contrib/completion/zsh, lazy:true
 
     ## fuzzy matcher
-    zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf, lazy:true
+    zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 
     ## enhanced cd command 
-    zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
+    zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin", lazy:true
 
     ## theme
     #zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme, defer:3
