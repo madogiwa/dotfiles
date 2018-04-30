@@ -25,6 +25,9 @@ if [ $? -ne 0 ]; then
     sudo sh -c 'echo `which fish` >> /etc/shells'
 fi
 
+## install zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
 ## install anyenv
 git clone https://github.com/riywo/anyenv ~/.anyenv
 mkdir -p ~/.anyenv/plugins
