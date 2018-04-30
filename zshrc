@@ -20,27 +20,6 @@ if [ -d ~/.zplug/ ]; then
     ## enhanced cd command 
     zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin", lazy:true
 
-    ## theme
-    #zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme, defer:3
-    #BULLETTRAIN_PROMPT_ORDER=(
-    #  time status custom context dir screen aws git hg cmd_exec_time
-    #)
-
-    #zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-    #POWERLEVEL9K_PROMPT_ADD_NEWLINE=true  # Promptの前に1行空ける
-    #POWERLEVEL9K_PROMPT_ON_NEWLINE=true   # Promptを2行にする
-    #POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""    # 1行目の先頭
-    #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "   # 2行目の先頭
-    #POWERLEVEL9K_DIR_SHOW_WRITABLE=true   # 書き込み不可のディレクトリの場合にマーカーを表示
-    #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-    #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-    #POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
-    #POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='green'
-
-    #zplug "geometry-zsh/geometry"
-    #GEOMETRY_PROMPT_PLUGINS=(jobs exec_time virtualenv node rustup git hg)
-    #PROMPT_GEOMETRY_GIT_TIME=false       # gitで日付チェックを無効化
-
     zplug mafredri/zsh-async, from:github
     zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
