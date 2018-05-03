@@ -34,7 +34,8 @@ brew "jq"
 
 ## languages
 brew "rust"
-cask "java"
+tap "caskroom/versions"
+cask "java8"
 brew "sbt"
 brew "maven"
 
@@ -124,10 +125,6 @@ cask "firefox"
 cask "gas-mask"
 cask "wireshark"
 cask "visual-studio-code"
-
-## Java 8
-tap "caskroom/versions"
-cask "java8"
 
 
 ## ===========================================================================
