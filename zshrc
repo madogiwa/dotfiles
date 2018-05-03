@@ -2,6 +2,21 @@
 ## ============================================================================
 ## zplug
 ## ============================================================================
+
+## ----------------------------------------------------------------------------
+## enhancd
+## ----------------------------------------------------------------------------
+
+## don't use interactive filter when specifing a double dot (..)
+ENHANCD_DISABLE_DOT=1
+
+## change command name of enhancd from default
+ENHANCD_COMMAND=j
+
+## ----------------------------------------------------------------------------
+## zplug load
+## ----------------------------------------------------------------------------
+
 if [ -d ~/.zplug/ ]; then
     source ~/.zplug/init.zsh
 
@@ -18,7 +33,7 @@ if [ -d ~/.zplug/ ]; then
     zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 
     ## enhanced cd command 
-    zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin", lazy:true
+    zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
 
     zplug mafredri/zsh-async, from:github
     zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
@@ -34,17 +49,6 @@ if [ -d ~/.zplug/ ]; then
     ## Then, source plugins and add commands to $PATH
     zplug load --verbose
 fi
-
-
-## ----------------------------------------------------------------------------
-## enhancd
-## ----------------------------------------------------------------------------
-
-## don't use interactive filter when specifing a double dot (..)
-ENHANCD_DISABLE_DOT=1
-
-## change command name of enhancd from default
-ENHANCD_COMMAND=j
 
 
 ## ============================================================================
