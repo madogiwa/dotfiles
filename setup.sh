@@ -9,28 +9,38 @@ if [[ "$OSTYPE" =~ darwin ]]; then
     brew bundle --file=Brewfile
 fi
 
-## execute rcm
-rcup
-
 ## install tpm(tmux package manager)
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## install fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fisher
+fish -c fisher
 
 ## add fish into /etc/shells
-`grep fish /etc/shells`
+eval grep fish /etc/shells
 if [ $? -ne 0 ]; then
     sudo sh -c 'echo `which fish` >> /etc/shells'
 fi
 
 ## install zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+rm -rf ~/.zplug && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 ## install anyenv
-git clone https://github.com/riywo/anyenv ~/.anyenv
-mkdir -p ~/.anyenv/plugins
-git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
-git clone https://github.com/amashigeseiji/anyenv-lazyload.git ~/.anyenv/plugins/anyenv-lazyload
+if [ -d ~/.anyenv ]; then
+    echo "~/.anyenv already exists, skip install"
+else
+    git clone https://github.com/riywo/anyenv ~/.anyenv
+    mkdir -p ~/.anyenv/plugins
+    git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+    git clone https://github.com/amashigeseiji/anyenv-lazyload.git ~/.anyenv/plugins/anyenv-lazyload
+fi
+
+## rcm & tpm
+echo ""
+echo "========================================================================"
+echo "rcup -d ~/src/github.com/madogiwa/dotfiles"
+echo "tmux"
+echo "tmux run-shell ~/.tmux/plugins/tpm/bindings/install_plugins"
+echo "========================================================================"
+echo ""
 
