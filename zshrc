@@ -20,12 +20,12 @@ ENHANCD_COMMAND=j
 if [ -d ~/.zplug/ ]; then
     source ~/.zplug/init.zsh
 
-    zplug "zsh-users/zsh-syntax-highlighting", defer:2, lazy:true
+    zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
     zplug "zsh-users/zsh-history-substring-search", lazy:true
 
     ## Additional completion definitions for Zsh
-    zplug "zsh-users/zsh-completions", lazy:true
+    zplug "zsh-users/zsh-completions"
 
     zplug "docker/compose", use:contrib/completion/zsh, lazy:true
 
