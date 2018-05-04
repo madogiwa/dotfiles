@@ -13,6 +13,7 @@ ENHANCD_DISABLE_DOT=1
 ## change command name of enhancd from default
 ENHANCD_COMMAND=j
 
+
 ## ----------------------------------------------------------------------------
 ## zplug load
 ## ----------------------------------------------------------------------------
@@ -27,7 +28,8 @@ if [ -d ~/.zplug/ ]; then
     ## Additional completion definitions for Zsh
     zplug "zsh-users/zsh-completions"
 
-    zplug "docker/compose", use:contrib/completion/zsh, lazy:true
+    zplug "docker/cli", use:contrib/completion/zsh
+    zplug "docker/compose", use:contrib/completion/zsh
 
     ## fuzzy matcher
     zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
