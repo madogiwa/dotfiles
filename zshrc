@@ -37,6 +37,10 @@ if [ -d ~/.zplug/ ]; then
     ## enhanced cd command 
     zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
 
+    ## peco/percol/fzf wrapper
+    zplug "mollifier/anyframe"
+
+    ## pure theme
     zplug mafredri/zsh-async, from:github
     zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
