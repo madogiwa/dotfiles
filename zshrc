@@ -250,3 +250,29 @@ if [ -n "`go env GOROOT 2>/dev/null`" ]; then
 fi
 
 
+## ============================================================================
+## anyframe
+## ============================================================================
+
+function anyframe-widget-docker-container-id() {
+    docker container list | tail -n +2 \
+        | anyframe-selector-auto \
+        | cut -d ' ' -f 1
+}
+
+function anyframe-widget-docker-image-id() {
+    docker image list | tail -n +2 \
+        | anyframe-selector-auto \
+        | awk '{ print $3 }'
+}
+
+function anyframe-widget-docker-image-name() {
+    docker image list | tail -n +2 \
+        | anyframe-selector-auto \
+        | awk '{ printf "%s:%s", $1, $2 }'
+}
+
+function anyframe-widget-docker-shell() {
+    docker exec -it `anyframe-widget-docker-container` sh
+}
+
