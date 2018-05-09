@@ -31,7 +31,7 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8"
 ## ============================================================================
 ## golang
 ## ============================================================================
-export GOPATH="$HOME/.go"
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 
