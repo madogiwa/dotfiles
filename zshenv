@@ -40,14 +40,6 @@ export PATH="$GOPATH/bin:$PATH"
 ## ============================================================================
 export ANYENV_ROOT="${HOME}/.anyenv"
 
-## フォルダが存在しない場合はインストールする
-if [ ! -e ~/.anyenv ]
-then
-    git clone https://github.com/riywo/anyenv ~/.anyenv
-    mkdir -p ~/.anyenv/plugins
-    git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
-fi
-
 ## initのみzshrcで実行
 if [ -d "${ANYENV_ROOT}" ]; then
     export PATH=${ANYENV_ROOT}/bin:$PATH
