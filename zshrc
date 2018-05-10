@@ -79,6 +79,9 @@ setopt print_eight_bit
 ## enable function into $PROMPT
 setopt prompt_subst
 
+## ignore Ctrl+d
+setopt ignoreeof
+
 
 ## ============================================================================
 ## alias
