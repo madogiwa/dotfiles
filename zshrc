@@ -53,7 +53,7 @@ if [ -d ~/.zplug/ ]; then
     fi
 
     ## Then, source plugins and add commands to $PATH
-    zplug load --verbose
+    zplug load
 fi
 
 
