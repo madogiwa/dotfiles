@@ -119,6 +119,29 @@ bindkey -m ' ' eval 'stuff \040' 'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME
 bindkey -m Y   eval 'stuff Y'    'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME/var/screen/buffer"'
 bindkey -m W   eval 'stuff W'    'writebuf' 'exec sh -c "/usr/bin/pbcopy < $HOME/var/screen/buffer"'
 
+## split window
+bind | eval 'split -v'
+bind - eval 'split -h'
+bind \ eval 'split h'
+bind _ eval 'split h'
+
+## focus window
+bind j eval 'focus down'
+bind k eval 'focus up'
+bind h eval 'focus left'
+bind l eval 'focus right'
+
+## resize window
+bind ^j eval 'resize -v +1'
+bind ^k eval 'resize -v -1'
+bind ^h eval 'resize -h -1'
+bind ^l eval 'resize -h +1'
+
+bind J eval 'resize -v +5'
+bind K eval 'resize -v -5'
+bind H eval 'resize -h -5'
+bind L eval 'resize -h +5'
+
 
 ## =============================================================================
 ## local
