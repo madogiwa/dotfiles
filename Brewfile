@@ -104,6 +104,9 @@ brew "kops"
 tap "c-bata/kube-prompt"
 brew "kube-prompt"
 
+brew "hadolint"
+
+
 ## docker manager
 tap "moncho/dry"
 brew "dry"
