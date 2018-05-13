@@ -276,6 +276,6 @@ function anyframe-widget-docker-image-name() {
 }
 
 function anyframe-widget-docker-shell() {
-    docker exec -it `anyframe-widget-docker-container` sh
+    docker exec -it `anyframe-widget-docker-container-id` sh
 }
 
