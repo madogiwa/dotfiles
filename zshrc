@@ -82,6 +82,30 @@ setopt prompt_subst
 ## ignore Ctrl+d
 setopt ignoreeof
 
+export IGNOREEOF=3
+
+# https://superuser.com/questions/1243138/why-does-ignoreeof-not-work-in-zsh
+# Emulate Bash $IGNOREEOF behavior
+bash-ctrl-d() {
+    if [[ $CURSOR == 0 && -z $BUFFER ]]
+    then
+        [[ -z $IGNOREEOF || $IGNOREEOF == 0 ]] && exit
+        if [[ $LASTWIDGET == bash-ctrl-d ]]
+        then
+            (( --__BASH_IGNORE_EOF <= 0 )) && exit
+        else
+            (( __BASH_IGNORE_EOF = IGNOREEOF-1 ))
+        fi
+        echo -n Use \"exit\" to leave the shell.
+        zle send-break
+    else
+        zle delete-char-or-list
+    fi
+}
+
+zle -N bash-ctrl-d
+bindkey '^D' bash-ctrl-d
+
 
 ## ============================================================================
 ## alias
