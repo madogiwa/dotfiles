@@ -19,3 +19,6 @@ Host * !github.com !*.bitbucket.org
     PermitLocalCommand yes
     LocalCommand [ -n $TMUX ] && tmux rename-window "@`echo %n | sed 's/\.[a-z.-]*\.[a-z]*$//'`"
 
+Host github.com *.bitbucket.org
+    ControlMaster auto
+
