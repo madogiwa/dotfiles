@@ -8,6 +8,12 @@ Host *
     ## パスフレーズの登録を有効にする
     AddKeysToAgent yes
 
+    ## ControlMaster用の設定
+    ## 有効にしたいHostでControlMaster autoを設定する
+    ## または -o "ControlMaster=auto" を指定してsshを実行する
+    ControlPath ~/.ssh/cm/%C
+    ControlPersist 3m
+
 Host * !github.com !*.bitbucket.org
     ## ウィンドウタイトルにSSH接続先を表示
     PermitLocalCommand yes
