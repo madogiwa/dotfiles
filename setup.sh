@@ -35,6 +35,10 @@ else
     git clone https://github.com/amashigeseiji/anyenv-lazyload.git ~/.anyenv/plugins/anyenv-lazyload
 fi
 
+## ssh folder
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
 ## rcm & tpm
 echo ""
 echo "========================================================================"
