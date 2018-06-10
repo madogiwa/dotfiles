@@ -129,7 +129,7 @@ cask "iterm2"
 cask "google-chrome"
 cask "firefox"
 
-cask "gas-mask"
+#cask "gas-mask"
 cask "wireshark"
 cask "visual-studio-code"
 
