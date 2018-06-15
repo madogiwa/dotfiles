@@ -40,6 +40,9 @@ if [ -d ~/.zplug/ ]; then
     ## peco/percol/fzf wrapper
     zplug "mollifier/anyframe"
 
+    ## ssh-gent
+    zplug "plugins/ssh-agent", from:oh-my-zsh, ignore:oh-my-zsh.sh
+
     ## pure theme
     zplug mafredri/zsh-async, from:github
     zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
