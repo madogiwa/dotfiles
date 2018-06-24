@@ -54,6 +54,9 @@ brew "iftop"
 
 brew "global", args:["with-ctags", "with-pygments"]
 
+## code statistics
+brew "cloc"
+
 ## infrastructure
 brew "awscli"
 brew "amazon-ecs-cli"
