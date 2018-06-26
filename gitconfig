@@ -41,6 +41,17 @@
     ff = false
 
 [alias]
+    branch-create = branch
+    branch-delete = branch -d
+    branch-force-delete = branch -D
+    branch-list = branch
+
+    upstream-branch-list = branch -r
+    upstream-set = git branch -u
+    upstream-tag-delete = push --delete origin 
+
+    tag-sync = fetch --tags --prune
+
     x-addp = add --patch
     x-addi = add --interactive
 
