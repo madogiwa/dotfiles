@@ -25,6 +25,10 @@
     ## pushするブランチに関連するタグを同時にプッシュする
     followTags = true
 
+[fetch]
+    ## fetch時にリモートで削除されたブランチは追跡ブランチからも削除する
+    prune = true
+
 [pull]
     ## git pull時にfast forwardのみ行う
     ## できない場合はエラーとなるので下記のようなコマンドで手動解消が必要
