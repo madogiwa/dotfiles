@@ -62,7 +62,6 @@ brew "awscli"
 brew "amazon-ecs-cli"
 brew "aws-elasticbeanstalk"
 brew "tfenv"
-brew "ansible"
 cask "google-cloud-sdk"
 brew "packer"
 
