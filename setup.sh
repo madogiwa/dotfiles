@@ -39,6 +39,9 @@ fi
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
+## docker-compose files
+mkdir -p ~/var/docker/portainer && curl -sL -o ~/var/docker/portainer/docker-compose.yml https://portainer.io/download/docker-compose.yml
+
 ## rcm & tpm
 echo ""
 echo "========================================================================"
