@@ -11,7 +11,7 @@ Host *
     ## ControlMaster用の設定
     ## 有効にしたいHostでControlMaster autoを設定する
     ## または -o "ControlMaster=auto" を指定してsshを実行する
-    ControlPath ~/.ssh/cm/%C
+    ControlPath ~/.ssh/cm/%r@%h:%p
     ControlPersist 3m
 
 Host * !github.com !*.bitbucket.org
