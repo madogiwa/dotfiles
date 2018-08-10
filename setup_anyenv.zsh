@@ -14,6 +14,9 @@ nodenv install ${latest}
 nodenv global ${latest}
 
 npm install -g yarn
+yarn global add dockly
+yarn global add vue-cli
+yarn global add @vue/cli-init
 nodenv rehash
 
 
