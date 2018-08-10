@@ -16,6 +16,7 @@ brew "tig"
 brew "git-flow"
 brew "hub"
 brew "ghq"
+brew "git-secrets"
 
 ## gnu version tar
 brew "gnu-tar"
