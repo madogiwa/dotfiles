@@ -27,6 +27,9 @@ fi
 export JAVA_HOME=`/usr/libexec/java_home`
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
+## enable Docker BuildKit
+export DOCKER_BUILDKIT=1
+
 
 ## ============================================================================
 ## golang
