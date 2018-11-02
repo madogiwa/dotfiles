@@ -6,7 +6,7 @@ anyenv update
 anyenv install -f nodenv
 source ~/.zshrc
 
-prefix="8"
+prefix="10"
 latest=`nodenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
 echo "install node ${latest}"
 nodenv uninstall -f ${latest}
