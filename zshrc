@@ -272,8 +272,8 @@ add-zsh-hook precmd precmd_title
 
 ## zshenvの読み込みが遅くならないようにzshrcでinitを実施
 if [ -d "${ANYENV_ROOT}" ]; then
-    #eval "$(anyenv init - --no-rehash)"
-    eval "$(anyenv lazyload)"
+    eval "$(anyenv init - --no-rehash)"
+    #eval "$(anyenv lazyload)"
 fi
 
 ## goenvを利用する場合にIDE等にGOROOTを認識させるためのアドホックな対応
