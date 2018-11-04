@@ -240,7 +240,7 @@ setopt hist_reduce_blanks
 update_window_title() {
     if [ -n "$TMUX" ]; then
         `tmux set-window-option allow-rename on`
-        echo -n "\ek${1} #[fg=colour39,bold]\e\\"
+        echo -n "\ek${1}\e\\"
         `tmux set-window-option allow-rename off`
     else
         echo -n "\ek${1}\e\\"
