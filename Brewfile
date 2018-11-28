@@ -119,7 +119,7 @@ tap "thoughtbot/formulae"
 brew "rcm"
 
 ## ssh
-brew "pssh"
+brew "madogiwa/pssh/parallel-ssh"
 
 
 ## ===========================================================================
