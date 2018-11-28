@@ -51,33 +51,6 @@ go get -u github.com/golang/dep/cmd/dep
 goenv rehash
 
 
-## python
-anyenv install -f pyenv
-source ~/.zshrc
-
-rm -rf ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
-git clone git://github.com/pyenv/pyenv-virtualenv.git ~/.anyenv/envs/pyenv/plugins/pyenv-virtualenv
-echo "install miniconda3-latest"
-pyenv uninstall -f miniconda3-latest
-pyenv install miniconda3-latest
-pyenv global system miniconda3-latest
-
-prefix=""
-latest=`pyenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
-venv="jupyter"
-echo "install python ${latest} based on miniconda3-latest"
-pyenv uninstall -f miniconda3-latest/envs/${venv}
-conda create -n ${venv} python=${latest} conda
-
-pyenv activate miniconda3-latest/envs/${venv}
-conda install -y jupyter
-conda install -y pandas
-conda install -y matplotlib
-conda install -y scikit-learn
-conda install -y gensim
-pyenv rehash
-
-
 ## perl
 anyenv install -f plenv
 source ~/.zshrc
