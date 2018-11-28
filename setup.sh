@@ -1,5 +1,11 @@
 #!/bin/sh
 
+## install xcode tools
+xcode-select --install
+if [ $? -eq 0 ]; then
+    read \?"Waiting xcode-select install... press [Enter] to continue."
+fi
+
 ## install Homebrew
 if [[ "$OSTYPE" =~ darwin ]]; then
     if [ ! -e /usr/local/bin/brew ]; then
