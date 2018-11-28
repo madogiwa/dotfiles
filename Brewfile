@@ -68,7 +68,6 @@ brew "packer"
 
 ## DB client
 brew "mysql"
-brew "mycli"
 brew "pgcli"
 brew "percona-toolkit"
 
