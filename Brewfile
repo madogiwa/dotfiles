@@ -48,6 +48,7 @@ brew "bazel"
 brew "httpie"
 
 ## http debugging proxy
+brew "protobuf", args:["without-python@2"]
 brew "mitmproxy"
 
 ## monitoring tools
