@@ -283,6 +283,17 @@ fi
 
 
 ## ============================================================================
+## virtualenv
+## ============================================================================
+
+if [ -f `which virtualenvwrapper.sh` ]; then
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    export WORKON_HOME=$HOME/.virtualenvs
+    source `which virtualenvwrapper.sh`
+fi
+
+
+## ============================================================================
 ## anyframe
 ## ============================================================================
 
@@ -308,3 +319,10 @@ function anyframe-widget-docker-shell() {
     docker exec -it `anyframe-widget-docker-container-id` sh
 }
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/mdgw/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/mdgw/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/mdgw/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mdgw/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
