@@ -160,6 +160,13 @@ setopt list_types
 ## disable select next item by tabkey
 unsetopt auto_menu
 
+## enable completion cache
+if [ ! -f ~/.zsh/cache ]; then
+    mkdir -p ~/.zsh/cache
+fi
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
 ## ignore capital
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
