@@ -181,6 +181,17 @@ zstyle ':completion:*:default' list-colors ${(s.:.)ZLS_COLORS}
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin \
     /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
+### 詳細出力を有効にする
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' format '%B%d%b'
+
+### 補完候補がない場合にエラーを表示する
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+
+### 補完候補をマッチ種別ごとに表示する
+zstyle ':completion:*' group-name ''
+
+setopt complete_in_word
 
 ## ============================================================================
 ## application
