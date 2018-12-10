@@ -84,6 +84,9 @@ setopt print_eight_bit
 ## enable function into $PROMPT
 setopt prompt_subst
 
+## hide rprompt after command execution
+setopt transient_rprompt
+
 ## ignore Ctrl+d
 setopt ignoreeof
 
