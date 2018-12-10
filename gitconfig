@@ -80,6 +80,7 @@
 
 [ghq]
     root = ~/src
+    root = ~/go/src
 
 [secrets]
 	providers = git secrets --aws-provider
