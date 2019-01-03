@@ -25,7 +25,7 @@ if [ -d ~/.zplug/ ]; then
 
     zplug "zsh-users/zsh-autosuggestions", defer:2
 
-    zplug "zsh-users/zsh-history-substring-search", lazy:true
+    zplug "zsh-users/zsh-history-substring-search", defer:3
 
     ## Additional completion definitions for Zsh
     zplug "zsh-users/zsh-completions"
@@ -252,6 +252,11 @@ setopt hist_ignore_space
 
 ## recude blanks
 setopt hist_reduce_blanks
+
+## customize history-substring-search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
 
 
 ## ============================================================================
