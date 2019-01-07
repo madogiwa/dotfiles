@@ -301,8 +301,19 @@ function aws_prof {
 PROMPT='$(aws_prof)'$PROMPT
 
 ## awsp (AWS Profile Switcher)
-alias awsp="source _awsp"
-
+function awsp() {
+  if [ $# -ge 1 ]; then
+    if [ "$1" != "clear" ]; then
+      export AWS_PROFILE="$1"
+      echo "export AWS_PROFILE=$AWS_PROFILE"
+    else
+      unset AWS_PROFILE
+      echo "unset AWS_PROFILE"
+    fi
+  else
+    source _awsp
+  fi
+}
 
 ## ============================================================================
 ## anyenv
