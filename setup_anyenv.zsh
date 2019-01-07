@@ -18,6 +18,7 @@ yarn global add @vue/cli
 yarn global add @vue/cli-init
 yarn global add firebase-tools
 yarn global add serverless
+yarn global add awsp
 nodenv rehash
 
 
