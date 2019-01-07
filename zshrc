@@ -291,6 +291,15 @@ precmd_title() {
 }
 add-zsh-hook precmd precmd_title
 
+## show AWS_PROFILE in prompt
+function aws_prof {
+  local profile="${AWS_PROFILE:=default}"
+  if [ "${profile}" != "default" ]; then
+    echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+  fi
+}
+PROMPT='$(aws_prof)'$PROMPT
+
 
 ## ============================================================================
 ## anyenv
