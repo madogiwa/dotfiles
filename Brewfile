@@ -40,6 +40,7 @@ tap "caskroom/versions"
 cask "java8"
 brew "sbt"
 brew "maven"
+brew "pipenv"
 
 ## build tool
 brew "bazel"

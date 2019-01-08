@@ -332,13 +332,11 @@ fi
 
 
 ## ============================================================================
-## virtualenv
+## pipenv
 ## ============================================================================
 
-if [ -f `which virtualenvwrapper.sh` ]; then
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-    export WORKON_HOME=$HOME/.virtualenvs
-    source `which virtualenvwrapper.sh`
+if [ -f `which pipenv` ]; then
+    eval "$(pipenv --completion)"
 fi
 
 
