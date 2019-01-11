@@ -42,8 +42,9 @@ brew "sbt"
 brew "maven"
 brew "pipenv"
 
-## build tool
+## build & test tools
 brew "bazel"
+brew "circleci"
 
 ## http client
 brew "httpie"
