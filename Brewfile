@@ -50,8 +50,8 @@ brew "circleci"
 brew "httpie"
 
 ## http debugging proxy
-brew "protobuf", args:["without-python@2"]
-brew "mitmproxy"
+#brew "protobuf", args:["without-python@2"]
+#brew "mitmproxy"
 
 ## monitoring tools
 brew "iftop"
