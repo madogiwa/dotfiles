@@ -37,6 +37,7 @@ brew "jq"
 ## languages
 brew "rust"
 tap "caskroom/versions"
+cask "java"
 cask "java8"
 brew "sbt"
 brew "maven"
