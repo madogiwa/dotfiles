@@ -18,10 +18,6 @@ fi
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-## install fisherman
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fish -c fisher
-
 ## add fish into /etc/shells
 eval grep fish /etc/shells
 if [ $? -ne 0 ]; then
