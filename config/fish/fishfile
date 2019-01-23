@@ -6,3 +6,5 @@ jethrokuan/z
 tuvistavie/fish-ssh-agent
 ## notify when long process finished
 franciscolourenco/done
+## for history search (Ctrl + r)
+jethrokuan/fzf

@@ -5,6 +5,7 @@
 
 ## fish shell
 brew "fish"
+brew "fzf"
 
 ## better grep
 brew "ack"
