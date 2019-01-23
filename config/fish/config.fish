@@ -10,3 +10,10 @@ end
 set -x PATH $HOME/.anyenv/bin $PATH
 anyenv init - --no-rehash fish | source
 
+## customize pure theme
+set pure_separate_prompt_on_error true
+
+## customize fzf plugin
+## enable new keybindings
+set -U FZF_LEGACY_KEYBINDINGS 0
+
