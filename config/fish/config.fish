@@ -6,6 +6,11 @@ if not functions -q fisher
     fish -c fisher
 end
 
+## aliases
+alias cp 'cp -i'
+alias rm 'rm -i'
+alias mv 'mv -i'
+
 ## setup anyenv
 set -x PATH $HOME/.anyenv/bin $PATH
 anyenv init - --no-rehash fish | source
