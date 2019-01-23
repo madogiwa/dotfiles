@@ -6,6 +6,7 @@ if not functions -q fisher
     fish -c fisher
 end
 
+## setup anyenv
 set -x PATH $HOME/.anyenv/bin $PATH
 anyenv init - --no-rehash fish | source
 
