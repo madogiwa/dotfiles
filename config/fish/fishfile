@@ -4,3 +4,5 @@ rafaelrinaldi/pure
 jethrokuan/z
 ## start ssh agent when using fish shell
 tuvistavie/fish-ssh-agent
+## notify when long process finished
+franciscolourenco/done
