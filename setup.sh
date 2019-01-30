@@ -32,8 +32,10 @@ if [ -d ~/.anyenv ]; then
     echo "~/.anyenv already exists, skip install"
 else
     git clone https://github.com/riywo/anyenv ~/.anyenv
+
     mkdir -p ~/.anyenv/plugins
     git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+    git clone https://github.com/amashigeseiji/anyenv-lazyload.git ~/.aneynv/plugins/anyenv-lazyload
 fi
 
 ## ssh folder
