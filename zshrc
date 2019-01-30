@@ -332,7 +332,12 @@ fi
 ## ============================================================================
 
 if [ -f `which pipenv` ]; then
-    eval "$(pipenv --completion)"
+    PIPENV_COMPLETION_CACHE="$HOME/.zsh/cache/pipenv-completion"
+    if [ ! -f "${PIPENV_COMPLETION_CACHE}" ]; then
+        pipenv --completion > "${PIPENV_COMPLETION_CACHE}"
+    fi
+    eval "$(cat ${PIPENV_COMPLETION_CACHE})"
+    #eval "$(pipenv --completion)"
 fi
 
 
