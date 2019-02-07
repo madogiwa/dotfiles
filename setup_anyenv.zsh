@@ -15,11 +15,11 @@ nodenv global ${latest}
 
 npm install -g npm
 npm install -g yarn
-yarn global add @vue/cli
-yarn global add @vue/cli-init
-yarn global add firebase-tools
-yarn global add serverless
-yarn global add awsp
+npm install -g @vue/cli
+npm install -g @vue/cli-init
+npm install -g firebase-tools
+npm install -g serverless
+npm install -g awsp
 nodenv rehash
 
 
