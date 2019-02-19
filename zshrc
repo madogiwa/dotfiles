@@ -311,6 +311,19 @@ function awsp() {
   fi
 }
 
+
+## ============================================================================
+## assume-role
+## ============================================================================
+
+source $(which assume-role)
+
+function aws_account_info {
+  [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg_bold[blue]%})%{$reset_color%} "
+}
+PROMPT='$(aws_account_info)'$PROMPT
+
+
 ## ============================================================================
 ## anyenv
 ## ============================================================================
@@ -375,3 +388,7 @@ function anyframe-widget-docker-shell() {
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f ~/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . ~/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
