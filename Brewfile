@@ -71,6 +71,8 @@ brew "tfenv"
 cask "google-cloud-sdk"
 brew "packer"
 
+brew "coinbase/assume-role/assume-role"
+
 ## DB client
 brew "mysql"
 brew "pgcli"
