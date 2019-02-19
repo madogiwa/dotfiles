@@ -318,6 +318,28 @@ function awsp() {
 
 source $(which assume-role)
 
+function assume-role-clear() {
+    if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
+        unset AWS_REGION
+        unset AWS_DEFAULT_REGION
+        unset AWS_ACCESS_KEY_ID
+        unset AWS_SECRET_ACCESS_KEY
+        unset AWS_SESSION_TOKEN
+        unset AWS_ACCOUNT_ID
+        unset AWS_ACCOUNT_NAME
+        unset AWS_ACCOUNT_ROLE
+        unset AWS_SESSION_ACCESS_KEY_ID
+        unset AWS_SESSION_SECRET_ACCESS_KEY
+        unset AWS_SESSION_SESSION_TOKEN
+        unset AWS_SESSION_SECURITY_TOKEN
+        unset AWS_SESSION_START
+        unset GEO_ENV
+        unset AWS_SECURITY_TOKEN
+    else
+        echo "nothing cleared"
+    fi
+}
+
 function aws_account_info {
   [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg_bold[blue]%})%{$reset_color%} "
 }
