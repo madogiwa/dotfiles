@@ -381,6 +381,13 @@ function anyframe-widget-docker-shell() {
 }
 
 
+## ============================================================================
+## include local zshrc
+## ============================================================================
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f ~/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . ~/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
