@@ -315,7 +315,7 @@ function awsp() {
 }
 
 ## kubectl-prompt
-RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+RPROMPT='%{$fg[yellow]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 
 ## ============================================================================
