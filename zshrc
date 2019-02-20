@@ -49,6 +49,9 @@ if [ -d ~/.zplug/ ]; then
     zplug mafredri/zsh-async, from:github
     zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
+    ## kubectl-prompt
+    zplug "superbrothers/zsh-kubectl-prompt"
+
     ## Install plugins if there are plugins that have not been installed
     if ! zplug check --verbose; then
         printf "Install? [y/N]: "
@@ -310,6 +313,9 @@ function awsp() {
     source _awsp
   fi
 }
+
+## kubectl-prompt
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 
 ## ============================================================================
