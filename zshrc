@@ -294,7 +294,7 @@ add-zsh-hook precmd precmd_title
 function aws_prof {
   local profile="${AWS_PROFILE:=default}"
   if [ "${profile}" != "default" ]; then
-    echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+    echo "%{$fg_bold[blue]%}awsp:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
   fi
 }
 PROMPT='$(aws_prof)'$PROMPT
