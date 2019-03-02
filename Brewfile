@@ -109,6 +109,7 @@ brew "kompose"
 brew "kubernetes-helm"
 brew "skaffold"
 brew "kops"
+brew "argoproj/tap/argo"
 
 tap "c-bata/kube-prompt"
 brew "kube-prompt"
