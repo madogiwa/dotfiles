@@ -119,7 +119,7 @@ endif
 set fileformats=unix,dos,mac
 
 "" tabstop
-set tabstop=4 shiftwidth=4 softtabstop=0
+set tabstop=2 shiftwidth=2 softtabstop=0
 set expandtab
 
 "" visible tab
@@ -156,6 +156,7 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
 
+  autocmd FileType go setlocal sw=4 sts=0 ts=4 et
 endif
 
 
