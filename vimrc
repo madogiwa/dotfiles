@@ -97,6 +97,7 @@ set noshowmode
 set showcmd
 set hlsearch
 set autoindent
+set indentexpr=
 set nostartofline
 set ruler
 set confirm
