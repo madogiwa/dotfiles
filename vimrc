@@ -122,9 +122,11 @@ set fileformats=unix,dos,mac
 set tabstop=2 shiftwidth=2 softtabstop=0
 set expandtab
 
-"" visible tab
+"" visible tab & eol
 set list
-set listchars=tab:>.
+set listchars=tab:»-,eol:↵
+
+highlight NonText    ctermfg=23 ctermbg=none cterm=BOLD
 
 "" enable incremental search
 set incsearch
