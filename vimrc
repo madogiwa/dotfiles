@@ -128,6 +128,9 @@ set listchars=tab:»-,eol:↵
 
 highlight NonText    ctermfg=23 ctermbg=none cterm=BOLD
 
+"" don't insert to eol the end of file
+set noeol
+
 "" enable incremental search
 set incsearch
 
