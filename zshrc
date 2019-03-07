@@ -341,8 +341,10 @@ function assume-role-clear() {
         unset AWS_SESSION_START
         unset GEO_ENV
         unset AWS_SECURITY_TOKEN
+
+        echo "AWS session cleared."
     else
-        echo "nothing cleared"
+        echo "nothing cleared."
     fi
 }
 
@@ -357,7 +359,10 @@ add-zsh-hook precmd precmd_aws_session_expire_check
 
 function aws_account_info {
     if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
-        echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg_bold[blue]%})%{$reset_color%} "
+        diff=$((`date +%s` - ${AWS_SESSION_START}))
+        [ $diff -ge 3300 ] && least=" $((3600 - ${diff}))" || least=""
+
+        echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
     fi
 }
 PROMPT='$(aws_account_info)'$PROMPT
