@@ -346,8 +346,19 @@ function assume-role-clear() {
     fi
 }
 
+## check session timeout
+function precmd_aws_session_expire_check() {
+    if [ "${AWS_SESSION_START}" ]; then
+        diff=$((`date +%s` - ${AWS_SESSION_START}))
+        [ $diff -ge 3600 ] && assume-role-clear
+    fi
+}
+add-zsh-hook precmd precmd_aws_session_expire_check
+
 function aws_account_info {
-  [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg_bold[blue]%})%{$reset_color%} "
+    if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
+        echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg_bold[blue]%})%{$reset_color%} "
+    fi
 }
 PROMPT='$(aws_account_info)'$PROMPT
 
