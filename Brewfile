@@ -5,6 +5,7 @@
 
 ## pgp
 brew "gnupg"
+cask "keybase"
 
 ## fish shell
 brew "fish"
