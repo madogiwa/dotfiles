@@ -373,6 +373,22 @@ PROMPT='$(aws_account_info)'$PROMPT
 
 
 ## ============================================================================
+## gcloud
+## ============================================================================
+
+function gcp_info() {
+    if [ -f "$HOME/.config/gcloud/active_config" ]; then
+        profile=$(cat $HOME/.config/gcloud/active_config)
+        project=$(awk '/project/{print $3}' $HOME/.config/gcloud/configurations/config_$profile)
+        if [ ! -z ${project} ]; then
+            echo "%{$fg_bold[blue]%}gcp:(%{$fg[yellow]%}${profile}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
+        fi
+    fi
+}
+PROMPT='$(gcp_info)'$PROMPT
+
+
+## ============================================================================
 ## anyenv
 ## ============================================================================
 
