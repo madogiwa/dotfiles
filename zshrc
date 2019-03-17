@@ -380,12 +380,25 @@ function gcp_info() {
     if [ -f "$HOME/.config/gcloud/active_config" ]; then
         profile=$(cat $HOME/.config/gcloud/active_config)
         project=$(awk '/project/{print $3}' $HOME/.config/gcloud/configurations/config_$profile)
-        if [ ! -z ${project} ]; then
-            echo "%{$fg_bold[blue]%}gcp:(%{$fg[yellow]%}${profile}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
+        account=$(awk '/account/{print $3}' $HOME/.config/gcloud/configurations/config_$profile)
+        if [ ! -z ${project} ] && [ ! -z ${account} ]; then
+            echo "%{$fg_bold[blue]%}gcp:(%{$fg[yellow]%}${account}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
         fi
     fi
 }
 PROMPT='$(gcp_info)'$PROMPT
+
+
+function gcredential_info() {
+    if [ "$GOOGLE_APPLICATION_CREDENTIALS" ] && [ -f "$GOOGLE_APPLICATION_CREDENTIALS" ]; then
+        project=$(jq -r .project_id $GOOGLE_APPLICATION_CREDENTIALS)
+        account=$(jq -r .client_email $GOOGLE_APPLICATION_CREDENTIALS | cut -d'@' -f1)
+        if [ ! -z ${project} ] && [ ! -z ${account} ]; then
+            echo "%{$fg_bold[blue]%}gcpc:(%{$fg[yellow]%}${account}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
+        fi
+    fi
+}
+PROMPT='$(gcredential_info)'$PROMPT
 
 
 ## ============================================================================
