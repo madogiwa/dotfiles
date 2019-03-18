@@ -193,8 +193,10 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin \
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' format '%B%d%b'
 
-### 補完候補がない場合にエラーを表示する
-zstyle ':completion:*:warnings' format 'No matches for: %d'
+### メッセージフォーマット
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:corrections' format '%U%F{green}%d (errors: %e)%f%u'
+zstyle ':completion:*:warnings' format '%F{202}%BNo matches for: %F{214}%d%b'
 
 # Prettier completion for processes
 zstyle ':completion:*:*:*:*:processes' force-list always
