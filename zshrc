@@ -182,6 +182,9 @@ zstyle ':completion:*:default' menu select=2
 ## colored completion list
 zstyle ':completion:*:default' list-colors ${(s.:.)ZLS_COLORS} 
 
+## ディレクトリを先に表示する
+zstyle ':completion:*' list-dirs-first true
+
 ## enable sudo completion
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin \
     /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
