@@ -196,6 +196,12 @@ zstyle ':completion:*' format '%B%d%b'
 ### 補完候補がない場合にエラーを表示する
 zstyle ':completion:*:warnings' format 'No matches for: %d'
 
+# Prettier completion for processes
+zstyle ':completion:*:*:*:*:processes' force-list always
+zstyle ':completion:*:*:*:*:processes' menu yes select
+zstyle ':completion:*:*:*:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,args -w -w"
+
 # Show message while waiting for completion
 zstyle ':completion:*' show-completer true
 
