@@ -196,6 +196,9 @@ zstyle ':completion:*' format '%B%d%b'
 ### 補完候補がない場合にエラーを表示する
 zstyle ':completion:*:warnings' format 'No matches for: %d'
 
+# Show message while waiting for completion
+zstyle ':completion:*' show-completer true
+
 ### 補完候補をマッチ種別ごとに表示する
 zstyle ':completion:*' group-name ''
 
