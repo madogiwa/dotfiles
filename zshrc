@@ -149,6 +149,9 @@ if [ ! -x /usr/bin/tac ]; then
     alias tac='tail -r'
 fi
 
+## kubectl
+alias k='kubectl'
+
 
 ## ============================================================================
 ## completion
@@ -359,6 +362,7 @@ function assume-role-clear() {
         unset AWS_SESSION_START
         unset GEO_ENV
         unset AWS_SECURITY_TOKEN
+        unset ROLE_SESSION_START
 
         echo "AWS session cleared."
     else
