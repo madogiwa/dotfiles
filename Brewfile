@@ -100,6 +100,7 @@ cask "font-noto-sans-cjk-jp"
 cask "font-noto-serif-cjk-jp"
 cask "font-noto-mono"
 cask "font-roboto-mono-for-powerline"
+cask "caskroom/fonts/font-ricty-diminished"
 
 ## QuickLook
 cask "qlstephen"
