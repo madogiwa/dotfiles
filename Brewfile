@@ -38,6 +38,9 @@ brew "ipcalc"
 ## json query tool
 brew "jq"
 
+## editor
+brew "vim"
+
 ## languages
 brew "rust"
 tap "caskroom/versions"
