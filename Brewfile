@@ -135,6 +135,10 @@ brew "rcm"
 ## ssh
 brew "madogiwa/pssh/parallel-ssh"
 
+## image & movie
+brew "imagemagick"
+brew "ffmpeg"
+
 
 ## ===========================================================================
 ## brew cask
