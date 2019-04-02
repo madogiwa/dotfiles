@@ -43,7 +43,6 @@ brew "vim"
 
 ## languages
 brew "rust"
-tap "caskroom/versions"
 cask "java"
 cask "java8"
 brew "sbt"
