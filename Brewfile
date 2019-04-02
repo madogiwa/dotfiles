@@ -59,6 +59,7 @@ brew "httpie"
 ## http debugging proxy
 #brew "protobuf", args:["without-python@2"]
 #brew "mitmproxy"
+cask "proxyman"
 
 ## monitoring tools
 brew "iftop"
