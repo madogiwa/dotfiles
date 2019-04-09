@@ -11,7 +11,6 @@ brew "fish"
 brew "fzf"
 
 ## better grep
-brew "ack"
 brew "ripgrep"
 
 ## git & git tools
