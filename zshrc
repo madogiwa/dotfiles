@@ -28,15 +28,18 @@ ENHANCD_COMMAND=j
 zplugin ice wait'!0'; zplugin light zdharma/fast-syntax-highlighting
 
 zplugin ice wait'!0'; zplugin light zsh-users/zsh-autosuggestions
-zplugin ice wait'!0'; zplugin light zsh-users/zsh-completions
 zplugin light zsh-users/zsh-history-substring-search
 
 ## pure theme
 zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
 
-## completion for docker
-#zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-#zplugin snippet https://github.com/docker/compose/blog/master/contrib/completion/zsh/_docker-compose
+## completions
+zplugin ice wait'!0'; zplugin light zsh-users/zsh-completions
+
+zplugin ice as"completion" wait'!0'; zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zplugin ice as"completion" wait'!0'; zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+
+zplugin ice wait'!0'; zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 ## fuzzy matcher
 zplugin ice wait'!0'; zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
@@ -52,9 +55,6 @@ zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 ## kubectl-prompt
 zplugin light superbrothers/zsh-kubectl-prompt
-
-## kubectl-completion
-zplugin ice wait'!0'; zplugin light nnao45/zsh-kubectl-completion
 
 
 ## ============================================================================
@@ -138,9 +138,6 @@ alias mv='mv -i'
 if [ ! -x /usr/bin/tac ]; then
     alias tac='tail -r'
 fi
-
-## kubectl
-alias k='kubectl'
 
 
 ## ============================================================================
