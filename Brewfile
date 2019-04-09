@@ -21,11 +21,10 @@ brew "hub"
 brew "ghq"
 brew "git-secrets"
 
-## gnu version tar
-brew "gnu-tar"
-
 ## gnu version utils(date, etc)
 brew "coreutils"
+brew "gnu-tar"
+brew "gawk"
 
 ## compress & decompress
 brew "lzop"
@@ -93,7 +92,6 @@ brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
 
 ## tmux
 brew "tmux", args:["with-utf8proc"]
-brew "gawk"
 brew "ansifilter"
 
 ## fonts
