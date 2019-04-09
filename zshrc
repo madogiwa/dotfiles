@@ -18,8 +18,9 @@ ENHANCD_COMMAND=j
 ## zplug load
 ## ----------------------------------------------------------------------------
 
-if [ -d ~/.zplug/ ]; then
-    source ~/.zplug/init.zsh
+export ZPLUG_HOME=/usr/local/opt/zplug
+if [ -d $ZPLUG_HOME ]; then
+    source $ZPLUG_HOME/init.zsh
 
     zplug "zsh-users/zsh-syntax-highlighting", defer:2
 

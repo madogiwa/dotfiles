@@ -6,7 +6,9 @@
 ## pgp
 cask "keybase"
 
-## fish shell
+## shells
+brew "zsh"
+brew "zplug"
 brew "fish"
 brew "fzf"
 

@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
 fi
 
 ## install zplug
-rm -rf ~/.zplug && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+zplug install
 
 ## install anyenv
 if [ -d ~/.anyenv ]; then
