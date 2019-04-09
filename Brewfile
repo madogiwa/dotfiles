@@ -135,7 +135,7 @@ brew "ffmpeg"
 ## Mac Apps (cask)
 ## ===========================================================================
 cask "karabiner-elements"
-cask "hyperswitch"
+#cask "hyperswitch"
 cask "iterm2"
 
 cask "google-chrome"
