@@ -119,11 +119,6 @@ brew "shyiko/kubesec/kubesec"
 
 brew "hadolint"
 
-
-## docker manager
-tap "moncho/dry"
-brew "dry"
-
 ## dotfile management
 tap "thoughtbot/formulae"
 brew "rcm"
