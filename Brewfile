@@ -8,7 +8,6 @@ cask "keybase"
 
 ## shells
 brew "zsh"
-brew "zplug"
 brew "fish"
 brew "fzf"
 

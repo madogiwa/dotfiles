@@ -24,8 +24,10 @@ if [ $? -ne 0 ]; then
     sudo sh -c 'echo `which fish` >> /etc/shells'
 fi
 
-## install zplug
-zplug install
+## install zplugin
+if [[ ! -d ~/.zplugin ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+fi
 
 ## install anyenv
 if [ -d ~/.anyenv ]; then

@@ -1,7 +1,14 @@
 
 ## ============================================================================
-## zplug
+## zplugin
 ## ============================================================================
+
+### Added by Zplugin's installer
+source "${HOME}/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin's installer chunk
+
 
 ## ----------------------------------------------------------------------------
 ## enhancd
@@ -15,58 +22,39 @@ ENHANCD_COMMAND=j
 
 
 ## ----------------------------------------------------------------------------
-## zplug load
+## load plugins
 ## ----------------------------------------------------------------------------
 
-export ZPLUG_HOME=/usr/local/opt/zplug
-if [ -d $ZPLUG_HOME ]; then
-    source $ZPLUG_HOME/init.zsh
+zplugin ice wait'!0'; zplugin light zdharma/fast-syntax-highlighting
 
-    zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplugin ice wait'!0'; zplugin light zsh-users/zsh-autosuggestions
+zplugin ice wait'!0'; zplugin light zsh-users/zsh-completions
+zplugin light zsh-users/zsh-history-substring-search
 
-    zplug "zsh-users/zsh-autosuggestions", defer:2
+## pure theme
+zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
 
-    zplug "zsh-users/zsh-history-substring-search", defer:3
+## completion for docker
+#zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+#zplugin snippet https://github.com/docker/compose/blog/master/contrib/completion/zsh/_docker-compose
 
-    ## Additional completion definitions for Zsh
-    zplug "zsh-users/zsh-completions"
+## fuzzy matcher
+zplugin ice wait'!0'; zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
 
-    zplug "docker/cli", use:contrib/completion/zsh
-    zplug "docker/compose", use:contrib/completion/zsh
+## enhanced cd command 
+zplugin ice wait'!0'; zplugin light b4b4r07/enhancd
 
-    ## fuzzy matcher
-    zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+## peco/percol/fzf wrapper
+zplugin ice wait'!0'; zplugin light mollifier/anyframe
 
-    ## enhanced cd command 
-    zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf-bin"
+## ssh-gent
+zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
-    ## peco/percol/fzf wrapper
-    zplug "mollifier/anyframe"
+## kubectl-prompt
+zplugin light superbrothers/zsh-kubectl-prompt
 
-    ## ssh-gent
-    zplug "plugins/ssh-agent", from:oh-my-zsh, ignore:oh-my-zsh.sh
-
-    ## pure theme
-    zplug mafredri/zsh-async, from:github
-    zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-
-    ## kubectl-prompt
-    zplug "superbrothers/zsh-kubectl-prompt"
-
-    ## kubectl-completion
-    zplug "nnao45/zsh-kubectl-completion"
-
-    ## Install plugins if there are plugins that have not been installed
-    #if ! zplug check --verbose; then
-    #    printf "Install? [y/N]: "
-    #    if read -q; then
-    #        echo; zplug install
-    #    fi
-    #fi
-
-    ## Then, source plugins and add commands to $PATH
-    zplug load
-fi
+## kubectl-completion
+zplugin ice wait'!0'; zplugin light nnao45/zsh-kubectl-completion
 
 
 ## ============================================================================
@@ -83,7 +71,8 @@ setopt auto_cd
 setopt auto_pushd
 
 ## output return code if error occured
-setopt print_exit_value
+# disable due to compatibility with zplugin
+#setopt print_exit_value
 
 ## passthrough 8bit
 setopt print_eight_bit
@@ -495,3 +484,4 @@ function anyframe-widget-docker-shell() {
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
