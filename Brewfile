@@ -117,9 +117,6 @@ brew "kubectx"
 brew "argoproj/tap/argo"
 brew "shyiko/kubesec/kubesec"
 
-tap "c-bata/kube-prompt"
-brew "kube-prompt"
-
 brew "hadolint"
 
 
