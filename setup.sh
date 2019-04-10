@@ -18,10 +18,15 @@ fi
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-## add fish into /etc/shells
+## add fish and zsh into /etc/shells
 eval grep fish /etc/shells
 if [ $? -ne 0 ]; then
     sudo sh -c 'echo `which fish` >> /etc/shells'
+fi
+
+eval grep '/usr/local/bin/zsh' /etc/shells
+if [ $? -ne 0 ]; then
+    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
 fi
 
 ## install zplugin
