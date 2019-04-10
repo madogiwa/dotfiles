@@ -9,6 +9,8 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 ### End of Zplugin's installer chunk
 
+export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-$HOME/.zsh/cache}"
+
 
 ## ----------------------------------------------------------------------------
 ## enhancd
