@@ -90,6 +90,11 @@ setopt ignoreeof
 
 export IGNOREEOF=3
 
+## enable completion after '='
+setopt magic_equal_subst
+
+setopt always_last_prompt
+
 # https://superuser.com/questions/1243138/why-does-ignoreeof-not-work-in-zsh
 # Emulate Bash $IGNOREEOF behavior
 bash-ctrl-d() {
@@ -187,9 +192,10 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin \
 
 ### 詳細出力を有効にする
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*' format '%B%d%b'
+zstyle ':completion:*' format '%f[%F{yellow}%B%d%b%k]'
 
 ### メッセージフォーマット
+zstyle ':completion:*:messages' format '%F{YELLOW}%d'$DEFAULT
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:corrections' format '%U%F{green}%d (errors: %e)%f%u'
 zstyle ':completion:*:warnings' format '%F{202}%BNo matches for: %F{214}%d%b'
