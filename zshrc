@@ -280,8 +280,10 @@ update_window_title() {
         `tmux set-window-option allow-rename on`
         echo -n "\ek${1}\e\\"
         `tmux set-window-option allow-rename off`
-    else
+    elif [ ! -n "$TERMINAL_EMULATOR" ]; then
         echo -n "\ek${1}\e\\"
+    else
+        # do not output for termianl in JetBrains IDE
     fi
 }
 
