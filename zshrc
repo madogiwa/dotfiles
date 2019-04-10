@@ -472,21 +472,25 @@ function anyframe-widget-docker-shell() {
 
 
 ## ============================================================================
+## serverless framework
+## ============================================================================
+
+NODE_VERSION=`node --version | sed 's/v//'`
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+
+## ============================================================================
 ## include local zshrc
 ## ============================================================================
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f ~/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . ~/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
-
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f ~/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . ~/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mdgw/.anyenv/envs/nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
