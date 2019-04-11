@@ -43,6 +43,8 @@ zplugin ice as"completion" wait'!0'; zplugin snippet https://github.com/docker/c
 
 zplugin ice wait'!0'; zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
+zplugin ice wait'!0'; zplugin snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
+
 ## fuzzy matcher
 zplugin ice wait'!0'; zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
 
@@ -433,20 +435,6 @@ fi
 ## goenvを利用する場合にIDE等にGOROOTを認識させるためのアドホックな対応
 if [ -n "`go env GOROOT 2>/dev/null`" ]; then
     export GOROOT=`go env GOROOT`
-fi
-
-
-## ============================================================================
-## pipenv
-## ============================================================================
-
-if [ -f `which pipenv` ]; then
-    PIPENV_COMPLETION_CACHE="$HOME/.zsh/cache/pipenv-completion"
-    if [ ! -f "${PIPENV_COMPLETION_CACHE}" ]; then
-        pipenv --completion > "${PIPENV_COMPLETION_CACHE}"
-    fi
-    eval "$(cat ${PIPENV_COMPLETION_CACHE})"
-    #eval "$(pipenv --completion)"
 fi
 
 
