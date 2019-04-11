@@ -60,6 +60,9 @@ zplugin ice wait'!0'; zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zs
 ## kubectl-prompt
 zplugin light superbrothers/zsh-kubectl-prompt
 
+## anyenv
+zplugin ice wait'!0'; zplugin light Milly/zsh-anyenv-cache
+
 
 ## ============================================================================
 ## general
@@ -420,22 +423,6 @@ function gcredential_info() {
     fi
 }
 PROMPT='$(gcredential_info)'$PROMPT
-
-
-## ============================================================================
-## anyenv
-## ============================================================================
-
-## zshenvの読み込みが遅くならないようにzshrcでinitを実施
-if [ -d "${ANYENV_ROOT}" ]; then
-    #eval "$(anyenv init - --no-rehash)"
-    eval "$(anyenv lazyload)"
-fi
-
-## goenvを利用する場合にIDE等にGOROOTを認識させるためのアドホックな対応
-if [ -n "`go env GOROOT 2>/dev/null`" ]; then
-    export GOROOT=`go env GOROOT`
-fi
 
 
 ## ============================================================================
