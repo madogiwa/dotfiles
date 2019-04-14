@@ -1,0 +1,86 @@
+#!/usr/bin/env ruby
+#
+# 指定されたファイル内の文字列を置換するコマンド
+#
+# ##使い方
+#
+#   結果を標準出力に表示（確認用）
+#     replace-string [対象ファイル] [対象文字列] [置換する文字列]
+#
+#   結果を対象ファイルに書き込む
+#     replace-string -w [対象ファイル] [対象文字列] [置換する文字列]
+#
+# ##オプション
+#
+#   -r  正規表現を利用する
+#   -b  バックアップを作成する
+#
+require 'optparse'
+
+options = {
+  :tempdir => '',
+  :regex => false,
+  :backup => false,
+  :suffix => '.backup',
+  :overwrite => false,
+  :verbose => false
+}
+
+parser = OptionParser.new
+parser.on('--tempdir=DIR') do |v|
+  options[:tempdir] = v
+end
+parser.on('-r', '--regex') do |v|
+  options[:regex] = true
+end
+parser.on('-b', '--backup[=SUFFIX]') do |v|
+  options[:backup] = true
+  options[:suffix] = v ? v : options[:suffix]
+end
+parser.on('-w', '--overwrite') do |v|
+  options[:overwrite] = true
+end
+parser.on('-v', '--verbose') do |v|
+  options[:verbose] = true
+end
+
+parser.parse!(ARGV)
+
+if ARGV.length != 3 then
+  parser.banner += " <targetfile> <pattern> <replace>"
+  puts parser;
+  exit
+end
+
+target = ARGV.shift
+pattern = ARGV.shift
+text = ARGV.shift
+
+f = open(target, "r")
+require 'tempfile'
+
+if options[:tempdir].empty? then
+  temp = Tempfile.new(File.basename(__FILE__))
+else
+  temp = Tempfile.new(File.basename(__FILE__), options[:tempdir])
+end
+
+if options[:regex] == true then
+  temp.write(f.read.gsub(Regexp.new(pattern), text))
+else
+  temp.write(f.read.gsub(pattern, text))
+end
+
+temp.close()
+
+if options[:overwrite] == false then
+  print temp.open.read
+  exit
+end
+
+if options[:backup] == true then
+  FileUtils.copy_file(target, target + options[:suffix], true)
+end
+
+FileUtils.copy(temp, target, {:verbose => options[:verbose]})
+
