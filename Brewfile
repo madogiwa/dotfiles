@@ -131,6 +131,9 @@ brew "madogiwa/pssh/parallel-ssh"
 brew "imagemagick"
 brew "ffmpeg"
 
+## job management
+brew "digdag"
+
 
 ## ===========================================================================
 ## Mac Apps (cask)
