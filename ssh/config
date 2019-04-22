@@ -15,11 +15,11 @@ Host *
     ControlPath ~/.ssh/cm/%r@%h:%p
     ControlPersist 3m
 
-Host * !github.com !*.bitbucket.org
+Host * !github.com !*.bitbucket.org !gitlab.com
     ## ウィンドウタイトルにSSH接続先を表示
     PermitLocalCommand yes
     LocalCommand [ -n $TMUX ] && tmux rename-window "@`echo %n | sed 's/\.[a-z.-]*\.[a-z]*$//'`"
 
-Host github.com *.bitbucket.org
+Host github.com *.bitbucket.org gitlab.com
     ControlMaster auto
 
