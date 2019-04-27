@@ -376,11 +376,27 @@ function assume-role-clear() {
     fi
 }
 
+function assume-role-clear-role() {
+    if [ "${ROLE_SESSION_START}" ]; then
+        unset AWS_ACCESS_KEY_ID
+        unset AWS_SECRET_ACCESS_KEY
+        unset AWS_SESSION_TOKEN
+        unset AWS_SECURITY_TOKEN
+        unset AWS_ACCOUNT_ID
+        unset AWS_ACCOUNT_NAME
+        unset AWS_ACCOUNT_ROLE
+        unset ROLE_SESSION_START
+        unset GEO_ENV
+
+        echo "AWS role session cleared."
+    fi
+}
+
 ## check session timeout
 function precmd_aws_session_expire_check() {
     if [ "${ROLE_SESSION_START}" ]; then
         diff=$((`date +%s` - ${ROLE_SESSION_START}))
-        [ $diff -ge $AWS_ROLE_SESSION_TIMEOUT ] && assume-role-clear
+        [ $diff -ge $AWS_ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
     fi
 }
 add-zsh-hook precmd precmd_aws_session_expire_check
