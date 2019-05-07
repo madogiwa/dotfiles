@@ -17,6 +17,7 @@ cask "imageoptim"
 
 cask "appcleaner"
 cask "switchhosts"
+cask "clipy"
 
 mas 'Slack', id: 803453959
 mas 'LINE', id: 539883307
