@@ -14,7 +14,9 @@ cask "google-backup-and-sync"
 cask "microsoft-office"
 cask "calibre"
 cask "imageoptim"
+
 cask "appcleaner"
+cask "switchhosts"
 
 mas 'Slack', id: 803453959
 mas 'LINE', id: 539883307
