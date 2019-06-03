@@ -11,7 +11,6 @@ autoload -Uz _zplugin
 
 export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-$HOME/.zsh/cache}"
 
-
 ## ----------------------------------------------------------------------------
 ## enhancd
 ## ----------------------------------------------------------------------------
@@ -62,6 +61,8 @@ zplugin light superbrothers/zsh-kubectl-prompt
 
 ## anyenv
 zplugin ice wait'!0' atload'export GOROOT=`go env GOROOT`'; zplugin light madogiwa/zsh-anyenv-cache
+
+zpcompinit
 
 
 ## ============================================================================
