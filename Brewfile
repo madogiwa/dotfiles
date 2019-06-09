@@ -76,6 +76,7 @@ brew "tfenv"
 cask "google-cloud-sdk"
 brew "packer"
 brew "terraform-docs"
+brew "terraformer"
 
 brew "coinbase/assume-role/assume-role"
 
