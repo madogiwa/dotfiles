@@ -51,6 +51,7 @@ brew "pipenv"
 ## build & test tools
 brew "bazel"
 brew "circleci"
+brew "shellcheck"
 
 ## http client
 brew "httpie"
