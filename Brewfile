@@ -119,6 +119,7 @@ brew "kops"
 brew "kubectx"
 brew "argoproj/tap/argo"
 brew "shyiko/kubesec/kubesec"
+brew "kustomize"
 
 brew "hadolint"
 
