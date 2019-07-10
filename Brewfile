@@ -43,7 +43,7 @@ brew "vim"
 ## languages
 brew "rust"
 cask "java"
-cask "java8"
+cast "adoptopenjdk8"
 brew "sbt"
 brew "maven"
 brew "pipenv"
