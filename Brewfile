@@ -94,7 +94,7 @@ tap "rcmdnk/rcmdnkpac"
 brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
 
 ## tmux
-brew "tmux", args:["with-utf8proc"]
+brew "tmux"
 brew "ansifilter"
 
 ## fonts
