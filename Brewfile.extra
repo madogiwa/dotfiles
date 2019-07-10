@@ -5,7 +5,6 @@
 
 cask "bettertouchtool"
 cask "jetbrains-toolbox"
-cask "android-studio"
 cask "atok"
 cask "skype"
 cask "dropbox"
