@@ -473,7 +473,7 @@ function anyframe-widget-docker-shell() {
 ## serverless framework
 ## ============================================================================
 
-NODE_VERSION=`node --version | sed 's/v//'`
+NODE_VERSION=`cat ~/.anyenv/envs/nodenv/version`
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
