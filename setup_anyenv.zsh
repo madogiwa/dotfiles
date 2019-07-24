@@ -49,8 +49,6 @@ echo "install go ${latest}"
 goenv uninstall -f ${latest}
 goenv install ${latest}
 goenv global ${latest}
-
-go get -u github.com/golang/dep/cmd/dep
 goenv rehash
 
 
