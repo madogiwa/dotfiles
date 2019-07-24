@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+anyenv install --init
 anyenv update
 
 ## node
