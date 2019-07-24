@@ -473,6 +473,7 @@ function anyframe-widget-docker-shell() {
 ## serverless framework
 ## ============================================================================
 
+#NODE_VERSION=`nodenv versions | grep '\* ' | cut -d' ' -f2`
 NODE_VERSION=`cat ~/.anyenv/envs/nodenv/version`
 
 # tabtab source for serverless package
