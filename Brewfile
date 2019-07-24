@@ -79,6 +79,7 @@ brew "packer"
 brew "terraform-docs"
 brew "terraformer"
 
+tap "coinbase/assume-role"
 brew "coinbase/assume-role/assume-role"
 
 ## DB client
@@ -119,6 +120,7 @@ brew "skaffold"
 brew "kops"
 brew "kubectx"
 brew "argoproj/tap/argo"
+tap "shyiko/kubesec"
 brew "shyiko/kubesec/kubesec"
 brew "kustomize"
 
@@ -129,6 +131,7 @@ tap "thoughtbot/formulae"
 brew "rcm"
 
 ## ssh
+tap "madogiwa/pssh"
 brew "madogiwa/pssh/parallel-ssh"
 
 ## image & movie
