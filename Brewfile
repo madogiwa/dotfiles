@@ -64,7 +64,7 @@ cask "proxyman"
 ## monitoring tools
 brew "iftop"
 
-brew "global", args:["with-ctags", "with-pygments"]
+brew "global"
 
 ## code statistics
 brew "cloc"
