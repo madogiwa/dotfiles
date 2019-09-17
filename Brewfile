@@ -34,8 +34,9 @@ brew "lz4"
 ## ip address calculator
 brew "ipcalc"
 
-## json query tool
+## json, csv query tool
 brew "jq"
+brew "csvkit"
 
 ## editor
 brew "vim"
