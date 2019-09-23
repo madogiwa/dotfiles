@@ -60,7 +60,7 @@ zplugin ice wait'!0'; zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zs
 zplugin light superbrothers/zsh-kubectl-prompt
 
 ## anyenv
-zplugin ice wait'!0' atload'export GOROOT=`go env GOROOT`'; zplugin light madogiwa/zsh-anyenv-cache
+zplugin ice wait'!0' atload'export GOROOT=`go env GOROOT`; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH'; zplugin light madogiwa/zsh-anyenv-cache
 
 zpcompinit
 
