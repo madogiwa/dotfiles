@@ -61,6 +61,7 @@ brew "httpie"
 #brew "protobuf", args:["without-python@2"]
 #brew "mitmproxy"
 cask "proxyman"
+brew "privoxy"
 
 ## monitoring tools
 brew "iftop"
