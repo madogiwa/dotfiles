@@ -91,6 +91,7 @@ brew "percona-toolkit"
 
 ## json, yaml converter
 brew "remarshal"
+brew "jsonnet"
 
 ## newer screen + utf8 patch
 tap "rcmdnk/rcmdnkpac"
