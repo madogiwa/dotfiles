@@ -65,6 +65,7 @@ brew "privoxy"
 
 ## monitoring tools
 brew "iftop"
+brew "prometheus"
 
 brew "global"
 
