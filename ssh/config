@@ -3,8 +3,8 @@ Include conf.d/*
 
 Host *
     ## 接続の死活監視の間隔と回数
-    ServerAliveInterval 60
-    ServerAliveCountMax 5
+    ServerAliveInterval 30
+    ServerAliveCountMax 10
 
     ## パスフレーズの登録を有効にする
     AddKeysToAgent yes
