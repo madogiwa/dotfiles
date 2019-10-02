@@ -3,8 +3,9 @@ Include conf.d/*
 
 Host *
     ## 接続の死活監視の間隔と回数
-    ServerAliveInterval 30
-    ServerAliveCountMax 10
+    ServerAliveInterval 15
+    ServerAliveCountMax 4
+    TCPKeepAlive no
 
     ## パスフレーズの登録を有効にする
     AddKeysToAgent yes
