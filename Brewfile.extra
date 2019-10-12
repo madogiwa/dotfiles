@@ -15,7 +15,6 @@ cask "appcleaner"
 cask "clipy"
 
 mas 'Slack', id: 803453959
-mas 'LINE', id: 539883307
 mas 'Tweetbot', id: 557168941
 
 mas 'Quiver', id: 866773894
