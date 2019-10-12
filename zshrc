@@ -54,7 +54,8 @@ zplugin ice wait'!0'; zplugin light b4b4r07/enhancd
 zplugin ice wait'!0'; zplugin light mollifier/anyframe
 
 ## ssh-gent
-zplugin ice wait'!0'; zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+#zplugin ice wait'!0'; zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 ## kubectl-prompt
 zplugin light superbrothers/zsh-kubectl-prompt
