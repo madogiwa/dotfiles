@@ -111,10 +111,6 @@ cask "font-noto-mono"
 cask "font-roboto-mono"
 cask "font-roboto-mono-for-powerline"
 
-## QuickLook
-cask "qlstephen"
-cask "qlmarkdown"
-
 ## Containers
 cask "virtualbox"
 cask "docker"
