@@ -21,9 +21,6 @@ mas 'Tweetbot', id: 557168941
 mas 'Quiver', id: 866773894
 mas 'Pocket', id: 568494494
 
-mas 'Growl', id: 467939042
-mas 'HardwareGrowler', id: 475260933
-
 mas 'Yoink', id: 457622435
 mas 'PopClip', id: 445189367
 mas 'Magnet', id: 441258766
