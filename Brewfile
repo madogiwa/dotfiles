@@ -39,7 +39,7 @@ brew "csvkit"
 brew "vim"
 
 ## languages
-brew "rust"
+brew "rustup-init"
 cask "java"
 tap "homebrew/cask-versions"
 cask "adoptopenjdk8"
