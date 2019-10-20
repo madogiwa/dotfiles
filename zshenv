@@ -30,6 +30,9 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8"
 ## enable Docker BuildKit
 export DOCKER_BUILDKIT=1
 
+## append cargo envs
+[[ -f "${HOME}/.cargo/env" ]] && source "${HOME}/.cargo/env"
+
 
 ## ============================================================================
 ## anyenv
