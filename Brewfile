@@ -87,6 +87,7 @@ brew "coinbase/assume-role/assume-role"
 brew "mysql"
 brew "pgcli"
 brew "percona-toolkit"
+brew "tokyo-cabinet"
 
 ## json, yaml converter
 brew "remarshal"
