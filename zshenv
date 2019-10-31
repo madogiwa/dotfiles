@@ -24,7 +24,7 @@ fi
 ## ============================================================================
 ## exports
 ## ============================================================================
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
 ## enable Docker BuildKit
