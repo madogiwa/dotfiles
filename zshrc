@@ -283,6 +283,10 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
+# インクリメンタル検索でglobを利用可能にする
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
+
 
 ## ============================================================================
 ## prompt 
