@@ -112,7 +112,6 @@ cask "font-roboto-mono-for-powerline"
 ## Containers
 cask "virtualbox"
 cask "docker"
-cask "minikube"
 brew "kompose"
 brew "kubernetes-helm"
 brew "skaffold"
