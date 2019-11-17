@@ -52,6 +52,8 @@ goenv install ${latest}
 goenv global ${latest}
 goenv rehash
 
+go get github.com/spf13/cobra/cobra
+
 
 ## perl
 anyenv install -f plenv
