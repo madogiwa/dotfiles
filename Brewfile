@@ -136,6 +136,7 @@ brew "madogiwa/pssh/parallel-ssh"
 ## image & movie
 brew "imagemagick"
 brew "ffmpeg"
+brew "mozjpeg"
 
 ## job management
 brew "digdag"
