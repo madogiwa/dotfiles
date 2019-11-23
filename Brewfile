@@ -122,6 +122,7 @@ brew "argo"
 tap "shyiko/kubesec"
 brew "shyiko/kubesec/kubesec"
 brew "kustomize"
+brew "derailed/k9s/k9s"
 
 brew "hadolint"
 
