@@ -39,6 +39,9 @@ rbenv global ${latest}
 rbenv exec gem install bundler
 rbenv rehash
 
+rbenv exec gem install mdless
+rbenv rehash
+
 
 ## go
 anyenv install -f goenv
