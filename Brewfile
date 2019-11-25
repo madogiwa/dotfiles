@@ -40,8 +40,8 @@ brew "vim"
 
 ## languages
 brew "rustup-init"
-cask "java"
 tap "homebrew/cask-versions"
+cask "adoptopenjdk"
 cask "adoptopenjdk8"
 brew "sbt"
 brew "maven"
