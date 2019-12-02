@@ -72,6 +72,7 @@ brew "cloc"
 ## infrastructure
 brew "awscli"
 brew "amazon-ecs-cli"
+brew "docker-credential-helper-ecr"
 brew "aws-elasticbeanstalk"
 brew "tfenv"
 cask "google-cloud-sdk"
