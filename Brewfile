@@ -53,6 +53,7 @@ brew "shellcheck"
 
 ## http client
 brew "httpie"
+brew "wget"
 
 ## http debugging proxy
 #brew "protobuf", args:["without-python@2"]
