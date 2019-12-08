@@ -2,8 +2,6 @@
     path = ~/.gitconfig.local
 
 [core]
-    excludesfile = ~/.gitignore_global
-
     ## 改行コードの変換をしない
     autocrlf = false
 
