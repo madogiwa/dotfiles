@@ -15,6 +15,10 @@ if [[ "$OSTYPE" =~ darwin ]]; then
     brew bundle --file=Brewfile
 fi
 
+## use Xcode bundled Command Line Tools
+echo "switch Command Line Tools to /Application/Xcode.app"
+sudo xcode-select --switch /Applications/Xcode.app
+
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
