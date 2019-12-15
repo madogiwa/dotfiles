@@ -23,6 +23,7 @@ npm install -g @angular/cli
 npm install -g firebase-tools
 npm install -g ionic
 npm install -g cordova
+npm install -g cordova-res
 npm install -g serverless
 npm install -g awsp
 npm install -g yo generator-web-extension
