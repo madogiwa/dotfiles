@@ -11,6 +11,7 @@ cask "tresorit"
 cask "google-backup-and-sync"
 cask "calibre"
 cask "intel-power-gadget"
+cask "dash"
 
 cask "appcleaner"
 cask "clipy"
