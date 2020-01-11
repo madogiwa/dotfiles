@@ -355,7 +355,6 @@ RPROMPT='%{$fg[yellow]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'$RPROMPT
 ## ============================================================================
 
 source $(which assume-role)
-export AWS_ROLE_SESSION_TIMEOUT=3600
 
 function assume-role-clear() {
     if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
@@ -402,14 +401,14 @@ function assume-role-clear-role() {
 function precmd_aws_session_expire_check() {
     if [ "${ROLE_SESSION_START}" ]; then
         diff=$((`date +%s` - ${ROLE_SESSION_START}))
-        [ $diff -ge $AWS_ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
+        [ $diff -ge $ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
     fi
 }
 add-zsh-hook precmd precmd_aws_session_expire_check
 
 function aws_account_info {
     if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
-        least=$(($ROLE_SESSION_START + $AWS_ROLE_SESSION_TIMEOUT - `date +%s`))
+        least=$(($ROLE_SESSION_START + $ROLE_SESSION_TIMEOUT - `date +%s`))
         [ $least -ge 600 ] && least="" || least=" $least"
 
         echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
