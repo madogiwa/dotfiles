@@ -83,8 +83,8 @@ brew "packer"
 brew "terraform-docs"
 brew "terraformer"
 
-tap "coinbase/assume-role"
-brew "coinbase/assume-role/assume-role"
+tap "madogiwa/assume-role"
+brew "madogiwa/assume-role/assume-role"
 
 ## DB client
 brew "mysql"
