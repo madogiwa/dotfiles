@@ -128,6 +128,9 @@ brew "kustomize"
 brew "derailed/k9s/k9s"
 brew "kind"
 
+tap "goodwithtech/r"
+brew "dockertags"
+
 brew "hadolint"
 
 ## dotfile management
