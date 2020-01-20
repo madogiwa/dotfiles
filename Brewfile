@@ -18,6 +18,7 @@ brew "git-flow"
 brew "hub"
 brew "ghq"
 brew "git-secrets"
+brew "gibo"
 
 ## gnu version utils(date, etc)
 brew "coreutils"
