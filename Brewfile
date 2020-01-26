@@ -130,6 +130,7 @@ tap "shyiko/kubesec"
 brew "shyiko/kubesec/kubesec"
 brew "kustomize"
 brew "derailed/k9s/k9s"
+brew "stern"
 brew "kind"
 
 tap "goodwithtech/r"
