@@ -8,6 +8,9 @@ brew "zsh"
 brew "fish"
 brew "fzf"
 
+## man
+brew "tldr"
+
 ## better grep
 brew "ripgrep"
 
