@@ -64,7 +64,7 @@
 
     x-status-sb = status -sb
 
-    x-prune-merged-local-branch = !git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -p -I % git branch -d %
+    x-prune-merged-local-branch = !git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %
 
     cob = !"git branch -r|sed -e 's/origin\\///'|choice|xargs git checkout"
     x-diff = diff --word-diff=color
