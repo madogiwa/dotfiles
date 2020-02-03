@@ -3,10 +3,11 @@
 ## brew
 ## ===========================================================================
 
-## shells
+## shell & tools
 brew "zsh"
 brew "fish"
 brew "fzf"
+brew "watch"
 
 ## man
 brew "tldr"
