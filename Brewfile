@@ -150,6 +150,9 @@ brew "rcm"
 tap "madogiwa/pssh"
 brew "madogiwa/pssh/parallel-ssh"
 
+tap "xen0l/homebrew-taps"
+brew "aws-gate"
+
 ## image & movie
 brew "imagemagick"
 brew "ffmpeg"
