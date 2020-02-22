@@ -177,6 +177,8 @@ cask "vivaldi"
 cask "wireshark"
 cask "visual-studio-code"
 
+cask "libreoffice"
+
 
 ## ===========================================================================
 ## Mac Apps (mas)
