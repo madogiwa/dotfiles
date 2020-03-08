@@ -1,13 +1,30 @@
 
 ## ============================================================================
-## zplugin
+## zinit
 ## ============================================================================
 
-### Added by Zplugin's installer
-source "${HOME}/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin's installer chunk
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
 
 export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-$HOME/.zsh/cache}"
 
@@ -26,42 +43,42 @@ ENHANCD_COMMAND=j
 ## load plugins
 ## ----------------------------------------------------------------------------
 
-zplugin ice wait'!0'; zplugin light zdharma/fast-syntax-highlighting
+zinit ice wait'!0'; zinit light zdharma/fast-syntax-highlighting
 
-zplugin ice wait'!0'; zplugin light zsh-users/zsh-autosuggestions
-zplugin light zsh-users/zsh-history-substring-search
+zinit ice wait'!0'; zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
 
 ## pure theme
-zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
+zinit ice pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
 
 ## completions
-zplugin ice wait'!0'; zplugin light zsh-users/zsh-completions
+zinit ice wait'!0'; zinit light zsh-users/zsh-completions
 
-zplugin ice as"completion" wait'!0'; zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-zplugin ice as"completion" wait'!0'; zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+zinit ice as"completion" wait'!0'; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zinit ice as"completion" wait'!0'; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-zplugin ice wait'!0'; zplugin snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+zinit ice wait'!0'; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
-zplugin ice wait'!0'; zplugin snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
+zinit ice wait'!0'; zinit snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
 
 ## fuzzy matcher
-zplugin ice wait'!0'; zplugin ice from"gh-r" as"program"; zplugin light junegunn/fzf-bin
+zinit ice wait'!0'; zinit ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
 
 ## enhanced cd command 
-zplugin ice wait'!0'; zplugin light b4b4r07/enhancd
+zinit ice wait'!0'; zinit light b4b4r07/enhancd
 
 ## peco/percol/fzf wrapper
-zplugin ice wait'!0'; zplugin light mollifier/anyframe
+zinit ice wait'!0'; zinit light mollifier/anyframe
 
 ## ssh-gent
-#zplugin ice wait'!0'; zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+#zinit ice wait'!0'; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 ## kubectl-prompt
-zplugin light superbrothers/zsh-kubectl-prompt
+zinit light superbrothers/zsh-kubectl-prompt
 
 ## anyenv
-zplugin ice wait'!0' atload'export GOROOT=`go env GOROOT`; export GOPATH=`go env GOPATH`; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH'; zplugin light madogiwa/zsh-anyenv-cache
+zinit ice wait'!0' atload'export GOROOT=`go env GOROOT`; export GOPATH=`go env GOPATH`; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH'; zinit light madogiwa/zsh-anyenv-cache
 
 zpcompinit
 
@@ -80,7 +97,7 @@ setopt auto_cd
 setopt auto_pushd
 
 ## output return code if error occured
-# disable due to compatibility with zplugin
+# disable due to compatibility with zinit
 #setopt print_exit_value
 
 ## passthrough 8bit
