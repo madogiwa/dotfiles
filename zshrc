@@ -65,7 +65,7 @@ zinit ice wait'!0'; zinit snippet https://github.com/gangleri/pipenv/blob/master
 zinit ice wait'!0'; zinit ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
 
 ## enhanced cd command 
-zinit ice wait'!0'; zinit light b4b4r07/enhancd
+#zinit ice wait'!0'; zinit light b4b4r07/enhancd
 
 ## peco/percol/fzf wrapper
 zinit ice wait'!0'; zinit light mollifier/anyframe
