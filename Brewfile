@@ -23,6 +23,8 @@ brew "hub"
 brew "ghq"
 brew "git-secrets"
 brew "gibo"
+tap "github/gh"
+brew "gh"
 
 ## gnu version utils(date, etc)
 brew "coreutils"
