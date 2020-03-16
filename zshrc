@@ -416,7 +416,7 @@ function assume-role-clear-role() {
 
 ## check session timeout
 function precmd_aws_session_expire_check() {
-    if [ "${ROLE_SESSION_START}" ]; then
+    if [ "${ROLE_SESSION_START}" ] && [ "$ROLE_SESSION_TIMEOUT" ]; then
         diff=$((`date +%s` - ${ROLE_SESSION_START}))
         [ $diff -ge $ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
     fi
@@ -425,8 +425,10 @@ add-zsh-hook precmd precmd_aws_session_expire_check
 
 function aws_account_info {
     if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
-        least=$(($ROLE_SESSION_START + $ROLE_SESSION_TIMEOUT - `date +%s`))
-        [ $least -ge 600 ] && least="" || least=" $least"
+        if [ "$ROLE_SESSION_START" ] && [ "$ROLE_SESSION_TIMEOUT" ]; then
+            least=$(($ROLE_SESSION_START + $ROLE_SESSION_TIMEOUT - `date +%s`))
+            [ $least -ge 600 ] && least="" || least=" $least"
+        fi
 
         echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
     fi
