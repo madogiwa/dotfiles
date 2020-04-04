@@ -71,6 +71,7 @@ brew "privoxy"
 ## monitoring tools
 brew "iftop"
 brew "prometheus"
+brew "mtr"
 
 brew "global"
 
@@ -162,6 +163,10 @@ brew "mozjpeg"
 
 ## job management
 brew "digdag"
+
+## video conference
+cask "zoomus"
+cask "krisp"
 
 
 ## ===========================================================================
