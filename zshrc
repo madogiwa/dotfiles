@@ -262,8 +262,8 @@ export GREP_OPTIONS='--color=auto'
 ## history file
 HISTFILE=${HOME}/.zsh_history
 
-## history size on memory (200,000)
-HISTSIZE=200000
+## history size on memory (500,000)
+HISTSIZE=500000
 
 ## history size on disk (100,000,000)
 SAVEHIST=100000000
