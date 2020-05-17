@@ -139,6 +139,7 @@ brew "kustomize"
 brew "derailed/k9s/k9s"
 brew "stern"
 brew "kind"
+brew "dive"
 
 tap "goodwithtech/r"
 brew "dockertags"
