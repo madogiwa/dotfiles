@@ -140,6 +140,7 @@ brew "derailed/k9s/k9s"
 brew "stern"
 brew "kind"
 brew "dive"
+brew "docker-slim"
 
 tap "goodwithtech/r"
 brew "dockertags"
