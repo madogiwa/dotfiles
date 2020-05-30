@@ -17,6 +17,7 @@ brew "ripgrep"
 
 ## git & git tools
 brew "git"
+brew "git-lfs"
 brew "tig"
 brew "git-flow"
 brew "hub"
