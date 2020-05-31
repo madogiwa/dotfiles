@@ -178,6 +178,7 @@ cask "iterm2"
 
 cask "google-chrome"
 cask "firefox"
+cask "firefox-developer-edition"
 
 #cask "gas-mask"
 cask "wireshark"
