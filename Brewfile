@@ -177,6 +177,7 @@ cask "karabiner-elements"
 cask "iterm2"
 
 cask "google-chrome"
+cask "google-chrome-canary"
 cask "firefox"
 cask "firefox-developer-edition"
 
