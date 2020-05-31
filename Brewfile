@@ -181,6 +181,7 @@ cask "google-chrome-canary"
 cask "firefox"
 cask "firefox-developer-edition"
 
+cask "hyperswitch"
 #cask "gas-mask"
 cask "wireshark"
 cask "visual-studio-code"
