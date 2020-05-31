@@ -176,7 +176,6 @@ cask "krisp"
 ## Mac Apps (cask)
 ## ===========================================================================
 cask "karabiner-elements"
-cask "hyperswitch"
 cask "iterm2"
 
 cask "google-chrome"
