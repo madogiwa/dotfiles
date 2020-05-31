@@ -180,7 +180,6 @@ cask "iterm2"
 
 cask "google-chrome"
 cask "firefox"
-cask "vivaldi"
 
 #cask "gas-mask"
 cask "wireshark"
