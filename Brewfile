@@ -141,6 +141,8 @@ brew "kind"
 brew "dive"
 brew "docker-slim"
 
+brew "minikube"
+
 tap "ubuntu/microk8s"
 brew "microk8s"
 
