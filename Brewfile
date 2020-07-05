@@ -58,12 +58,12 @@ brew "bazel"
 brew "circleci"
 brew "shellcheck"
 
-## http client
+## http & api tools
 brew "httpie"
 brew "wget"
+brew "protobuf"
 
 ## http debugging proxy
-#brew "protobuf", args:["without-python@2"]
 #brew "mitmproxy"
 cask "proxyman"
 brew "privoxy"
