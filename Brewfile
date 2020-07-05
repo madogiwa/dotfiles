@@ -156,8 +156,7 @@ tap "thoughtbot/formulae"
 brew "rcm"
 
 ## ssh
-tap "madogiwa/pssh"
-brew "madogiwa/pssh/parallel-ssh"
+brew "pssh"
 
 tap "xen0l/homebrew-taps"
 brew "aws-gate"
