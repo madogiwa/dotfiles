@@ -143,9 +143,6 @@ brew "docker-slim"
 
 brew "minikube"
 
-tap "ubuntu/microk8s"
-brew "microk8s"
-
 tap "goodwithtech/r"
 brew "dockertags"
 
