@@ -77,3 +77,17 @@ plenv install-cpanm
 
 plenv rehash
 
+
+## python
+anyenv install -f pyenv
+source ~/.zshrc
+
+prefix="3"
+latest=`pyenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
+echo "install python ${latest}"
+pyenv uninstall -f ${latest}
+pyenv install ${latest}
+pyenv global ${latest}
+
+pyenv rehash
+
