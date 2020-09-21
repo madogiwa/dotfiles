@@ -60,7 +60,8 @@ goenv install ${latest}
 goenv global ${latest}
 goenv rehash
 
-go get github.com/spf13/cobra/cobra
+go get -u github.com/spf13/cobra/cobra
+go get -u github.com/99designs/gqlgen
 
 
 ## perl
