@@ -21,6 +21,7 @@ npm install -g @vue/cli-init
 npm install -g @angular/cli
 npm install -g @angular/cli
 npm install -g firebase-tools
+npm install -g expo-cli
 npm install -g ionic
 npm install -g cordova
 npm install -g cordova-res
