@@ -44,3 +44,13 @@ if [ -d "${ANYENV_ROOT}" ]; then
     export PATH=${ANYENV_ROOT}/bin:$PATH
 fi
 
+## ============================================================================
+## Android SDK
+## ============================================================================
+ANDROID_ROOT="${HOME}/Library/Android"
+
+if [ -d "${ANDROID_ROOT}" ]; then
+    export ANDROID_SDK="${ANDROID_ROOT}/sdk"
+    export PATH=${ANDROID_SDK}/platform-tools:$PATH
+fi
+
