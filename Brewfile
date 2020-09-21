@@ -192,8 +192,9 @@ cask "hyperswitch"
 cask "wireshark"
 cask "visual-studio-code"
 
-cask "libreoffice"
+cask "android-studio"
 
+cask "libreoffice"
 
 ## ===========================================================================
 ## Mac Apps (mas)
