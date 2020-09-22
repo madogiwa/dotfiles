@@ -16,6 +16,9 @@ nodenv global ${latest}
 
 npm install -g npm
 npm install -g yarn
+npm install -g typescript
+npm install -g ts-node
+npm install -g typesync
 npm install -g @vue/cli
 npm install -g @vue/cli-init
 npm install -g @angular/cli
