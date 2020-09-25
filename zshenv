@@ -44,6 +44,9 @@ if [ -d "${ANYENV_ROOT}" ]; then
     export PATH=${ANYENV_ROOT}/bin:$PATH
 fi
 
+## avoid brew doctor warning
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+
 ## ============================================================================
 ## Android SDK
 ## ============================================================================
