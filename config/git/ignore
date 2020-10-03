@@ -4,3 +4,6 @@
 *.iml
 .vscode/
 
+*~
+*.swp
+
