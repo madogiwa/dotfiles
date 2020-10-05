@@ -93,3 +93,5 @@
 	date = iso-strict
 [diff]
 	wordRegex = [^�-�][�-�]*
+[init]
+	defaultBranch = main
