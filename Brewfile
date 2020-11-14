@@ -125,7 +125,6 @@ cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-powerline"
 
 ## Containers
-cask "virtualbox"
 cask "docker"
 brew "kompose"
 brew "kubernetes-helm"
