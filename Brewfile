@@ -7,12 +7,14 @@
 brew "zsh"
 brew "fzf"
 brew "watch"
+brew "shellcheck"
 
 ## man
 brew "tldr"
 
-## better grep
+## text search
 brew "ripgrep"
+brew "global"
 
 ## git & git tools
 brew "git"
@@ -25,7 +27,7 @@ brew "gibo"
 tap "github/gh"
 brew "gh"
 
-## gnu version utils(date, etc)
+## gnu utils(date, etc)
 brew "coreutils"
 brew "gnu-tar"
 brew "gawk"
@@ -44,18 +46,21 @@ brew "csvkit"
 ## editor
 brew "vim"
 
-## languages
+## rust
 brew "rustup-init"
+
+## java
 tap "homebrew/cask-versions"
 cask "adoptopenjdk8"
 brew "sbt"
 brew "maven"
 brew "pipenv"
 
-## build & test tools
+## CI tools
 brew "bazel"
+brew "skaffold"
 brew "circleci"
-brew "shellcheck"
+brew "act"
 
 ## http & api tools
 brew "httpie"
@@ -72,8 +77,6 @@ brew "iftop"
 brew "prometheus"
 brew "mtr"
 
-brew "global"
-
 ## code statistics
 brew "cloc"
 
@@ -84,9 +87,10 @@ brew "weaveworks/tap/eksctl"
 brew "amazon-ecs-cli"
 brew "docker-credential-helper-ecr"
 brew "aws-elasticbeanstalk"
-brew "tfenv"
 cask "google-cloud-sdk"
 brew "packer"
+
+brew "tfenv"
 brew "terraform-docs"
 brew "terraformer"
 
@@ -105,13 +109,13 @@ brew "remarshal"
 brew "jsonnet"
 
 ## newer screen + utf8 patch
-tap "rcmdnk/rcmdnkpac"
-brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
 
-## tmux
+## Terminal Multiplexer
 brew "tmux"
 brew "tmux-xpanes"
 brew "ansifilter"
+#tap "rcmdnk/rcmdnkpac"
+#brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
 
 ## fonts
 tap "homebrew/cask-fonts"
@@ -127,7 +131,6 @@ cask "font-jetbrains-mono-powerline"
 cask "docker"
 brew "kompose"
 brew "kubernetes-helm"
-brew "skaffold"
 brew "kubectx"
 tap "argoproj/tap"
 brew "argo"
@@ -150,7 +153,6 @@ brew "hadolint"
 tap "FairwindsOps/tap"
 brew "FairwindsOps/tap/polaris"
 
-
 ## dotfile management
 tap "thoughtbot/formulae"
 brew "rcm"
@@ -171,13 +173,16 @@ brew "digdag"
 
 ## video conference
 cask "zoomus"
-cask "krisp"
 
 
 ## ===========================================================================
 ## Mac Apps (cask)
 ## ===========================================================================
+
 cask "karabiner-elements"
+cask "clipy"
+cask "hyperswitch"
+
 cask "iterm2"
 
 cask "google-chrome"
@@ -185,19 +190,16 @@ cask "google-chrome-canary"
 cask "firefox"
 cask "firefox-developer-edition"
 
-cask "hyperswitch"
-#cask "gas-mask"
-cask "wireshark"
-cask "visual-studio-code"
+cask "appcleaner"
 
+cask "wireshark"
+cask "switchhosts"
+
+cask "visual-studio-code"
 cask "libreoffice"
 
+cask "graphiql"
 
-## ===========================================================================
-## Mac Apps (mas)
-## ===========================================================================
-mas 'WinArchiver Lite', id: 414855915
-mas 'The Unarchiver', id: 425424353
-mas 'CotEditor', id: 1024640650
-mas 'Xcode', id: 497799835
+cask "deepl"
+cask "zoomus"
 

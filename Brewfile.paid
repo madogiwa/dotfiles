@@ -1,0 +1,27 @@
+
+cask "atok"
+cask "bettertouchtool"
+cask "jetbrains-toolbox"
+cask "google-backup-and-sync"
+
+## ===========================================================================
+## Mac Apps (mas)
+## ===========================================================================
+
+mas 'Tweetbot', id: 1384080005
+
+mas 'Yoink', id: 457622435
+
+mas 'Pixelmator', id: 407963104
+mas 'Affinity Designer', id: 824171161
+mas 'PDF Expert', id: 1055273043
+
+mas '1Password', id: 443987910
+mas '1Password 7', id: 1333542190
+
+mas 'Final Cut Pro', id: 424389933
+mas 'Motion', id: 434290957
+mas 'Compressor', id: 424390742
+
+mas 'WiFi Explorer', id: 494803304
+
