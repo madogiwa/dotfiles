@@ -198,7 +198,7 @@ cask "switchhosts"
 cask "visual-studio-code"
 cask "libreoffice"
 
-cask "graphiql"
+cask "altair-graphql-client"
 
 cask "deepl"
 cask "zoomus"
