@@ -274,11 +274,17 @@ REPORTTIME=3
 ## ignore repeated command
 setopt hist_ignore_dups
 
-## don't save duplicate command into history file
+## delete duplicate command from history file
+setopt hist_ignore_all_dups
+
+## do not save duplicate command
 setopt hist_save_no_dups
 
 ## share history list
 #setopt share_history
+
+## do not overwrite history file
+setopt append_history
 
 ## save history file at every command execution
 setopt inc_append_history
@@ -294,6 +300,12 @@ setopt hist_ignore_space
 
 ## recude blanks
 setopt hist_reduce_blanks
+
+## expire duplicate command first when triming history
+setopt hist_expire_dups_first
+
+## don't show duplicate command
+setopt hist_find_no_dups
 
 ## customize history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
