@@ -201,6 +201,7 @@ cask "libreoffice"
 
 cask "altair-graphql-client"
 
+cask "kap"
 cask "deepl"
 cask "zoomus"
 
