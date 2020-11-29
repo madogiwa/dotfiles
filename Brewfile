@@ -41,6 +41,7 @@ brew "ipcalc"
 
 ## json, csv query tool
 brew "jq"
+brew "yq"
 brew "csvkit"
 
 ## editor
