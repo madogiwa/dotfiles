@@ -43,6 +43,8 @@ brew "ipcalc"
 brew "jq"
 brew "yq"
 brew "csvkit"
+tap "noborus/tap"
+brew "trdsql"
 
 ## editor
 brew "vim"
