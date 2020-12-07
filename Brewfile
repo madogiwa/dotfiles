@@ -8,6 +8,7 @@ brew "zsh"
 brew "fzf"
 brew "watch"
 brew "shellcheck"
+brew "sponge"
 
 ## man
 brew "tldr"
