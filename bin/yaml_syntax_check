@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  ruby -r yaml -e 'YAML.load STDIN'
+else
+  ruby -r yaml -e "YAML.load_file '$1'"
+fi
+

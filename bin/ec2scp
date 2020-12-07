@@ -1,0 +1,54 @@
+#!/bin/sh
+
+set -eu
+
+if [ $# -lt 1 ]; then
+  echo "ec2scp [options...] [src] [dest]"
+  exit 1
+fi
+
+## 終了時にSSH一時鍵を削除
+cleanup() {
+  rm -f $TMP_KEY
+  rm -f $TMP_PUB_KEY
+}
+
+## 転送元と転送先を取得
+OPTIONS=${@:1:($#-2)}
+SRC=${@:($#-1):1}
+DEST=${@:$#:1}
+
+echo $OPTIONS
+echo $SRC
+echo $DEST
+
+## username@instance-id 形式の値を取得
+## 手を抜いているためSRCとDESTの両方に含まれている場合は DEST 側が採用されてしまう
+REMOTE=""
+if [ "`echo ${SRC} | grep '@'`" ]; then REMOTE=${SRC}; fi
+if [ "`echo ${DEST} | grep '@'`" ]; then REMOTE=${DEST}; fi
+
+## username@instance-id 形式の指定がない場合はエラー
+if [ "${REMOTE}" = "" ]; then
+  echo "You must specify a value in format [username@instance-id]"
+  exit 2
+fi
+
+## 引数をユーザ名とインスタンスIDに分離
+PARAMS=( $(echo $REMOTE | tr -s '@' ' ' | tr -s ':' ' ') )
+EC2_USER=${PARAMS[0]}
+INSTANCE_ID=${PARAMS[1]}
+
+## SSH一時鍵を生成
+TMP_KEY=$(mktemp -u)
+TMP_PUB_KEY=${TMP_KEY}.pub
+ssh-keygen -t rsa -f $TMP_KEY -q -N ""
+trap cleanup SIGHUP SIGINT SIGKILL SIGTERM
+
+## 一時鍵をEC2に登録
+EC2_AZ=$(aws ec2 describe-instances --instance-ids ${INSTANCE_ID} --query 'Reservations[].Instances[].Placement.AvailabilityZone' --output text)
+aws ec2-instance-connect send-ssh-public-key --instance-id ${INSTANCE_ID} --availability-zone ${EC2_AZ} --instance-os-user ${EC2_USER} --ssh-public-key file://${TMP_PUB_KEY} > /dev/null
+
+## SSH接続
+scp ${OPTIONS} -i ${TMP_KEY} ${SRC} ${DEST}
+

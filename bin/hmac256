@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -lt 1 -o $# -gt 3 ]; then
+    echo "Usage: $0 [key] [message]"
+    exit 1
+fi
+
+if [ $# -eq 2 ]; then
+    echo "$2" | openssl dgst -sha256 -hmac "$1"
+else
+    openssl dgst -sha256 -hmac $1
+fi
+
