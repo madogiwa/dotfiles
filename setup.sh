@@ -15,6 +15,10 @@ if [[ "$OSTYPE" =~ darwin ]]; then
     brew bundle --file=Brewfile
 fi
 
+## fix compinit insecure directories
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
+
 ## use Xcode bundled Command Line Tools
 echo "switch Command Line Tools to /Application/Xcode.app"
 sudo xcodebuild -license accept
