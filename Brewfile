@@ -178,6 +178,7 @@ brew "digdag"
 
 ## video conference
 cask "zoomus"
+cask "discord"
 
 
 ## ===========================================================================
