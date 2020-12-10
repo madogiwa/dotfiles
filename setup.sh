@@ -17,6 +17,7 @@ fi
 
 ## use Xcode bundled Command Line Tools
 echo "switch Command Line Tools to /Application/Xcode.app"
+sudo xcodebuild -license accept
 sudo xcode-select --switch /Applications/Xcode.app
 
 ## install tpm(tmux package manager)
