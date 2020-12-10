@@ -58,7 +58,6 @@ tap "homebrew/cask-versions"
 cask "adoptopenjdk8"
 brew "sbt"
 brew "maven"
-brew "pipenv"
 
 ## CI tools
 brew "bazel"
