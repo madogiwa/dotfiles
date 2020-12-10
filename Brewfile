@@ -129,7 +129,6 @@ cask "font-noto-mono"
 cask "font-roboto-mono"
 cask "font-roboto-mono-for-powerline"
 cask "font-jetbrains-mono"
-cask "font-jetbrains-mono-powerline"
 
 ## Containers
 cask "docker"
