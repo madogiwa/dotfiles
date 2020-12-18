@@ -71,6 +71,9 @@ brew "httpie"
 brew "wget"
 brew "protobuf"
 
+brew "mkcert"
+brew "nss"
+
 ## http debugging proxy
 #brew "mitmproxy"
 cask "proxyman"
