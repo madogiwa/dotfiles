@@ -180,7 +180,7 @@ brew "mozjpeg"
 brew "digdag"
 
 ## video conference
-cask "zoomus"
+cask "zoom"
 cask "discord"
 
 
@@ -211,5 +211,4 @@ cask "altair-graphql-client"
 
 cask "kap"
 cask "deepl"
-cask "zoomus"
 
