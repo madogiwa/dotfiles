@@ -62,6 +62,8 @@ zinit ice wait'!0'; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
 zinit ice wait'!0'; zinit snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
 
+zinit snippet OMZP::gcloud
+
 ## fuzzy matcher
 zinit ice wait'!0'; zinit ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
 
