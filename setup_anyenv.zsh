@@ -77,7 +77,7 @@ anyenv install -f plenv
 source ~/.zshrc
 ln -s ~/.anyenv/envs/plenv ~/.plenv
 
-prefix="5.26"
+prefix="5.32"
 latest=`plenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
 echo "install perl ${latest}"
 plenv uninstall -f ${latest}
