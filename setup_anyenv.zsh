@@ -6,6 +6,7 @@ anyenv update
 ## node
 anyenv install -f nodenv
 source ~/.zshrc
+ln -s ~/.anyenv/envs/nodenv ~/.nodenv
 
 prefix="14"
 latest=`nodenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
@@ -37,6 +38,7 @@ nodenv rehash
 ## ruby
 anyenv install -f rbenv
 source ~/.zshrc
+ln -s ~/.anyenv/envs/rbenv ~/.rbenv
 
 prefix=""
 latest=`rbenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
@@ -55,6 +57,7 @@ rbenv rehash
 ## go
 anyenv install -f goenv
 source ~/.zshrc
+ln -s ~/.anyenv/envs/goenv ~/.goenv
 
 prefix=""
 latest=`goenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
@@ -72,6 +75,7 @@ go get -u github.com/marianogappa/chart
 ## perl
 anyenv install -f plenv
 source ~/.zshrc
+ln -s ~/.anyenv/envs/plenv ~/.plenv
 
 prefix="5.26"
 latest=`plenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
@@ -87,6 +91,7 @@ plenv rehash
 ## python
 anyenv install -f pyenv
 source ~/.zshrc
+ln -s ~/.anyenv/envs/pyenv ~/.pyenv
 
 prefix="3"
 latest=`pyenv install -l | grep -E "^\s*${prefix}[0-9.]*$" | sort -V -r | head -n 1 | tr -d ' '`
