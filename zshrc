@@ -83,6 +83,10 @@ zinit light superbrothers/zsh-kubectl-prompt
 ## anyenv
 zinit ice wait'!0' atload'export GOROOT=`go env GOROOT`; export GOPATH=`go env GOPATH`; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH'; zinit light madogiwa/zsh-anyenv-cache
 
+## direnv
+zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
+zinit light direnv/direnv
+
 zpcompinit
 
 
