@@ -11,6 +11,9 @@ brew "shellcheck"
 brew "sponge"
 brew "asdf"
 
+# used by asdf
+brew "gnupg"
+
 ## man
 brew "tldr"
 
