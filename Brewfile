@@ -9,6 +9,7 @@ brew "fzf"
 brew "watch"
 brew "shellcheck"
 brew "sponge"
+brew "asdf"
 
 ## man
 brew "tldr"
