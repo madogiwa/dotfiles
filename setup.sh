@@ -39,17 +39,6 @@ if [[ ! -d ~/.zplugin ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 fi
 
-## install anyenv
-if [ -d ~/.anyenv ]; then
-    echo "~/.anyenv already exists, skip install"
-else
-    git clone https://github.com/riywo/anyenv ~/.anyenv
-
-    mkdir -p ~/.anyenv/plugins
-    git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
-    git clone https://github.com/amashigeseiji/anyenv-lazyload.git ~/.anyenv/plugins/anyenv-lazyload
-fi
-
 ## ssh folder
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh

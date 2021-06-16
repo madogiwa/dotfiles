@@ -33,20 +33,6 @@ export DOCKER_BUILDKIT=1
 ## append cargo envs
 [[ -f "${HOME}/.cargo/env" ]] && source "${HOME}/.cargo/env"
 
-
-## ============================================================================
-## anyenv
-## ============================================================================
-export ANYENV_ROOT="${HOME}/.anyenv"
-
-## initのみzshrcで実行
-if [ -d "${ANYENV_ROOT}" ]; then
-    export PATH=${ANYENV_ROOT}/bin:$PATH
-fi
-
-## avoid brew doctor warning
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
-
 ## ============================================================================
 ## Android SDK
 ## ============================================================================

@@ -80,12 +80,13 @@ zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 ## kubectl-prompt
 zinit light superbrothers/zsh-kubectl-prompt
 
-## anyenv
-zinit ice wait'!0' atload'export GOROOT=`go env GOROOT`; export GOPATH=`go env GOPATH`; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH'; zinit light madogiwa/zsh-anyenv-cache
-
 ## direnv
 zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
 zinit light direnv/direnv
+
+## asdf
+zinit ice lucid as'program' src'asdf.sh'
+zinit light asdf-vm/asdf
 
 zpcompinit
 
@@ -532,18 +533,17 @@ bindkey '^]' ghq-fzf
 ## serverless framework
 ## ============================================================================
 
-#NODE_VERSION=`nodenv versions | grep '\* ' | cut -d' ' -f2`
-NODE_VERSION=`cat ~/.anyenv/envs/nodenv/version`
+NODEJS_HOME=$(asdf where nodejs)
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $HOME/.anyenv/envs/nodenv/versions/$NODE_VERSION/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
 
 ## ============================================================================
