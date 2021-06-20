@@ -194,7 +194,6 @@ cask "discord"
 
 cask "karabiner-elements"
 cask "clipy"
-cask "hyperswitch"
 
 cask "iterm2"
 
