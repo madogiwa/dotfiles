@@ -88,8 +88,6 @@ zinit light direnv/direnv
 zinit ice lucid as'program' src'asdf.sh'
 zinit light asdf-vm/asdf
 
-zpcompinit
-
 
 ## ============================================================================
 ## general
