@@ -81,7 +81,7 @@ zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 zinit light superbrothers/zsh-kubectl-prompt
 
 ## direnv
-zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
+zinit ice from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
 zinit light direnv/direnv
 
 ## asdf
