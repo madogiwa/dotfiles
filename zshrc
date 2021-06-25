@@ -44,44 +44,43 @@ ENHANCD_COMMAND=j
 ## load plugins
 ## ----------------------------------------------------------------------------
 
-zinit ice wait'!0'; zinit light zdharma/fast-syntax-highlighting
+zinit ice wait'!0' lucid; zinit light zdharma/fast-syntax-highlighting
 
-zinit ice wait'!0'; zinit light zsh-users/zsh-autosuggestions
+zinit ice wait'!0' lucid; zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
 
 ## pure theme
-zinit ice pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
+zinit ice lucid pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
 
 ## completions
-zinit ice wait'!0'; zinit light zsh-users/zsh-completions
+zinit ice wait'!0' lucid; zinit light zsh-users/zsh-completions
 
-zinit ice as"completion" wait'!0'; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-zinit ice as"completion" wait'!0'; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-zinit ice wait'!0'; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+zinit ice wait'!0' lucid; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
-zinit ice wait'!0'; zinit snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
+zinit ice wait'!0' lucid; zinit snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
 
-zinit snippet OMZP::gcloud
+zinit ice wait'!0' lucid; zinit snippet OMZP::gcloud
 
 ## fuzzy matcher
-zinit ice wait'!0'; zinit ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
+zinit ice wait'!0' lucid ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
 
 ## enhanced cd command 
-#zinit ice wait'!0'; zinit light b4b4r07/enhancd
+#zinit ice wait'!0' lucid; zinit light b4b4r07/enhancd
 
 ## peco/percol/fzf wrapper
-zinit ice wait'!0'; zinit light mollifier/anyframe
+zinit ice wait'!0' lucid; zinit light mollifier/anyframe
 
 ## ssh-gent
-#zinit ice wait'!0'; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 ## kubectl-prompt
-zinit light superbrothers/zsh-kubectl-prompt
+zinit ice lucid; zinit light superbrothers/zsh-kubectl-prompt
 
 ## direnv
-zinit ice from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
+zinit ice lucid from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
 zinit light direnv/direnv
 
 ## asdf
