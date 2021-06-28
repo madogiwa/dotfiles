@@ -64,6 +64,8 @@ zinit ice wait'!0' lucid; zinit snippet https://github.com/gangleri/pipenv/blob/
 
 zinit ice wait'!0' lucid; zinit snippet OMZP::gcloud
 
+zinit ice wait'!0' lucid; zinit snippet OMZP::aws
+
 ## fuzzy matcher
 zinit ice wait'!0' lucid ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
 
@@ -357,6 +359,10 @@ precmd_title() {
 add-zsh-hook precmd precmd_title
 
 ## show AWS_PROFILE in prompt
+
+# disable OMZP::aws's prompt
+export SHOW_AWS_PROMPT=false
+
 function aws_prof {
   local profile="${AWS_PROFILE:=default}"
   if [ "${profile}" != "default" ]; then
