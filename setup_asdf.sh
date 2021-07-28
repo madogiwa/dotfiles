@@ -39,7 +39,7 @@ asdf reshim golang
 ##
 
 asdf plugin add perl
-asdf install perl 5.16.2
+asdf install perl 5.16.3
 asdf install perl 5.32.1
 asdf reshim perl
 
