@@ -5,7 +5,7 @@
 ##
 
 asdf plugin add nodejs
-asdf install nodejs latest:14
+asdf install nodejs 14.17.6
 asdf reshim nodejs
 
 ##
@@ -14,7 +14,7 @@ asdf reshim nodejs
 
 asdf plugin add ruby
 asdf install ruby latest:2.3
-asdf install ruby latest:3.0
+asdf install ruby 3.0.2
 asdf reshim ruby
 
 ##
@@ -22,8 +22,8 @@ asdf reshim ruby
 ##
 
 asdf plugin add python
-asdf install python latest:3.8
 asdf install python latest:3.7
+asdf install python 3.8.12
 asdf reshim python
 
 ##
@@ -32,7 +32,7 @@ asdf reshim python
 
 asdf plugin add golang
 asdf install golang latest:1.16
-asdf install golang latest:1.17
+asdf install golang 1.17.1
 asdf reshim golang
 
 ##
