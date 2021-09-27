@@ -76,6 +76,7 @@ zinit ice wait'!0' lucid ice from"gh-r" as"program"; zinit light junegunn/fzf-bi
 zinit ice wait'!0' lucid; zinit light mollifier/anyframe
 
 ## ssh-gent
+zstyle :omz:plugins:ssh-agent identities ''  # disable automatic ssh-add
 zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 
 ## kubectl-prompt
