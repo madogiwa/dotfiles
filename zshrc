@@ -52,9 +52,6 @@ zinit light zsh-users/zsh-history-substring-search
 ## pure theme
 zinit ice lucid pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
 
-## completions
-zinit ice wait'!0' lucid; zinit light zsh-users/zsh-completions
-
 zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
@@ -90,6 +87,8 @@ zinit light direnv/direnv
 zinit ice lucid as'program' src'asdf.sh'
 zinit light asdf-vm/asdf
 
+## completions
+zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
 
 ## ============================================================================
 ## general
