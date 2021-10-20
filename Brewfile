@@ -155,9 +155,6 @@ brew "docker-slim"
 
 brew "minikube"
 
-tap "goodwithtech/r"
-brew "dockertags"
-
 brew "hadolint"
 
 tap "FairwindsOps/tap"
