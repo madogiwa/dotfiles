@@ -156,9 +156,6 @@ brew "minikube"
 
 brew "hadolint"
 
-tap "FairwindsOps/tap"
-brew "FairwindsOps/tap/polaris"
-
 ## dotfile management
 tap "thoughtbot/formulae"
 brew "rcm"
