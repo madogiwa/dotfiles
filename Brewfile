@@ -29,7 +29,6 @@ brew "git-flow"
 brew "ghq"
 brew "git-secrets"
 brew "gibo"
-tap "github/gh"
 brew "gh"
 brew "svn"
 
