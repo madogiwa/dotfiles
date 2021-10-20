@@ -93,8 +93,7 @@ brew "cloc"
 
 ## infrastructure
 brew "awscli"
-tap "weaveworks/tap"
-brew "weaveworks/tap/eksctl"
+brew "eksctl"
 brew "amazon-ecs-cli"
 brew "docker-credential-helper-ecr"
 brew "aws-elasticbeanstalk"
