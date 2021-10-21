@@ -87,6 +87,9 @@ zinit light direnv/direnv
 zinit ice lucid as'program' src'asdf.sh'
 zinit light asdf-vm/asdf
 
+# avoid warning by brew
+alias brew="env PATH=${PATH//$HOME\/.asdf\/shims:/} brew"
+
 ## completions
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
 
