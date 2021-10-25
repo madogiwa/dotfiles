@@ -30,6 +30,7 @@ brew "git-secrets"
 brew "gibo"
 brew "gh"
 brew "svn"
+brew "git-delta"
 
 ## gnu utils(date, etc)
 brew "coreutils"
