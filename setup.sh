@@ -34,9 +34,9 @@ if [ $? -ne 0 ]; then
     sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
 fi
 
-## install zplugin
-if [[ ! -d ~/.zplugin ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+## install zinit
+if [[ ! -d ~/.zinit ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 fi
 
 ## ssh folder
