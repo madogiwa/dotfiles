@@ -58,6 +58,7 @@ brew "trdsql"
 
 ## editor
 brew "vim"
+brew "neovim"
 
 ## rust
 brew "rustup-init"
