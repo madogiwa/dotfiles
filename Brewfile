@@ -40,8 +40,12 @@ brew "gawk"
 brew "lzop"
 brew "lz4"
 
-## ip address calculator
+## utilities
+### ip address calculator
 brew "ipcalc"
+
+### regex generator
+brew "grex"
 
 ## json, csv query tool
 brew "jq"
