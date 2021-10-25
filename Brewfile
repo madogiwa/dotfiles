@@ -177,7 +177,7 @@ cask "zoom"
 cask "discord"
 
 ## window management
-brew "alt-tab"
+cask "alt-tab"
 
 ## ===========================================================================
 ## Mac Apps (cask)
