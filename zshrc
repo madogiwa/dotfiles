@@ -278,6 +278,9 @@ HISTSIZE=500000
 ## history size on disk (100,000,000)
 SAVEHIST=100000000
 
+## do not save these commands
+HISTORY_IGNORE="(cd|ls|pwd|which|cp|mv|rm|ln|kill|cat|less|vim|exit)"
+
 ## command execution time is greater than this value have timing statistics printed for them
 REPORTTIME=3
 
