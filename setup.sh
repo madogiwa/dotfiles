@@ -41,6 +41,7 @@ chmod 700 ~/.ssh
 echo ""
 echo "========================================================================"
 echo "rcup -d ~/src/github.com/madogiwa/dotfiles"
+echo "ln -s ~/src/github.com/madogiwa/dotfiles/bin ~/bin"
 echo "tmux"
 echo "tmux run-shell ~/.tmux/plugins/tpm/bindings/install_plugins"
 echo "========================================================================"
