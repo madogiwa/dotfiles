@@ -14,7 +14,7 @@ brew "asdf"
 brew "gnupg"
 
 ## man
-brew "tldr"
+brew "tealdeer"
 
 ## text search
 brew "ripgrep"
