@@ -28,12 +28,6 @@ sudo xcode-select --switch /Applications/Xcode.app
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-## add zsh into /etc/shells
-eval grep '/usr/local/bin/zsh' /etc/shells
-if [ $? -ne 0 ]; then
-    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
-fi
-
 ## install zinit
 if [[ ! -d ~/.zinit ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"

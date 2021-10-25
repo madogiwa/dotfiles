@@ -4,7 +4,6 @@
 ## ===========================================================================
 
 ## shell & tools
-brew "zsh"
 brew "fzf"
 brew "watch"
 brew "shellcheck"
