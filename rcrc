@@ -1,2 +1,2 @@
 DOTFILES_DIRS="$HOME/src/github.com/madogiwa/dotfiles $HOME/.dotfiles"
-EXCLUDES="bin setup.sh setup_anyenv.zsh setup_asdf.sh setup_tools.sh"
+EXCLUDES="bin setup.sh setup_asdf.sh"
