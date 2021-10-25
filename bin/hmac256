@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ $# -lt 1 -o $# -gt 3 ]; then
     echo "Usage: $0 [key] [message]"

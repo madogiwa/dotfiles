@@ -9,7 +9,7 @@ fi
 ## install Homebrew
 if [[ "$OSTYPE" =~ darwin ]]; then
     if [ ! -e /usr/local/bin/brew ]; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
 
     brew bundle --file=Brewfile.mas
