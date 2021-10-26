@@ -2,7 +2,7 @@
 cask "atok"
 cask "bettertouchtool"
 cask "jetbrains-toolbox"
-cask "google-backup-and-sync"
+cask "google-drive"
 
 ## ===========================================================================
 ## Mac Apps (mas)
