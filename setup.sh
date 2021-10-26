@@ -35,6 +35,24 @@ fi
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
+## write defaults
+### do not create .DS_Store in external storage
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+### enable text selection in QuickLook
+defaults write com.apple.finder QLEnableTextSelection true
+
+### set default format to PlainText in TextEdit
+defaults write com.apple.TextEdit RichText -int 0
+
+### show CrashReporter into notification center
+defaults write com.apple.CrashReporter UseUNC 1
+
+### show dotfiles in Finder
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+
 ## rcm & tpm
 echo ""
 echo "========================================================================"
