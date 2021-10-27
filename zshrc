@@ -49,19 +49,12 @@ zinit ice wait'!0' lucid; zinit light zdharma/fast-syntax-highlighting
 zinit ice wait'!0' lucid; zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
 
-## pure theme
-zinit ice lucid pick"async.zsh" src"pure.zsh"; zinit light sindresorhus/pure
-
 zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
 zinit ice wait'!0' lucid; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 
-zinit ice wait'!0' lucid; zinit snippet https://github.com/gangleri/pipenv/blob/master/pipenv.plugin.zsh
-
 zinit ice wait'!0' lucid; zinit snippet OMZP::gcloud
-
-zinit ice wait'!0' lucid; zinit snippet OMZP::aws
 
 ## fuzzy matcher
 zinit ice wait'!0' lucid ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
@@ -75,9 +68,6 @@ zinit ice wait'!0' lucid; zinit light mollifier/anyframe
 ## ssh-gent
 zstyle :omz:plugins:ssh-agent identities ''  # disable automatic ssh-add
 zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-
-## kubectl-prompt
-zinit ice lucid; zinit light superbrothers/zsh-kubectl-prompt
 
 ## direnv
 zinit ice lucid from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
@@ -364,37 +354,6 @@ precmd_title() {
 }
 add-zsh-hook precmd precmd_title
 
-## show AWS_PROFILE in prompt
-
-# disable OMZP::aws's prompt
-export SHOW_AWS_PROMPT=false
-
-function aws_prof {
-  local profile="${AWS_PROFILE:=default}"
-  if [ "${profile}" != "default" ]; then
-    echo "%{$fg_bold[blue]%}awsp:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
-  fi
-}
-PROMPT='$(aws_prof)'$PROMPT
-
-## awsp (AWS Profile Switcher)
-function awsp() {
-  if [ $# -ge 1 ]; then
-    if [ "$1" != "clear" ]; then
-      export AWS_PROFILE="$1"
-      echo "export AWS_PROFILE=$AWS_PROFILE"
-    else
-      unset AWS_PROFILE
-      echo "unset AWS_PROFILE"
-    fi
-  else
-    source _awsp
-  fi
-}
-
-## kubectl-prompt
-RPROMPT='%{$fg[yellow]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'$RPROMPT
-
 
 ## ============================================================================
 ## assume-role
@@ -451,47 +410,6 @@ function precmd_aws_session_expire_check() {
     fi
 }
 add-zsh-hook precmd precmd_aws_session_expire_check
-
-function aws_account_info {
-    if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
-        if [ "$ROLE_SESSION_START" ] && [ "$ROLE_SESSION_TIMEOUT" ]; then
-            least=$(($ROLE_SESSION_START + $ROLE_SESSION_TIMEOUT - `date +%s`))
-            [ $least -ge 600 ] && least="" || least=" $least"
-        fi
-
-        echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${AWS_ACCOUNT_NAME}:${AWS_ACCOUNT_ROLE}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
-    fi
-}
-PROMPT='$(aws_account_info)'$PROMPT
-
-
-## ============================================================================
-## gcloud
-## ============================================================================
-
-function gcp_info() {
-    if [ -f "$HOME/.config/gcloud/active_config" ]; then
-        profile=$(cat $HOME/.config/gcloud/active_config)
-        project=$(awk '/project/{print $3}' $HOME/.config/gcloud/configurations/config_$profile)
-        account=$(awk '/account/{print $3}' $HOME/.config/gcloud/configurations/config_$profile)
-        if [ ! -z ${project} ] && [ ! -z ${account} ]; then
-            echo "%{$fg_bold[blue]%}gcp:(%{$fg[yellow]%}${account}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
-        fi
-    fi
-}
-PROMPT='$(gcp_info)'$PROMPT
-
-
-function gcredential_info() {
-    if [ "$GOOGLE_APPLICATION_CREDENTIALS" ] && [ -f "$GOOGLE_APPLICATION_CREDENTIALS" ]; then
-        project=$(jq -r .project_id $GOOGLE_APPLICATION_CREDENTIALS)
-        account=$(jq -r .client_email $GOOGLE_APPLICATION_CREDENTIALS | cut -d'@' -f1)
-        if [ ! -z ${project} ] && [ ! -z ${account} ]; then
-            echo "%{$fg_bold[blue]%}gcpc:(%{$fg[yellow]%}${account}:${project}%{$fg[red]%}${least}%{$fg_bold[blue]%})%{$reset_color%} "
-        fi
-    fi
-}
-PROMPT='$(gcredential_info)'$PROMPT
 
 
 ## ============================================================================
@@ -560,4 +478,10 @@ NODEJS_HOME=$(asdf where nodejs)
 ## ============================================================================
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+
+## ============================================================================
+## enable Starship
+## ============================================================================
+eval "$(starship init zsh)"
 

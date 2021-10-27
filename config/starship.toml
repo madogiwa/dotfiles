@@ -1,0 +1,43 @@
+
+format="$directory$all$line_break$aws${custom.assume_role}$gcloud$character"
+
+right_format = """
+($kubernetes)
+"""
+
+[aws]
+format = "[(awsp:\\($profile\\) )]($style)"
+
+[custom.assume_role]
+command = 'echo "aws:($AWS_ACCOUNT_ROLE@$AWS_ACCOUNT_NAME)" '
+when = """
+test "$AWS_ACCOUNT_ROLE" -a "$AWS_ACCOUNT_NAME"
+"""
+
+[directory]
+truncate_to_repo = false
+truncation_length = 10
+truncation_symbol = "..."
+
+[gcloud]
+format = "[(gcp:\\($project\\) )]($style)"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[kubernetes]
+disabled = false
+format = "[$symbol$context( \\($namespace\\))]($style)"
+
+[nodejs]
+format = "[$symbol]($style) "
+
+[package]
+format = "[$symbol]($style) "
+
+[python]
+format = "[$symbol]($style) "
+
+[terraform]
+format = "[$symbol]($style) "
+
