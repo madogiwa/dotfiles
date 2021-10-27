@@ -38,6 +38,9 @@ format = "[$symbol]($style) "
 [python]
 format = "[$symbol]($style) "
 
+[ruby]
+format = "[$symbol]($style) "
+
 [terraform]
 format = "[$symbol]($style) "
 
