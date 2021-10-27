@@ -8,6 +8,9 @@ right_format = """
 [aws]
 format = "[(awsp:\\($profile\\) )]($style)"
 
+[crystal]
+format = "[$symbol]($style) "
+
 [custom.assume_role]
 command = 'echo "aws:($AWS_ACCOUNT_ROLE@$AWS_ACCOUNT_NAME)" '
 when = """
