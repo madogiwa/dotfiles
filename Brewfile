@@ -157,6 +157,7 @@ brew "dive"
 brew "docker-slim"
 
 brew "minikube"
+brew "hyperkit"
 
 brew "hadolint"
 
