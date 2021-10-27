@@ -35,6 +35,9 @@ format = "[$symbol]($style) "
 [package]
 format = "[$symbol]($style) "
 
+[perl]
+format = "[$symbol]($style) "
+
 [python]
 format = "[$symbol]($style) "
 
