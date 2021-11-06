@@ -28,7 +28,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'juliosueiras/vim-terraform-completion', { 'for': 'terraform' }
 
 "" File Viewer
-Plug 'justinmk/vim-dirvish'
+Plug 'lambdalisue/fern.vim'
 
 "" tmuxのfocus変更をvimで使えるようにする？
 Plug 'tmux-plugins/vim-tmux-focus-events'
