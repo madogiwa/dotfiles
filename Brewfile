@@ -63,12 +63,6 @@ brew "neovim"
 ## rust
 brew "rustup-init"
 
-## java
-tap "homebrew/cask-versions"
-cask "adoptopenjdk8"
-brew "sbt"
-brew "maven"
-
 ## CI tools
 brew "bazel"
 brew "skaffold"
@@ -186,30 +180,42 @@ cask "discord"
 ## window management
 cask "alt-tab"
 
-## ===========================================================================
-## Mac Apps (cask)
-## ===========================================================================
-
+## usability
 cask "karabiner-elements"
 cask "clipy"
 
+## tools
+cask "appcleaner"
+
+## terminal
 cask "iterm2"
 
+## browsers
 cask "google-chrome"
 cask "google-chrome-canary"
 cask "firefox"
 cask "firefox-developer-edition"
 
-cask "appcleaner"
-
+## network
 cask "wireshark"
 cask "switchhosts"
 
+## editor
 cask "visual-studio-code"
 cask "libreoffice"
 
+## development
 cask "altair-graphql-client"
 
+## screen capture
 cask "kap"
+
+## translator
 cask "deepl"
+
+## java
+tap "homebrew/cask-versions"
+cask "adoptopenjdk8"
+brew "sbt"
+brew "maven"
 
