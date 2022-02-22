@@ -1,7 +1,9 @@
 
-## ===========================================================================
-## brew
-## ===========================================================================
+## web browsers
+cask "google-chrome"
+cask "google-chrome-canary"
+cask "firefox"
+cask "firefox-developer-edition"
 
 ## shell & tools
 brew "fzf"
@@ -189,12 +191,6 @@ cask "appcleaner"
 
 ## terminal
 cask "iterm2"
-
-## browsers
-cask "google-chrome"
-cask "google-chrome-canary"
-cask "firefox"
-cask "firefox-developer-edition"
 
 ## network
 cask "wireshark"
