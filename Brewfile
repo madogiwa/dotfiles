@@ -141,7 +141,7 @@ cask "font-hack-nerd-font"
 ## Containers
 cask "docker"
 brew "kompose"
-brew "kubernetes-helm"
+brew "helm"
 brew "kubectx"
 brew "krew"
 brew "argo"
