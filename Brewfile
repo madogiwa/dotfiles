@@ -164,9 +164,6 @@ brew "rcm"
 ## ssh
 brew "pssh"
 
-tap "xen0l/homebrew-taps"
-brew "aws-gate"
-
 ## image & movie
 brew "imagemagick"
 brew "ffmpeg"
