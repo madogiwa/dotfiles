@@ -169,9 +169,6 @@ brew "imagemagick"
 brew "ffmpeg"
 brew "mozjpeg"
 
-## job management
-brew "digdag"
-
 ## video conference
 cask "zoom"
 cask "discord"
