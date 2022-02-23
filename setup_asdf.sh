@@ -6,7 +6,7 @@
 
 asdf plugin add nodejs
 asdf install nodejs latest:14
-asdf install nodejs 16.13.0
+asdf install nodejs 16.14.0
 asdf reshim nodejs
 
 ##
