@@ -46,3 +46,10 @@ asdf install perl 5.32.1
 asdf install perl 5.34.0
 asdf reshim perl
 
+##
+## Rust
+##
+
+asdf plugin add rust
+asdf install rust 1.58.1
+

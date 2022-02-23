@@ -61,9 +61,6 @@ brew "trdsql"
 ## editor
 brew "vim"
 
-## rust
-brew "rustup-init"
-
 ## CI tools
 brew "bazel"
 brew "skaffold"
