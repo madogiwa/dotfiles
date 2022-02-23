@@ -25,7 +25,7 @@ asdf reshim ruby
 asdf plugin add python
 asdf install python latest:3.7
 asdf install python latest:3.8
-asdf install python 3.9.7
+asdf install python 3.9.10
 asdf reshim python
 
 ##
