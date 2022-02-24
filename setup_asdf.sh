@@ -53,3 +53,17 @@ asdf reshim perl
 asdf plugin add rust
 asdf install rust 1.58.1
 
+##
+## Java
+##
+
+asdf plugin add java
+asdf install java latest:adoptopenjdk-8.0
+asdf install java openjdk-17.0.2
+
+asdf plugin add maven
+asdf install maven 3.8.4
+
+asdf plugin add sbt
+asdf install sbt 1.6.2
+

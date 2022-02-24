@@ -198,9 +198,3 @@ cask "kap"
 ## translator
 cask "deepl"
 
-## java
-tap "homebrew/cask-versions"
-cask "adoptopenjdk8"
-brew "sbt"
-brew "maven"
-
