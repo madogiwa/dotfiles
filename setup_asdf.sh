@@ -10,6 +10,13 @@ asdf install nodejs 16.14.0
 asdf reshim nodejs
 
 ##
+## yarn
+##
+
+asdf plugin add yarn
+asdf install yarn 1.22.17
+
+##
 ## ruby
 ##
 
