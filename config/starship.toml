@@ -55,3 +55,6 @@ format = "[$symbol]($style) "
 [terraform]
 format = "[$symbol]($style) "
 
+[golang]
+format = "[$symbol]($style) "
+
