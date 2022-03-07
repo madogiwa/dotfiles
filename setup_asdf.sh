@@ -41,7 +41,7 @@ asdf reshim python
 
 asdf plugin add golang
 asdf install golang latest:1.16
-asdf install golang 1.17.7
+asdf install golang 1.17.8
 asdf reshim golang
 
 ##
