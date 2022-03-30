@@ -1,4 +1,4 @@
-nodejs 16.14.0
+nodejs lts
 yarn 1.22.17
 perl 5.32.1
 python 3.9.10

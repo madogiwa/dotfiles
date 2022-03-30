@@ -5,8 +5,8 @@
 ##
 
 asdf plugin add nodejs
-asdf install nodejs latest:14
-asdf install nodejs 16.14.0
+asdf install nodejs lts-fermium
+asdf install nodejs lts
 asdf reshim nodejs
 
 ##
