@@ -193,6 +193,7 @@ cask "libreoffice"
 cask "altair-graphql-client"
 
 ## screen capture
+brew "t-rec"
 cask "kap"
 
 ## translator
