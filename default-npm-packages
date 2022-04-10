@@ -6,4 +6,5 @@ firebase-tools
 expo-cli
 serverless
 quicktype
+@nestjs/cli
 
