@@ -38,23 +38,23 @@ disabled = false
 format = "[$symbol$context( \\($namespace\\))]($style)"
 
 [nodejs]
-format = "[$symbol]($style) "
+disabled = true
 
 [package]
-format = "[$symbol]($style) "
+disabled = true
 
 [perl]
-format = "[$symbol]($style) "
+disabled = true
 
 [python]
-format = "[$symbol]($style) "
+disabled = true
 
 [ruby]
-format = "[$symbol]($style) "
+disabled = true
 
 [terraform]
-format = "[$symbol]($style) "
+disabled = true
 
 [golang]
-format = "[$symbol]($style) "
+disabled = true
 
