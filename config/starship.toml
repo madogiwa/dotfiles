@@ -9,6 +9,7 @@ command_timeout = 1000
 
 [aws]
 format = "[(awsp:\\($profile\\) )]($style)"
+force_display = true
 
 [crystal]
 format = "[$symbol]($style) "
