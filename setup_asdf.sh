@@ -59,7 +59,7 @@ asdf reshim perl
 ##
 
 asdf plugin add rust
-asdf install rust 1.58.1
+asdf install rust 1.60.0
 
 ##
 ## Java
