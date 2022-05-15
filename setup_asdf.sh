@@ -6,7 +6,7 @@
 
 asdf plugin add nodejs
 asdf install nodejs lts-fermium
-asdf install nodejs lts
+asdf install nodejs $(cat tool-versions|grep nodejs|awk '{print $2}')
 asdf reshim nodejs
 
 ##
@@ -14,7 +14,7 @@ asdf reshim nodejs
 ##
 
 asdf plugin add yarn
-asdf install yarn 1.22.17
+asdf install yarn $(cat tool-versions|grep yarn|awk '{print $2}')
 
 ##
 ## ruby
@@ -22,7 +22,7 @@ asdf install yarn 1.22.17
 
 asdf plugin add ruby
 asdf install ruby latest:2.3
-asdf install ruby 3.0.2
+asdf install ruby $(cat tool-versions|grep ruby|awk '{print $2}')
 asdf reshim ruby
 
 ##
@@ -32,7 +32,7 @@ asdf reshim ruby
 asdf plugin add python
 asdf install python latest:3.7
 asdf install python latest:3.8
-asdf install python 3.9.10
+asdf install python $(cat tool-versions|grep python|awk '{print $2}')
 asdf reshim python
 
 ##
@@ -42,7 +42,7 @@ asdf reshim python
 asdf plugin add golang
 asdf install golang latest:1.16
 asdf install golang latest:1.17
-asdf install golang 1.18.2
+asdf install golang $(cat tool-versions|grep golang|awk '{print $2}')
 asdf reshim golang
 
 ##
@@ -50,8 +50,7 @@ asdf reshim golang
 ##
 
 asdf plugin add perl
-asdf install perl 5.32.1
-asdf install perl 5.34.0
+asdf install perl $(cat tool-versions|grep perl|awk '{print $2}')
 asdf reshim perl
 
 ##
@@ -59,7 +58,7 @@ asdf reshim perl
 ##
 
 asdf plugin add rust
-asdf install rust 1.60.0
+asdf install rust $(cat tool-versions|grep rust|awk '{print $2}')
 
 ##
 ## Java
@@ -67,11 +66,11 @@ asdf install rust 1.60.0
 
 asdf plugin add java
 asdf install java latest:adoptopenjdk-8.0
-asdf install java openjdk-17.0.2
+asdf install java $(cat tool-versions|grep java|awk '{print $2}')
 
 asdf plugin add maven
-asdf install maven 3.8.4
+asdf install maven $(cat tool-versions|grep maven|awk '{print $2}')
 
 asdf plugin add sbt
-asdf install sbt 1.6.2
+asdf install sbt $(cat tool-versions|grep sbt|awk '{print $2}')
 
