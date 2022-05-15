@@ -78,7 +78,6 @@ cask "proxyman"
 brew "privoxy"
 
 ## monitoring tools
-brew "iftop"
 brew "mtr"
 
 ## code statistics
