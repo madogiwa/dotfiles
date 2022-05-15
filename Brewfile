@@ -10,10 +10,8 @@ brew "fzf"
 brew "watch"
 brew "shellcheck"
 brew "sponge"
-brew "asdf"
 brew "starship"
 
-# used by asdf
 brew "gnupg"
 
 ## man
