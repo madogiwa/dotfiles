@@ -74,5 +74,6 @@ asdf plugin add maven
 asdf install maven $(cat tool-versions|grep maven|awk '{print $2}')
 
 asdf plugin add sbt
+asdf install sbt 1.4.9
 asdf install sbt $(cat tool-versions|grep sbt|awk '{print $2}')
 
