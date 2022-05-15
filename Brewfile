@@ -52,6 +52,7 @@ brew "grex"
 brew "jq"
 brew "yq"
 brew "csvkit"
+brew "csvq"
 
 ## editor
 brew "vim"
