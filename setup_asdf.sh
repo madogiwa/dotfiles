@@ -50,6 +50,7 @@ asdf reshim golang
 ##
 
 asdf plugin add perl
+asdf install perl 5.16.3
 asdf install perl $(cat tool-versions|grep perl|awk '{print $2}')
 asdf reshim perl
 
