@@ -1,5 +1,6 @@
 
 golang.org/x/tools/gopls
+github.com/go-delve/delve/cmd/dlv
 github.com/spf13/cobra-cli
 github.com/99designs/gqlgen
 
