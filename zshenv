@@ -20,6 +20,9 @@ fi
 [[ ":$PATH:" != *":/usr/sbin:"* ]] && PATH="/usr/sbin:${PATH}"
 [[ ":$PATH:" != *":/sbin:"* ]] && PATH="/sbin:${PATH}"
 
+## append asdf path if not exist
+[[ ":$PATH:" != *":${HOME}/.asdf/shims:"* ]] && PATH="${HOME}/.asdf/shims:${PATH}"
+
 
 ## ============================================================================
 ## exports
