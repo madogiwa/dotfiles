@@ -56,13 +56,6 @@ asdf install perl $(cat tool-versions|grep perl|awk '{print $2}')
 asdf reshim perl
 
 ##
-## Rust
-##
-
-asdf plugin add rust
-asdf install rust $(cat tool-versions|grep rust|awk '{print $2}')
-
-##
 ## Java
 ##
 

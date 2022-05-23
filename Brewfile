@@ -14,6 +14,9 @@ brew "starship"
 
 brew "gnupg"
 
+## languages
+brew "rustup-init"
+
 ## man
 brew "tealdeer"
 
