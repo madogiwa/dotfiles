@@ -53,6 +53,7 @@ brew "grex"
 
 ## json, csv query tool
 brew "jq"
+brew "gron"
 brew "yq"
 brew "csvkit"
 brew "csvq"
