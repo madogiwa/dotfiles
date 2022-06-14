@@ -60,7 +60,7 @@ asdf reshim perl
 ##
 
 asdf plugin add java
-asdf install java latest:adoptopenjdk-8.0
+asdf install java latest:temurin-8.0
 asdf install java $(cat tool-versions|grep java|awk '{print $2}')
 
 asdf plugin add maven
