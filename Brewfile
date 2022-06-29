@@ -39,6 +39,7 @@ brew "git-delta"
 brew "coreutils"
 brew "gnu-tar"
 brew "gawk"
+brew "gnu-time"
 
 ## compress & decompress
 brew "lzop"
