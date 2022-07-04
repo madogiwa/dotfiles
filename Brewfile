@@ -158,6 +158,7 @@ brew "rcm"
 
 ## ssh
 brew "pssh"
+cask "secretive"
 
 ## image & movie
 brew "imagemagick"
