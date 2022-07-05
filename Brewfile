@@ -65,7 +65,6 @@ brew "vim"
 ## CI tools
 brew "bazel"
 brew "skaffold"
-brew "circleci"
 brew "act"
 
 ## http & api tools
