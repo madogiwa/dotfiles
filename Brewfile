@@ -13,6 +13,7 @@ brew "sponge"
 brew "starship"
 
 brew "gnupg"
+brew "bat"
 
 ## languages
 brew "rustup-init"
