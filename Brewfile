@@ -20,9 +20,10 @@ brew "rustup-init"
 ## man
 brew "tealdeer"
 
-## text search
+## search
 brew "ripgrep"
 brew "global"
+brew "fd"
 
 ## git & git tools
 brew "git"
