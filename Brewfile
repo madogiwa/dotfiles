@@ -154,7 +154,6 @@ brew "hyperkit"
 brew "hadolint"
 
 ## dotfile management
-tap "thoughtbot/formulae"
 brew "rcm"
 
 ## ssh
