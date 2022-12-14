@@ -14,6 +14,7 @@ brew "starship"
 
 brew "gnupg"
 brew "bat"
+brew "tree"
 
 ## languages
 brew "rustup-init"
