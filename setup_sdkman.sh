@@ -11,8 +11,8 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 ## java
 ##
 
-sdk install java 8.0.332-tem
-sdk install java 17.0.3-tem
+sdk install java 8.0.352-tem
+sdk install java 17.0.5-tem
 
 ##
 ## maven
