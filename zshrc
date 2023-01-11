@@ -20,7 +20,7 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 
-export ZSH_CACHE_DIR="${ZSH_CACHE_DIR:-$HOME/.zsh/cache}"
+export ZSH_CACHE_DIR="$HOME/.local/share/zinit"
 
 ## ----------------------------------------------------------------------------
 ## enhancd
