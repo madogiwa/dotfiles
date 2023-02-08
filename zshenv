@@ -12,6 +12,13 @@ if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
 
+## setup brew shellenv
+if [ "$(uname -m)" = "x86_64" ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+else
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 ## append $HOME/bin path if not exist
 [[ ":$PATH:" != *":${HOME}/bin:"* ]] && PATH="${HOME}/bin:${PATH}"
 
