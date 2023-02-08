@@ -3,7 +3,6 @@
 cask "google-chrome"
 cask "google-chrome-canary"
 cask "firefox"
-cask "firefox-developer-edition"
 
 ## shell & tools
 brew "fzf"
