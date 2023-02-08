@@ -106,7 +106,7 @@ brew "madogiwa/assume-role/assume-role"
 
 ## DB client
 brew "mysql"
-brew "postgresql"
+brew "postgresql@14"
 brew "pgcli"
 brew "percona-toolkit"
 brew "tokyo-cabinet"
