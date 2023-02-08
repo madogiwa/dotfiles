@@ -12,9 +12,20 @@ sudo xcodebuild -license accept
 sudo xcode-select --switch /Applications/Xcode.app
 
 ## install Homebrew
-if [ ! -e /usr/local/bin/brew ]; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [ "$(uname -m)" = "x86_64" ]; then
+    if [ ! -e "/usr/local/bin/brew" ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    eval "$(/usr/local/bin/brew shellenv)"
+else
+    if [ ! -e "/opt/homebrew/bin/brew" ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
 
 brew bundle --file=Brewfile.mas
 brew bundle --file=Brewfile
