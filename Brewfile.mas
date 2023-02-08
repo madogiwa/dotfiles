@@ -4,7 +4,6 @@
 
 mas 'Xcode', id: 497799835
 
-mas 'WinArchiver Lite', id: 414855915
 mas 'The Unarchiver', id: 425424353
 
 mas 'CotEditor', id: 1024640650
