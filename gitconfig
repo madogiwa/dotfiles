@@ -11,6 +11,10 @@
     ## 日本語ファイル名などをエスケープしない
     quotepath = false
 
+    ## status cacheを有効にする
+    fsmonitor = true
+    untrackedcache = true
+
 [color]
     ## 自動設定されるカラーを利用
     ui = true
