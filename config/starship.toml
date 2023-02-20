@@ -2,7 +2,7 @@
 format="$directory$all$line_break$aws${custom.assume_role}$gcloud$character"
 
 right_format = """
-($kubernetes)
+$cmd_duration ($kubernetes)
 """
 
 command_timeout = 1000
