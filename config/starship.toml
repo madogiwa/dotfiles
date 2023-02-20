@@ -33,6 +33,7 @@ format = "[(gcp:\\($project\\) )]($style)"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
+symbol = ""
 
 [kubernetes]
 disabled = false
