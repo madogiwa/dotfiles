@@ -12,7 +12,7 @@
     quotepath = false
 
     ## status cacheを無効にする
-    fsmonitor = false
+    fsmonitor = true
 
     ## git statusの処理を簡略化して高速化
     untrackedcache = true
