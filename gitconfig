@@ -11,8 +11,10 @@
     ## 日本語ファイル名などをエスケープしない
     quotepath = false
 
-    ## status cacheを有効にする
-    fsmonitor = true
+    ## status cacheを無効にする
+    fsmonitor = false
+
+    ## git statusの処理を簡略化して高速化
     untrackedcache = true
 
 [color]
