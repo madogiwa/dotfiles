@@ -5,7 +5,7 @@ right_format = """
 $cmd_duration ($kubernetes)
 """
 
-command_timeout = 1000
+command_timeout = 2000
 
 [aws]
 format = "[(awsp:\\($profile\\) )]($style)"
