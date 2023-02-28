@@ -11,6 +11,7 @@ brew "shellcheck"
 brew "sponge"
 brew "starship"
 brew "rtx"
+brew "sheldon"
 
 brew "gnupg"
 brew "bat"
