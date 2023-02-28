@@ -10,6 +10,7 @@ brew "watch"
 brew "shellcheck"
 brew "sponge"
 brew "starship"
+brew "rtx"
 
 brew "gnupg"
 brew "bat"
