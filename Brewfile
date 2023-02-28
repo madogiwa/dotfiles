@@ -152,6 +152,9 @@ brew "minikube"
 
 brew "hadolint"
 
+tap "datawire/blackbird"
+brew "datawire/blackbird/telepresence"
+
 ## dotfile management
 brew "rcm"
 
