@@ -33,7 +33,7 @@ rtx install ruby@2.3
 ##
 ## go
 ##
-rtx install golang@1.15
+rtx install golang@1.16
 
 
 ##
