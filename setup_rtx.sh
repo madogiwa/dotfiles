@@ -45,6 +45,7 @@ rtx install nodejs@16
   eval "$(/usr/local/bin/brew shellenv)"
   rtx install ruby@2.3
 )
+rtx install ruby@2.4
 
 
 ##
