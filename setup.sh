@@ -67,6 +67,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 ## rcm & tpm
 echo ""
 echo "========================================================================"
+echo "rcup -d ~/src/github.com/madogiwa/dotfiles rcrc"
 echo "rcup -d ~/src/github.com/madogiwa/dotfiles"
 echo "ln -s ~/src/github.com/madogiwa/dotfiles/bin ~/bin"
 echo "tmux"
