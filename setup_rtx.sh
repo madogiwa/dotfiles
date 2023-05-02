@@ -58,7 +58,6 @@ rtx install maven@3.8
 ##
 ## sbt
 ##
-rtx install sbt@1.4
 rtx install sbt@1.6
 
 
