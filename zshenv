@@ -33,7 +33,6 @@ fi
 ## ============================================================================
 ## exports
 ## ============================================================================
-[[ -f "${HOME}/.asdf/plugins/java/set-java-home.zsh" ]] && source "${HOME}/.asdf/plugins/java/set-java-home.zsh"
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
 ## enable Docker BuildKit
