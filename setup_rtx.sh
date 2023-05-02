@@ -45,7 +45,7 @@ rtx install perl@5.16.3
 ##
 ## java
 ##
-rtx install java@temurin-8
+rtx install java@corretto-8
 rtx install java@temurin-11
 
 
