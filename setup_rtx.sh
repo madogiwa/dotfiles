@@ -1,6 +1,15 @@
 #!/bin/sh
 
 ##
+## install rtx for x86_64
+##
+(
+  eval "$(/usr/local/bin/brew shellenv)"
+  arch -x86_64 brew install rtx
+)
+
+
+##
 ## install default versions
 ##
 rtx install
@@ -17,10 +26,12 @@ rtx install python@3.7
 ## node.js
 ##
 (
+  eval "$(/usr/local/bin/brew shellenv)"
   rtx shell python@2.7
   arch -x86_64 rtx install nodejs@10
 )
 (
+  eval "$(/usr/local/bin/brew shellenv)"
   rtx shell python@3.7
   arch -x86_64 rtx install nodejs@14
 )
@@ -30,7 +41,10 @@ rtx install nodejs@16
 ##
 ## ruby
 ##
-rtx install ruby@2.3
+(
+  eval "$(/usr/local/bin/brew shellenv)"
+  rtx install ruby@2.3
+)
 
 
 ##
