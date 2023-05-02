@@ -66,15 +66,16 @@ zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 zinit ice lucid from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
 zinit light direnv/direnv
 
-## asdf
-zinit ice lucid as'program' src'asdf.sh'
-zinit light asdf-vm/asdf
-
-# avoid warning by brew
-alias brew="env PATH=${PATH//$HOME\/.asdf\/shims:/} brew"
-
 ## completions
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
+
+
+## ============================================================================
+## rtx (asdf rust clone)
+## ============================================================================
+
+eval "$(rtx activate zsh)"
+
 
 ## ============================================================================
 ## general
@@ -453,7 +454,7 @@ bindkey '^]' ghq-fzf
 ## serverless framework
 ## ============================================================================
 
-NODEJS_HOME=$(asdf where nodejs)
+NODEJS_HOME=$(rtx where nodejs)
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
