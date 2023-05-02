@@ -53,3 +53,25 @@ rtx install golang@1.19
 
 rtx install perl@5.16.3
 
+
+##
+## java
+##
+
+rtx install java@temurin-8
+rtx install java@temurin-11
+
+
+##
+## maven
+##
+
+rtx install maven@3.8
+
+##
+## sbt
+##
+
+rtx install sbt@1.4
+rtx install sbt@1.6
+rtx install sbt@1.8
