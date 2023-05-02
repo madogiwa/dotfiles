@@ -20,9 +20,6 @@ rtx install python@3.7
   rtx shell python@2.7
   arch -x86_64 rtx install nodejs@10
 )
-rtx shell python system
-
-rtx install nodejs@12
 rtx install nodejs@14
 rtx install nodejs@16
 
