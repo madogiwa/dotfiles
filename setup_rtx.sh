@@ -61,8 +61,15 @@ rtx install java@temurin-11
 ##
 rtx install maven@3.8
 
+
 ##
 ## sbt
 ##
 rtx install sbt@1.4
 rtx install sbt@1.6
+
+
+##
+## serverless
+##
+rtx install serverless@2

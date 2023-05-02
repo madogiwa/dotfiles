@@ -451,23 +451,6 @@ bindkey '^]' ghq-fzf
 
 
 ## ============================================================================
-## serverless framework
-## ============================================================================
-
-NODEJS_HOME=$(rtx where nodejs)
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
-
-## ============================================================================
 ## include local zshrc
 ## ============================================================================
 
