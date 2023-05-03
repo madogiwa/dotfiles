@@ -35,7 +35,7 @@ chmod 755 /usr/local/share/zsh
 chmod 755 /usr/local/share/zsh/site-functions
 
 if [[ "$(uname -m)" = "x86_64" ]]; then
-    mkdir -p /opt/homebrew/share/zsh/site-functions
+    sudo mkdir -p /opt/homebrew/share/zsh/site-functions
 fi
 
 chmod 755 /opt/homebrew/share
