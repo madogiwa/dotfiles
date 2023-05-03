@@ -43,11 +43,6 @@ chmod 755 /usr/local/share/zsh/site-functions
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-## install zinit
-if [[ ! -d ~/.zinit ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-fi
-
 ## ssh folder
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
