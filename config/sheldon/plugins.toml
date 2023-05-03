@@ -41,6 +41,10 @@ apply  = ["source"]
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
+[plugins.homebrew-zsh-completions]
+local = "/opt/homebrew/share/zsh/site-functions"
+apply = ["fpath"]
+
 #[plugins.ohmyzsh-plugins-kubectl]
 #github = "ohmyzsh/ohmyzsh"
 #dir = "plugins/kubectl"
