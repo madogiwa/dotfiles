@@ -11,34 +11,38 @@ echo "switch Command Line Tools to /Application/Xcode.app"
 sudo xcodebuild -license accept
 sudo xcode-select --switch /Applications/Xcode.app
 
-## install Homebrew
-if [ "$(uname -m)" = "x86_64" ]; then
-    if [ ! -e "/usr/local/bin/brew" ]; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    fi
 
-    eval "$(/usr/local/bin/brew shellenv)"
-else
-    # install x86_64 version
-    if [ ! -e "/usr/local/bin/brew" ]; then
-        arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    fi
-
-    # install arm64 version
-    if [ ! -e "/opt/homebrew/bin/brew" ]; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    fi
-
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+## Install Homebrew (x86_64)
+if [[ ! -e "/usr/local/bin/brew" ]]; then
+    arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+## install Homebrew (arm64)
+if [[ ! -e "/usr/local/bin/brew" && "$(uname -m)" = "arm64" ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+fi
+
+if [[ "$(uname -m)" = "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+## Install from Brewfile
 brew bundle --file=Brewfile.mas
 brew bundle --file=Brewfile
 
 ## fix compinit insecure directories
 chmod 755 /usr/local/share/zsh
 chmod 755 /usr/local/share/zsh/site-functions
+
+if [[ "$(uname -m)" = "arm64" ]]; then
+    chmod 755 /opt/homebrew/share
+    chmod 755 /opt/homebrew/share/zsh
+    chmod 755 /opt/homebrew/share/zsh/site-functions
+fi
+
 
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
