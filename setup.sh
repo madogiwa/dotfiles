@@ -34,11 +34,13 @@ sudo xcode-select -s /Library/Developer/CommandLineTools
 chmod 755 /usr/local/share/zsh
 chmod 755 /usr/local/share/zsh/site-functions
 
-if [[ "$(uname -m)" = "arm64" ]]; then
-    chmod 755 /opt/homebrew/share
-    chmod 755 /opt/homebrew/share/zsh
-    chmod 755 /opt/homebrew/share/zsh/site-functions
+if [[ "$(uname -m)" = "x86_64" ]]; then
+    mkdir -p /opt/homebrew/share/zsh/site-functions
 fi
+
+chmod 755 /opt/homebrew/share
+chmod 755 /opt/homebrew/share/zsh
+chmod 755 /opt/homebrew/share/zsh/site-functions
 
 
 ## install tpm(tmux package manager)
