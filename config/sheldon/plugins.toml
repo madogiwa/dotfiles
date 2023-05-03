@@ -55,6 +55,13 @@ dir = "contrib/completion/zsh"
 use = ["_docker"]
 apply = ["fpath"]
 
+[plugins.docker-compose-completion]
+github = "docker/compose"
+branch = "master"
+dir = "contrib/completion/zsh"
+use = ["_docker-compose"]
+apply = ["fpath"]
+
 [plugins.ohmyzsh-plugins-aws]
 github = "ohmyzsh/ohmyzsh"
 dir = "plugins/aws"
