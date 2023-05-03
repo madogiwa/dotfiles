@@ -45,7 +45,10 @@ rtx install nodejs@16
   eval "$(/usr/local/bin/brew shellenv)"
   rtx install ruby@2.3
 )
-rtx install ruby@2.4
+(
+  export RUBY_CFLAGS='-DUSE_FFI_CLOSURE_ALLOC -Wno-error=implicit-function-declaration'
+  rtx install ruby@2.4
+)
 
 
 ##
