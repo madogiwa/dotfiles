@@ -1,0 +1,104 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+apply = ["defer"]
+
+#
+# Deferred loading
+#
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+apply  = ["source"]
+
+[templates]
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
+
+
+#
+# Framework
+#
+
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+apply  = ["source"]
+
+
+#
+# completions
+#
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.ohmyzsh-plugins-kubectl]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/kubectl"
+
+[plugins.ohmyzsh-plugins-helm]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/helm"
+
+[plugins.docker-completion]
+github = "docker/cli"
+dir = "contrib/completion/zsh"
+use = ["_docker"]
+apply = ["fpath"]
+
+[plugins.ohmyzsh-plugins-aws]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/aws"
+
+[plugins.ohmyzsh-plugins-gcloud]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/gcloud"
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"
+
+
+#
+# shell customize
+#
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins.zsh-fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+
+[plugins.fzf]
+github = "junegunn/fzf"
+
+[plugins.znyframe]
+github = "mollifier/anyframe"
+
+[plugins.enhancd]
+github = "b4b4r07/enhancd"
+use = ["init.sh"]
+
+
+#
+# others
+#
+
+[plugins.direnv]
+inline = "source <(direnv hook zsh)"
+
+[plugins.ohmyzsh-plugins-ssh-agent]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/ssh-agent"
+
