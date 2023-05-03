@@ -6,12 +6,6 @@ if [ $? -eq 0 ]; then
     read \?"Waiting xcode-select install... press [Enter] to continue."
 fi
 
-## use Xcode bundled Command Line Tools
-echo "switch Command Line Tools to /Application/Xcode.app"
-sudo xcodebuild -license accept
-sudo xcode-select --switch /Applications/Xcode.app
-
-
 ## Install Homebrew (x86_64)
 if [[ ! -e "/usr/local/bin/brew" ]]; then
     arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -32,6 +26,9 @@ fi
 ## Install from Brewfile
 brew bundle --file=Brewfile.mas
 brew bundle --file=Brewfile
+
+## Restore Command Line Tools path
+sudo xcode-select -s /Library/Developer/CommandLineTools
 
 ## fix compinit insecure directories
 chmod 755 /usr/local/share/zsh
