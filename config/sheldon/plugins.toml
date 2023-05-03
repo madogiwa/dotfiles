@@ -96,7 +96,8 @@ use = ["init.sh"]
 #
 
 [plugins.direnv]
-inline = "source <(direnv hook zsh)"
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/direnv"
 
 [plugins.ohmyzsh-plugins-ssh-agent]
 github = "ohmyzsh/ohmyzsh"
