@@ -66,15 +66,16 @@ zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 zinit ice lucid from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
 zinit light direnv/direnv
 
-## asdf
-zinit ice lucid as'program' src'asdf.sh'
-zinit light asdf-vm/asdf
-
-# avoid warning by brew
-alias brew="env PATH=${PATH//$HOME\/.asdf\/shims:/} brew"
-
 ## completions
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
+
+
+## ============================================================================
+## rtx (asdf rust clone)
+## ============================================================================
+
+eval "$(rtx activate zsh)"
+
 
 ## ============================================================================
 ## general
@@ -450,23 +451,6 @@ bindkey '^]' ghq-fzf
 
 
 ## ============================================================================
-## serverless framework
-## ============================================================================
-
-NODEJS_HOME=$(asdf where nodejs)
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $NODEJS_HOME/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
-
-## ============================================================================
 ## include local zshrc
 ## ============================================================================
 
@@ -478,7 +462,3 @@ NODEJS_HOME=$(asdf where nodejs)
 ## ============================================================================
 eval "$(starship init zsh)"
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

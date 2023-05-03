@@ -27,16 +27,12 @@ fi
 [[ ":$PATH:" != *":/usr/sbin:"* ]] && PATH="/usr/sbin:${PATH}"
 [[ ":$PATH:" != *":/sbin:"* ]] && PATH="/sbin:${PATH}"
 
-## append asdf path if not exist
-[[ ":$PATH:" != *":${HOME}/.asdf/shims:"* ]] && PATH="${HOME}/.asdf/shims:${PATH}"
-
 ## append krew path if not exist
 [[ ":$PATH:" != *":${HOME}/.krew/bin:"* ]] && PATH="${HOME}/.krew/bin:${PATH}"
 
 ## ============================================================================
 ## exports
 ## ============================================================================
-[[ -f "${HOME}/.asdf/plugins/java/set-java-home.zsh" ]] && source "${HOME}/.asdf/plugins/java/set-java-home.zsh"
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
 ## enable Docker BuildKit

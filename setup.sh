@@ -19,6 +19,12 @@ if [ "$(uname -m)" = "x86_64" ]; then
 
     eval "$(/usr/local/bin/brew shellenv)"
 else
+    # install x86_64 version
+    if [ ! -e "/usr/local/bin/brew" ]; then
+        arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    # install arm64 version
     if [ ! -e "/opt/homebrew/bin/brew" ]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
@@ -67,6 +73,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 ## rcm & tpm
 echo ""
 echo "========================================================================"
+echo "rcup -d ~/src/github.com/madogiwa/dotfiles rcrc"
 echo "rcup -d ~/src/github.com/madogiwa/dotfiles"
 echo "ln -s ~/src/github.com/madogiwa/dotfiles/bin ~/bin"
 echo "tmux"
