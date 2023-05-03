@@ -73,7 +73,7 @@ rtx install java@temurin-11
 ##
 ## maven
 ##
-rtx install maven@3.8
+rtx install maven@3.8.8
 
 
 ##
