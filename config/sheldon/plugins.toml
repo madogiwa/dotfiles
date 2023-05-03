@@ -41,34 +41,34 @@ apply  = ["source"]
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
-[plugins.ohmyzsh-plugins-kubectl]
-github = "ohmyzsh/ohmyzsh"
-dir = "plugins/kubectl"
+#[plugins.ohmyzsh-plugins-kubectl]
+#github = "ohmyzsh/ohmyzsh"
+#dir = "plugins/kubectl"
 
-[plugins.ohmyzsh-plugins-helm]
-github = "ohmyzsh/ohmyzsh"
-dir = "plugins/helm"
+#[plugins.ohmyzsh-plugins-helm]
+#github = "ohmyzsh/ohmyzsh"
+#dir = "plugins/helm"
 
-[plugins.docker-completion]
-github = "docker/cli"
-dir = "contrib/completion/zsh"
-use = ["_docker"]
-apply = ["fpath"]
+#[plugins.docker-completion]
+#github = "docker/cli"
+#dir = "contrib/completion/zsh"
+#use = ["_docker"]
+#apply = ["fpath"]
 
-[plugins.docker-compose-completion]
-github = "docker/compose"
-branch = "master"
-dir = "contrib/completion/zsh"
-use = ["_docker-compose"]
-apply = ["fpath"]
+#[plugins.docker-compose-completion]
+#github = "docker/compose"
+#branch = "master"
+#dir = "contrib/completion/zsh"
+#use = ["_docker-compose"]
+#apply = ["fpath"]
 
-[plugins.ohmyzsh-plugins-aws]
-github = "ohmyzsh/ohmyzsh"
-dir = "plugins/aws"
+#[plugins.ohmyzsh-plugins-aws]
+#github = "ohmyzsh/ohmyzsh"
+#dir = "plugins/aws"
 
-[plugins.ohmyzsh-plugins-gcloud]
-github = "ohmyzsh/ohmyzsh"
-dir = "plugins/gcloud"
+#[plugins.ohmyzsh-plugins-gcloud]
+#github = "ohmyzsh/ohmyzsh"
+#dir = "plugins/gcloud"
 
 [plugins.compinit]
 inline = "autoload -Uz compinit && zsh-defer compinit"
