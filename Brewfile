@@ -95,7 +95,10 @@ brew "cloc"
 brew "awscli"
 brew "eksctl"
 brew "amazon-ecs-cli"
-brew "docker-credential-helper-ecr"
+
+# Bundled with Docker Desktop
+#brew "docker-credential-helper-ecr"
+
 brew "aws-elasticbeanstalk"
 cask "google-cloud-sdk"
 brew "packer"
