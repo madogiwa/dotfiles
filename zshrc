@@ -41,8 +41,7 @@ setopt auto_cd
 setopt auto_pushd
 
 ## output return code if error occured
-# disable due to compatibility with zinit
-#setopt print_exit_value
+setopt print_exit_value
 
 ## passthrough 8bit
 setopt print_eight_bit
