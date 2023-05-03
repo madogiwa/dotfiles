@@ -12,6 +12,7 @@ brew "sponge"
 brew "starship"
 brew "rtx"
 brew "sheldon"
+brew "direnv"
 
 brew "gnupg"
 brew "bat"
