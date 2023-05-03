@@ -1,29 +1,6 @@
 
-## ============================================================================
-## zinit
-## ============================================================================
-
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-
-export ZSH_CACHE_DIR="$HOME/.local/share/zinit"
-
 ## ----------------------------------------------------------------------------
-## enhancd
+## plugin settings
 ## ----------------------------------------------------------------------------
 
 ## don't use interactive filter when specifing a double dot (..)
@@ -32,42 +9,15 @@ ENHANCD_DISABLE_DOT=1
 ## change command name of enhancd from default
 ENHANCD_COMMAND=j
 
+## disable automatic ssh-add
+zstyle :omz:plugins:ssh-agent identities ''
 
-## ----------------------------------------------------------------------------
-## load plugins
-## ----------------------------------------------------------------------------
 
-zinit ice wait'!0' lucid; zinit light zdharma-continuum/fast-syntax-highlighting
+## ============================================================================
+## sheldon
+## ============================================================================
 
-zinit ice wait'!0' lucid; zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-history-substring-search
-
-zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-zinit ice as"completion" wait'!0' lucid; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
-
-zinit ice wait'!0' lucid; zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
-
-zinit ice wait'!0' lucid; zinit snippet OMZP::gcloud
-
-## fuzzy matcher
-zinit ice wait'!0' lucid ice from"gh-r" as"program"; zinit light junegunn/fzf-bin
-
-## enhanced cd command 
-#zinit ice wait'!0' lucid; zinit light b4b4r07/enhancd
-
-## peco/percol/fzf wrapper
-zinit ice wait'!0' lucid; zinit light mollifier/anyframe
-
-## ssh-gent
-zstyle :omz:plugins:ssh-agent identities ''  # disable automatic ssh-add
-zinit ice lucid; zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-
-## direnv
-zinit ice lucid from"gh-r" as"program" mv"direnv* -> direnv" './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
-zinit light direnv/direnv
-
-## completions
-zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
+eval "$(sheldon source)"
 
 
 ## ============================================================================
@@ -91,8 +41,7 @@ setopt auto_cd
 setopt auto_pushd
 
 ## output return code if error occured
-# disable due to compatibility with zinit
-#setopt print_exit_value
+setopt print_exit_value
 
 ## passthrough 8bit
 setopt print_eight_bit
