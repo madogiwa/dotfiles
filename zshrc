@@ -12,6 +12,9 @@ ENHANCD_COMMAND=j
 ## disable automatic ssh-add
 zstyle :omz:plugins:ssh-agent identities ''
 
+## disable url escape
+## https://github.com/ohmyzsh/ohmyzsh/issues/7632
+DISABLE_MAGIC_FUNCTIONS=true
 
 ## ============================================================================
 ## sheldon
