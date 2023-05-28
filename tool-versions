@@ -1,8 +1,8 @@
-golang     1.20.
-nodejs     18.
+golang     1.20.*
+nodejs     18.*
 perl       5.34.1
-python     3.11.
-ruby       3.2.
-serverless 3.
-java       temurin-17.
-yarn       1.22.
+python     3.11.*
+ruby       3.2.*
+serverless 3.*
+java       temurin-17.*
+yarn       1.22.*
