@@ -97,7 +97,6 @@ brew "awscli"
 # Bundled with Docker Desktop
 #brew "docker-credential-helper-ecr"
 
-brew "aws-elasticbeanstalk"
 cask "google-cloud-sdk"
 brew "packer"
 
