@@ -93,7 +93,6 @@ brew "cloc"
 
 ## infrastructure
 brew "awscli"
-brew "eksctl"
 brew "amazon-ecs-cli"
 
 # Bundled with Docker Desktop
