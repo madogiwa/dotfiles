@@ -236,7 +236,7 @@ setopt hist_save_no_dups
 setopt append_history
 
 ## save history file at every command execution
-#setopt inc_append_history
+setopt inc_append_history
 
 ## save history with timestamp
 setopt extended_history
