@@ -229,8 +229,8 @@ setopt hist_ignore_all_dups
 ## do not save duplicate command
 setopt hist_save_no_dups
 
-## share history list
-#setopt share_history
+## Disable share history list
+unsetopt share_history
 
 ## do not overwrite history file
 setopt append_history
