@@ -64,9 +64,6 @@ brew "yq"
 brew "csvkit"
 brew "csvq"
 
-## editor
-brew "vim"
-
 ## CI tools
 brew "bazel"
 brew "skaffold"
