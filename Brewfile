@@ -300,9 +300,6 @@ brew "skaffold"
 ## Argo Wowrkflows
 brew "argo"
 
-## docker-compose converter
-brew "kompose"
-
 ## provide connectivity from remote cluster to local machine
 tap "datawire/blackbird"
 brew "datawire/blackbird/telepresence"
