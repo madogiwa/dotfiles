@@ -1,44 +1,57 @@
 
+##
 ## web browsers
+##
 cask "google-chrome"
 cask "google-chrome-canary"
 cask "firefox"
 
+
+##
 ## shell & tools
-brew "fzf"
-brew "watch"
-brew "shellcheck"
-brew "sponge"
+##
+
+## customizable prompt
 brew "starship"
+
+## asdf clone
 brew "rtx"
+
+## shell plugin manager
 brew "sheldon"
+
+## dotfile management
+brew "rcm"
+
+## load env file
 brew "direnv"
 
-brew "gnupg"
+## fuzzy finder
+brew "fzf"
+
+## watch command
+brew "watch"
+
+## cat clone
 brew "bat"
+
+## display directories
 brew "tree"
 
-## languages
-brew "rustup-init"
+## read stdin and write to file
+brew "sponge"
 
-## man
+## PGP tools
+brew "gnupg"
+
+## man alternative
 brew "tealdeer"
 
-## search
+## grep alternative
 brew "ripgrep"
-brew "global"
-brew "fd"
 
-## git & git tools
-brew "git"
-brew "git-lfs"
-brew "tig"
-brew "git-flow"
-brew "ghq"
-brew "git-secrets"
-brew "gibo"
-brew "gh"
-brew "git-delta"
+## find alternative
+brew "fd"
 
 ## gnu utils(date, etc)
 brew "coreutils"
@@ -46,85 +59,311 @@ brew "gnu-tar"
 brew "gawk"
 brew "gnu-time"
 
-## compress & decompress
-brew "lzop"
-brew "lz4"
+## Terminal Multiplexer
+brew "tmux"
+brew "tmux-xpanes"
 
-## utilities
-### ip address calculator
-brew "ipcalc"
+## strip ANSI code
+brew "ansifilter"
 
-### regex generator
-brew "grex"
+## terminal recorder
+brew "t-rec"
 
-## json, csv query tool
+## terminal
+cask "iterm2"
+
+
+##
+## git
+##
+
+## git
+brew "git"
+
+## extension for large file
+brew "git-lfs"
+
+## extension for git-flow branch model
+brew "git-flow"
+
+## pager for git
+brew "git-delta"
+
+## prevent from committing sensitive information
+brew "git-secrets"
+
+## Text interface
+brew "tig"
+
+## .gitignore generator
+brew "gibo"
+
+## github CLI
+brew "gh"
+
+## repository management
+brew "ghq"
+
+
+##
+## Formats
+##
+
+## query tool for JSON
 brew "jq"
-brew "gron"
+
+## query tool for YAML, JSON, XML
 brew "yq"
-brew "csvkit"
+
+## converter for JSON, YAML
+brew "remarshal"
+
+## make json greppable
+brew "gron"
+
+## query tool for CSV
 brew "csvq"
 
-## CI tools
+## tools for CSV
+brew "csvkit"
+
+
+##
+## Development
+##
+
+## tag jump
+brew "global"
+
+## rust language
+brew "rustup-init"
+
+## build tool
 brew "bazel"
-brew "skaffold"
+
+## GitHub Actions emulator
 brew "act"
 
-## http & api tools
-brew "httpie"
-brew "wget"
+## Protocol buffer
 brew "protobuf"
 
+## TLS certs for local development
 brew "mkcert"
 brew "nss"
 
-## http debugging proxy
+## GraphQL client
+cask "altair-graphql-client"
+
+## editor
+cask "visual-studio-code"
+
+## shell script linter
+brew "shellcheck"
+
+## template language
+brew "jsonnet"
+
+## code statistics
+brew "cloc"
+
+## regex generator
+brew "grex"
+
+
+##
+## Network tools
+##
+
+## ssh
+brew "pssh"
+
+## store ssh key in secure enclave
+cask "secretive"
+
+## http & api tools
+brew "httpie"
+
+## http client
+brew "wget"
+
+## HTTPS proxy
 #brew "mitmproxy"
+
+## web debugging proxy
 cask "proxyman"
+
+## web proxy
 brew "privoxy"
 
 ## monitoring tools
 brew "mtr"
 
-## code statistics
-brew "cloc"
+## ip address calculator
+brew "ipcalc"
 
-## infrastructure
+## network package capture
+cask "wireshark"
+
+## /etc/hosts customize tool
+cask "switchhosts"
+
+
+##
+## DB client
+##
+
+## mysql
+brew "mysql"
+brew "percona-toolkit"
+
+## postgresql
+brew "postgresql@14"
+brew "pgcli"
+
+## NoSQL (key-value)
+brew "tokyo-cabinet"
+
+
+##
+## Cloud
+##
+
+## AWS cli
 brew "awscli"
 
-# Bundled with Docker Desktop
-#brew "docker-credential-helper-ecr"
-
-cask "google-cloud-sdk"
-brew "packer"
-
-brew "tfenv"
-brew "terraform-docs"
-brew "terraformer"
-
+## assume-role
 tap "madogiwa/assume-role"
 brew "madogiwa/assume-role/assume-role"
 
-## DB client
-brew "mysql"
-brew "postgresql@14"
-brew "pgcli"
-brew "percona-toolkit"
-brew "tokyo-cabinet"
+## GCP cli
+cask "google-cloud-sdk"
 
-## json, yaml converter
-brew "remarshal"
-brew "jsonnet"
+## create machine image
+brew "packer"
 
-## newer screen + utf8 patch
+## Terraform version manager
+brew "tfenv"
 
-## Terminal Multiplexer
-brew "tmux"
-brew "tmux-xpanes"
-brew "ansifilter"
-#tap "rcmdnk/rcmdnkpac"
-#brew "rcmdnk/rcmdnkpac/screenutf8", args:["utf8"]
+## Terraform document generator
+brew "terraform-docs"
 
+## .tf generator from existing resources
+brew "terraformer"
+
+
+##
+## Docker
+##
+
+## docker
+cask "docker"
+
+## docker image layer explorer
+brew "dive"
+
+## docker image minifier
+brew "docker-slim"
+
+## dockerfile linter
+brew "hadolint"
+
+
+##
+## Kubernetes
+##
+
+## local kubernetes cluster
+brew "kind"
+brew "minikube"
+
+## terminal UI
+brew "k9s"
+
+## log viewer
+brew "stern"
+
+## switch kubernetes context
+brew "kubectx"
+
+## kubectl plugin manager
+brew "krew"
+
+## manifest customization
+brew "kustomize"
+
+## package manager
+brew "helm"
+
+## cd tool
+brew "skaffold"
+
+## Argo Wowrkflows
+brew "argo"
+
+## docker-compose converter
+brew "kompose"
+
+## provide connectivity from remote cluster to local machine
+tap "datawire/blackbird"
+brew "datawire/blackbird/telepresence"
+
+
+##
+## compressor & converter
+##
+
+## compressor (lzo)
+brew "lzop"
+
+## compressor (lz4)
+brew "lz4"
+
+## image converter
+brew "imagemagick"
+
+## movie converter
+brew "ffmpeg"
+
+## reduce jpeg size
+brew "mozjpeg"
+
+
+##
+## Mac Apps
+##
+
+## window management
+cask "alt-tab"
+
+## keyboard customize
+cask "karabiner-elements"
+
+## clipboard manager
+cask "clipy"
+
+## app uninstall tool
+cask "appcleaner"
+
+## video conference
+cask "zoom"
+
+## voice chat
+cask "discord"
+
+## office
+cask "libreoffice"
+
+## screen recorder
+cask "kap"
+
+## translator
+cask "deepl"
+
+
+##
 ## fonts
+##
+
 tap "homebrew/cask-fonts"
 cask "font-noto-sans-cjk-jp"
 cask "font-noto-serif-cjk-jp"
@@ -133,72 +372,3 @@ cask "font-roboto-mono"
 cask "font-roboto-mono-for-powerline"
 cask "font-jetbrains-mono"
 cask "font-hack-nerd-font"
-
-## Containers
-cask "docker"
-brew "kompose"
-brew "helm"
-brew "kubectx"
-brew "krew"
-brew "argo"
-brew "kustomize"
-brew "k9s"
-brew "stern"
-brew "kind"
-brew "dive"
-brew "docker-slim"
-
-brew "minikube"
-
-brew "hadolint"
-
-tap "datawire/blackbird"
-brew "datawire/blackbird/telepresence"
-
-## dotfile management
-brew "rcm"
-
-## ssh
-brew "pssh"
-cask "secretive"
-
-## image & movie
-brew "imagemagick"
-brew "ffmpeg"
-brew "mozjpeg"
-
-## video conference
-cask "zoom"
-cask "discord"
-
-## window management
-cask "alt-tab"
-
-## usability
-cask "karabiner-elements"
-cask "clipy"
-
-## tools
-cask "appcleaner"
-
-## terminal
-cask "iterm2"
-
-## network
-cask "wireshark"
-cask "switchhosts"
-
-## editor
-cask "visual-studio-code"
-cask "libreoffice"
-
-## development
-cask "altair-graphql-client"
-
-## screen capture
-brew "t-rec"
-cask "kap"
-
-## translator
-cask "deepl"
-
