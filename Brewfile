@@ -169,6 +169,9 @@ brew "cloc"
 ## regex generator
 brew "grex"
 
+# Launcher for JetBrains Tools
+cask "jetbrains-toolbox"
+
 
 ##
 ## Network tools
@@ -355,6 +358,15 @@ cask "kap"
 
 ## translator
 cask "deepl"
+
+# Atok
+cask "atok"
+
+# Google Drive client
+cask "google-drive"
+
+# Better Touch Tool
+cask "bettertouchtool"
 
 
 ##

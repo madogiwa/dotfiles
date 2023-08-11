@@ -1,6 +1,3 @@
-## ===========================================================================
-## MAS (free)
-## ===========================================================================
 
 mas 'Xcode', id: 497799835
 
@@ -14,3 +11,18 @@ mas 'Kindle', id: 405399194
 
 mas 'MeetingBar', id: 1532419400
 
+mas 'Yoink', id: 457622435
+
+mas 'Pixelmator', id: 407963104
+
+mas 'Affinity Designer', id: 824171161
+
+mas 'PDF Expert', id: 1055273043
+
+mas 'Final Cut Pro', id: 424389933
+
+mas 'Motion', id: 434290957
+
+mas 'Compressor', id: 424390742
+
+mas 'WiFi Explorer', id: 494803304
