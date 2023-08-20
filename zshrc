@@ -182,6 +182,10 @@ zstyle ':completion:*' show-completer true
 ### 補完候補をマッチ種別ごとに表示する
 zstyle ':completion:*' group-name ''
 
+# 通常の_completeでマッチしない場合は_filesにフォールバックする
+zstyle ':completion:*' completer _complete _files
+
+
 setopt complete_in_word
 
 ## ============================================================================
