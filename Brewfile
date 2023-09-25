@@ -272,7 +272,7 @@ cask "docker"
 ##
 
 ## local kubernetes cluster
-brew "kind"
+#brew "kind"
 brew "minikube"
 
 ## terminal UI
