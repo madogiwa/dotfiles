@@ -258,7 +258,7 @@ brew "terraform-docs"
 cask "docker"
 
 ## docker image layer explorer
-brew "dive"
+#brew "dive"
 
 ## docker image minifier
 brew "docker-slim"
