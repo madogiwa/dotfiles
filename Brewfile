@@ -264,7 +264,7 @@ cask "docker"
 #brew "docker-slim"
 
 ## dockerfile linter
-brew "hadolint"
+#brew "hadolint"
 
 
 ##
