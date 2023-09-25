@@ -116,7 +116,7 @@ brew "jq"
 brew "yq"
 
 ## converter for JSON, YAML
-brew "remarshal"
+#brew "remarshal"
 
 ## make json greppable
 brew "gron"
