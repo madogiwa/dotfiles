@@ -246,7 +246,7 @@ brew "packer"
 brew "tfenv"
 
 ## Terraform document generator
-brew "terraform-docs"
+#brew "terraform-docs"
 
 
 ##
