@@ -67,7 +67,7 @@ brew "tmux-xpanes"
 #brew "ansifilter"
 
 ## terminal recorder
-brew "t-rec"
+#brew "t-rec"
 
 ## terminal
 cask "iterm2"
