@@ -328,9 +328,6 @@ brew "mozjpeg"
 ## Mac Apps
 ##
 
-## window management
-cask "alt-tab"
-
 ## keyboard customize
 cask "karabiner-elements"
 
