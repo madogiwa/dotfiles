@@ -178,7 +178,7 @@ cask "jetbrains-toolbox"
 ##
 
 ## ssh
-brew "pssh"
+#brew "pssh"
 
 ## store ssh key in secure enclave
 cask "secretive"
