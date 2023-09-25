@@ -164,7 +164,7 @@ brew "shellcheck"
 brew "jsonnet"
 
 ## code statistics
-brew "cloc"
+#brew "cloc"
 
 ## regex generator
 brew "grex"
