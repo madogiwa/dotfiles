@@ -217,7 +217,6 @@ cask "switchhosts"
 
 ## mysql
 brew "mysql"
-brew "percona-toolkit"
 
 ## postgresql
 brew "postgresql@14"
