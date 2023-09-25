@@ -84,7 +84,7 @@ brew "git"
 brew "git-lfs"
 
 ## extension for git-flow branch model
-brew "git-flow"
+#brew "git-flow"
 
 ## pager for git
 brew "git-delta"
