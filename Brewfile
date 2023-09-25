@@ -261,7 +261,7 @@ cask "docker"
 #brew "dive"
 
 ## docker image minifier
-brew "docker-slim"
+#brew "docker-slim"
 
 ## dockerfile linter
 brew "hadolint"
