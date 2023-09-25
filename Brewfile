@@ -220,7 +220,6 @@ brew "mysql"
 
 ## postgresql
 brew "postgresql@14"
-brew "pgcli"
 
 ## NoSQL (key-value)
 brew "tokyo-cabinet"
