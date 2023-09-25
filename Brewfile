@@ -249,9 +249,6 @@ brew "tfenv"
 ## Terraform document generator
 brew "terraform-docs"
 
-## .tf generator from existing resources
-brew "terraformer"
-
 
 ##
 ## Docker
