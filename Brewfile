@@ -358,7 +358,7 @@ cask "atok"
 cask "google-drive"
 
 # Better Touch Tool
-cask "bettertouchtool"
+#cask "bettertouchtool"
 
 
 ##
