@@ -199,7 +199,7 @@ cask "proxyman"
 brew "privoxy"
 
 ## monitoring tools
-brew "mtr"
+#brew "mtr"
 
 ## ip address calculator
 brew "ipcalc"
