@@ -64,7 +64,7 @@ brew "tmux"
 brew "tmux-xpanes"
 
 ## strip ANSI code
-brew "ansifilter"
+#brew "ansifilter"
 
 ## terminal recorder
 brew "t-rec"
