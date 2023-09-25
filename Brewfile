@@ -347,7 +347,7 @@ cask "discord"
 cask "libreoffice"
 
 ## screen recorder
-cask "kap"
+#cask "kap"
 
 ## translator
 cask "deepl"
