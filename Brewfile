@@ -340,7 +340,7 @@ cask "appcleaner"
 cask "zoom"
 
 ## voice chat
-cask "discord"
+#cask "discord"
 
 ## office
 cask "libreoffice"
