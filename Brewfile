@@ -355,7 +355,7 @@ cask "deepl"
 cask "atok"
 
 # Google Drive client
-cask "google-drive"
+#cask "google-drive"
 
 # Better Touch Tool
 #cask "bettertouchtool"
