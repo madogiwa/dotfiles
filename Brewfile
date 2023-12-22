@@ -231,6 +231,9 @@ brew "tokyo-cabinet"
 ## AWS cli
 brew "awscli"
 
+## AWS credentials
+brew "aws-vault"
+
 ## assume-role
 tap "madogiwa/assume-role"
 brew "madogiwa/assume-role/assume-role"
