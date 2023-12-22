@@ -61,7 +61,6 @@ brew "gnu-time"
 
 ## Terminal Multiplexer
 brew "tmux"
-brew "tmux-xpanes"
 
 ## strip ANSI code
 #brew "ansifilter"
