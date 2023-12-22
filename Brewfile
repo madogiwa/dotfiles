@@ -238,9 +238,6 @@ brew "madogiwa/assume-role/assume-role"
 ## GCP cli
 cask "google-cloud-sdk"
 
-## create machine image
-brew "packer"
-
 ## Terraform version manager
 brew "tfenv"
 
