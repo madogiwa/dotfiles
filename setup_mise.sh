@@ -12,14 +12,14 @@
 ##
 ## install default versions
 ##
-mise install
+mise -y install
 
 
 ##
 ## python
 ##
-mise install python@2.7
-mise install python@3.7
+mise -y install python@2.7
+mise -y install python@3.7
 
 
 ##
@@ -28,14 +28,14 @@ mise install python@3.7
 (
   eval "$(/usr/local/bin/brew shellenv)"
   mise shell python@2.7
-  arch -x86_64 mise install nodejs@10
+  arch -x86_64 mise -y install nodejs@10
 )
 (
   eval "$(/usr/local/bin/brew shellenv)"
   mise shell python@3.7
-  arch -x86_64 mise install nodejs@14
+  arch -x86_64 mise -y install nodejs@14
 )
-mise install nodejs@16
+mise -y install nodejs@16
 
 
 ##
@@ -43,46 +43,46 @@ mise install nodejs@16
 ##
 (
   eval "$(/usr/local/bin/brew shellenv)"
-  mise install ruby@2.3
+  mise -y install ruby@2.3
 )
 (
   export RUBY_CFLAGS='-DUSE_FFI_CLOSURE_ALLOC -Wno-error=implicit-function-declaration'
-  mise install ruby@2.4
+  mise -y install ruby@2.4
 )
 
 
 ##
 ## go
 ##
-mise install golang@1.16
+mise -y install golang@1.16
 
 
 ##
 ## perl
 ##
-mise install perl@5.16.3
+mise -y install perl@5.16.3
 
 
 ##
 ## java
 ##
-mise install java@corretto-8
-mise install java@temurin-11
+mise -y install java@corretto-8
+mise -y install java@temurin-11
 
 
 ##
 ## maven
 ##
-mise install maven@3.8.8
+mise -y install maven@3.8.8
 
 
 ##
 ## sbt
 ##
-mise install sbt@1.6
+mise -y install sbt@1.6
 
 
 ##
 ## serverless
 ##
-mise install serverless@2
+mise -y install serverless@2
