@@ -15,7 +15,7 @@ cask "firefox"
 brew "starship"
 
 ## asdf clone
-brew "rtx"
+brew "mise"
 
 ## shell plugin manager
 brew "sheldon"

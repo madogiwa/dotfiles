@@ -1,2 +1,2 @@
 DOTFILES_DIRS="$HOME/src/github.com/madogiwa/dotfiles $HOME/.dotfiles"
-EXCLUDES="bin setup.sh setup_krew.sh setup_rtx.sh"
+EXCLUDES="bin setup.sh setup_krew.sh setup_mise.sh"
