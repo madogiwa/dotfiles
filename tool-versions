@@ -5,4 +5,3 @@ python     3.11.*
 ruby       3.2.*
 serverless 3.*
 java       temurin-17.*
-yarn       1.22.*
