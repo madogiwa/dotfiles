@@ -317,9 +317,6 @@ brew "imagemagick"
 ## movie converter
 brew "ffmpeg"
 
-## reduce jpeg size
-brew "mozjpeg"
-
 
 ##
 ## Mac Apps
