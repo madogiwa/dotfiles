@@ -1,0 +1,120 @@
+
+##
+## shell & tools
+##
+
+## strip ANSI code
+brew "ansifilter"
+
+## terminal recorder
+brew "t-rec"
+
+
+##
+## git
+##
+
+## extension for git-flow branch model
+brew "git-flow"
+
+
+##
+## Formats
+##
+
+## converter for JSON, YAML
+brew "remarshal"
+
+
+##
+## Development
+##
+
+## code statistics
+brew "cloc"
+
+
+##
+## Network tools
+##
+
+## ssh
+brew "pssh"
+
+## HTTPS proxy
+brew "mitmproxy"
+
+## traceroute and ping
+brew "mtr"
+
+
+##
+## DB client
+##
+
+
+##
+## Cloud
+##
+
+## Terraform document generator
+brew "terraform-docs"
+
+
+##
+## Docker
+##
+
+## docker image layer explorer
+brew "dive"
+
+## docker image minifier
+brew "docker-slim"
+
+## dockerfile linter
+brew "hadolint"
+
+
+##
+## Kubernetes
+##
+
+## local kubernetes cluster
+brew "kind"
+brew "minikube"
+
+
+##
+## compressor & converter
+##
+
+
+##
+## Mac Apps
+##
+
+## voice chat
+cask "discord"
+
+## screen recorder
+cask "kap"
+
+# Google Drive client
+cask "google-drive"
+
+# Better Touch Tool
+cask "bettertouchtool"
+
+
+##
+## fonts
+##
+
+tap "homebrew/cask-fonts"
+cask "font-noto-sans-cjk-jp"
+cask "font-noto-serif-cjk-jp"
+cask "font-noto-mono"
+cask "font-roboto-mono"
+cask "font-roboto-mono-for-powerline"
+cask "font-jetbrains-mono"
+cask "font-hack-nerd-font"

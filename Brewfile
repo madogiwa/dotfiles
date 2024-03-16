@@ -61,12 +61,6 @@ brew "gnu-time"
 ## Terminal Multiplexer
 brew "tmux"
 
-## strip ANSI code
-#brew "ansifilter"
-
-## terminal recorder
-#brew "t-rec"
-
 ## terminal
 cask "iterm2"
 
@@ -80,9 +74,6 @@ brew "git"
 
 ## extension for large file
 brew "git-lfs"
-
-## extension for git-flow branch model
-#brew "git-flow"
 
 ## pager for git
 brew "git-delta"
@@ -112,9 +103,6 @@ brew "jq"
 
 ## query tool for YAML, JSON, XML
 brew "yq"
-
-## converter for JSON, YAML
-#brew "remarshal"
 
 ## make json greppable
 brew "gron"
@@ -161,9 +149,6 @@ brew "shellcheck"
 ## template language
 brew "jsonnet"
 
-## code statistics
-#brew "cloc"
-
 ## regex generator
 brew "grex"
 
@@ -175,9 +160,6 @@ cask "jetbrains-toolbox"
 ## Network tools
 ##
 
-## ssh
-#brew "pssh"
-
 ## store ssh key in secure enclave
 cask "secretive"
 
@@ -187,17 +169,11 @@ brew "httpie"
 ## http client
 brew "wget"
 
-## HTTPS proxy
-#brew "mitmproxy"
-
 ## web debugging proxy
 cask "proxyman"
 
 ## web proxy
 brew "privoxy"
-
-## monitoring tools
-#brew "mtr"
 
 ## ip address calculator
 brew "ipcalc"
@@ -243,9 +219,6 @@ cask "google-cloud-sdk"
 ## Terraform version manager
 brew "tfenv"
 
-## Terraform document generator
-#brew "terraform-docs"
-
 
 ##
 ## Docker
@@ -254,23 +227,10 @@ brew "tfenv"
 ## docker
 cask "docker"
 
-## docker image layer explorer
-#brew "dive"
-
-## docker image minifier
-#brew "docker-slim"
-
-## dockerfile linter
-#brew "hadolint"
-
 
 ##
 ## Kubernetes
 ##
-
-## local kubernetes cluster
-#brew "kind"
-#brew "minikube"
 
 ## terminal UI
 brew "k9s"
@@ -334,26 +294,14 @@ cask "appcleaner"
 ## video conference
 cask "zoom"
 
-## voice chat
-#cask "discord"
-
 ## office
 cask "libreoffice"
-
-## screen recorder
-#cask "kap"
 
 ## translator
 cask "deepl"
 
 # Atok
 cask "atok"
-
-# Google Drive client
-#cask "google-drive"
-
-# Better Touch Tool
-#cask "bettertouchtool"
 
 
 ##
