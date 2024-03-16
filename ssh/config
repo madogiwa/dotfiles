@@ -1,5 +1,5 @@
 
-Include conf.d/*
+Include conf.d/*.conf
 
 Host *
     ## 接続の死活監視の間隔と回数
