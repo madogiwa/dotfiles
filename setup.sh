@@ -31,17 +31,9 @@ brew bundle --file=Brewfile
 sudo xcode-select -s /Library/Developer/CommandLineTools
 
 ## fix compinit insecure directories
-chmod 755 /usr/local/share/zsh
-chmod 755 /usr/local/share/zsh/site-functions
-
-if [[ "$(uname -m)" = "x86_64" ]]; then
-    sudo mkdir -p /opt/homebrew/share/zsh/site-functions
-fi
-
 chmod 755 /opt/homebrew/share
 chmod 755 /opt/homebrew/share/zsh
 chmod 755 /opt/homebrew/share/zsh/site-functions
-
 
 ## install tpm(tmux package manager)
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
