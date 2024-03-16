@@ -3,7 +3,6 @@
 ## web browsers
 ##
 cask "google-chrome"
-cask "google-chrome-canary"
 cask "firefox"
 
 
