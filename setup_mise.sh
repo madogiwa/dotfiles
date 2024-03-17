@@ -47,7 +47,10 @@ mise -y install nodejs@16
 )
 (
   export RUBY_CFLAGS='-DUSE_FFI_CLOSURE_ALLOC -Wno-error=implicit-function-declaration'
+  export MISE_RUBY_DEFAULT_PACKAGES_FILE=""
   mise -y install ruby@2.4
+
+  mise shell ruby@2.4 && gem install bundler -v "2.3.26"
 )
 
 
