@@ -42,10 +42,6 @@ mise -y install nodejs@16
 ## ruby
 ##
 (
-  eval "$(/usr/local/bin/brew shellenv)"
-  mise -y install ruby@2.3
-)
-(
   export RUBY_CFLAGS='-DUSE_FFI_CLOSURE_ALLOC -Wno-error=implicit-function-declaration'
   export MISE_RUBY_DEFAULT_PACKAGES_FILE=""
   mise -y install ruby@2.4
