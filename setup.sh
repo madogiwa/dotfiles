@@ -6,27 +6,23 @@ if [ $? -eq 0 ]; then
     read \?"Waiting xcode-select install... press [Enter] to continue."
 fi
 
+## Install Rosetta2
+softwareupdate --install-rosetta --agree-to-license
+
 ## Install Homebrew (x86_64)
 if [[ ! -e "/usr/local/bin/brew" ]]; then
+    echo "Install Homebrew for x86_64"
     arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 ## install Homebrew (arm64)
-if [[ ! -e "/usr/local/bin/brew" && "$(uname -m)" = "arm64" ]]; then
+if [[ ! -e "/opt/homebrew/bin/brew" ]]; then
+    echo "Install Homebrew for arm64"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 fi
-
-if [[ "$(uname -m)" = "arm64" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-    eval "$(/usr/local/bin/brew shellenv)"
-fi
-
-## Install Rosetta2
-softwareupdate --install-rosetta --agree-to-license
 
 ## Install from Brewfile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file=Brewfile.mas
 brew bundle --file=Brewfile
 
