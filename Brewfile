@@ -160,9 +160,6 @@ cask "jetbrains-toolbox"
 ## Network tools
 ##
 
-## store ssh key in secure enclave
-cask "secretive"
-
 ## http & api tools
 brew "httpie"
 

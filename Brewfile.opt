@@ -47,6 +47,9 @@ brew "mitmproxy"
 ## traceroute and ping
 brew "mtr"
 
+## store ssh key in secure enclave
+cask "secretive"
+
 
 ##
 ## DB client
