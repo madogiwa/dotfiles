@@ -118,27 +118,9 @@ brew "csvkit"
 ## Development
 ##
 
-## tag jump
-brew "global"
-
-## rust language
-brew "rustup-init"
-
-## build tool
-brew "bazel"
-
-## GitHub Actions emulator
-brew "act"
-
-## Protocol buffer
-brew "protobuf"
-
 ## TLS certs for local development
 brew "mkcert"
 brew "nss"
-
-## GraphQL client
-cask "altair-graphql-client"
 
 ## editor
 cask "visual-studio-code"
@@ -148,9 +130,6 @@ brew "shellcheck"
 
 ## template language
 brew "jsonnet"
-
-## regex generator
-brew "grex"
 
 # Launcher for JetBrains Tools
 cask "jetbrains-toolbox"
@@ -166,34 +145,14 @@ brew "httpie"
 ## http client
 brew "wget"
 
-## web debugging proxy
-cask "proxyman"
-
 ## web proxy
 brew "privoxy"
 
 ## ip address calculator
 brew "ipcalc"
 
-## network package capture
-cask "wireshark"
-
 ## /etc/hosts customize tool
 cask "switchhosts"
-
-
-##
-## DB client
-##
-
-## mysql
-brew "mysql"
-
-## postgresql
-brew "postgresql@14"
-
-## NoSQL (key-value)
-brew "tokyo-cabinet"
 
 
 ##
@@ -206,23 +165,11 @@ brew "awscli"
 ## AWS credentials
 brew "aws-vault"
 
-## assume-role
-tap "madogiwa/assume-role"
-brew "madogiwa/assume-role/assume-role"
-
 ## GCP cli
 cask "google-cloud-sdk"
 
 ## Terraform version manager
 brew "tfenv"
-
-
-##
-## Docker
-##
-
-## docker
-cask "docker"
 
 
 ##
@@ -249,9 +196,6 @@ brew "helm"
 
 ## cd tool
 brew "skaffold"
-
-## Argo Wowrkflows
-brew "argo"
 
 ## provide connectivity from remote cluster to local machine
 tap "datawire/blackbird"
@@ -287,18 +231,6 @@ cask "clipy"
 
 ## app uninstall tool
 cask "appcleaner"
-
-## video conference
-cask "zoom"
-
-## office
-cask "libreoffice"
-
-## translator
-cask "deepl"
-
-# Atok
-cask "atok"
 
 
 ##

@@ -30,8 +30,29 @@ brew "remarshal"
 ## Development
 ##
 
+## tag jump
+brew "global"
+
+## rust language
+brew "rustup-init"
+
+## build tool
+brew "bazel"
+
+## GitHub Actions emulator
+brew "act"
+
+## Protocol buffer
+brew "protobuf"
+
 ## code statistics
 brew "cloc"
+
+## regex generator
+brew "grex"
+
+## GraphQL client
+cask "altair-graphql-client"
 
 
 ##
@@ -50,15 +71,34 @@ brew "mtr"
 ## store ssh key in secure enclave
 cask "secretive"
 
+## web debugging proxy
+cask "proxyman"
+
+## network package capture
+cask "wireshark"
+
 
 ##
 ## DB client
 ##
 
+## mysql
+brew "mysql"
+
+## postgresql
+brew "postgresql@14"
+
+## NoSQL (key-value)
+brew "tokyo-cabinet"
+
 
 ##
 ## Cloud
 ##
+
+## assume-role
+tap "madogiwa/assume-role"
+brew "madogiwa/assume-role/assume-role"
 
 ## Terraform document generator
 brew "terraform-docs"
@@ -67,6 +107,9 @@ brew "terraform-docs"
 ##
 ## Docker
 ##
+
+## docker
+cask "docker"
 
 ## docker image layer explorer
 brew "dive"
@@ -85,6 +128,9 @@ brew "hadolint"
 ## local kubernetes cluster
 brew "kind"
 brew "minikube"
+
+## Argo Wowrkflows
+brew "argo"
 
 
 ##
@@ -107,6 +153,18 @@ cask "google-drive"
 
 # Better Touch Tool
 cask "bettertouchtool"
+
+## video conference
+cask "zoom"
+
+## office
+cask "libreoffice"
+
+## translator
+cask "deepl"
+
+# Atok
+cask "atok"
 
 
 ##
