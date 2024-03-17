@@ -23,6 +23,9 @@ else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
 
+## Install Rosetta2
+softwareupdate --install-rosetta --agree-to-license
+
 ## Install from Brewfile
 brew bundle --file=Brewfile.mas
 brew bundle --file=Brewfile
