@@ -309,57 +309,60 @@ add-zsh-hook precmd precmd_title
 ## assume-role
 ## ============================================================================
 
-source $(which assume-role)
+which -s assume-role > /dev/null
+if [ "$?" -eq 0 ]; then
+    source $(which assume-role)
 
-function assume-role-clear() {
-    if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
-        unset AWS_REGION
-        unset AWS_DEFAULT_REGION
-        unset AWS_ACCESS_KEY_ID
-        unset AWS_SECRET_ACCESS_KEY
-        unset AWS_SESSION_TOKEN
-        unset AWS_ACCOUNT_ID
-        unset AWS_ACCOUNT_NAME
-        unset AWS_ACCOUNT_ROLE
-        unset AWS_SESSION_ACCESS_KEY_ID
-        unset AWS_SESSION_SECRET_ACCESS_KEY
-        unset AWS_SESSION_SESSION_TOKEN
-        unset AWS_SESSION_SECURITY_TOKEN
-        unset AWS_SESSION_START
-        unset GEO_ENV
-        unset AWS_SECURITY_TOKEN
-        unset ROLE_SESSION_START
+    function assume-role-clear() {
+        if [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ]; then
+            unset AWS_REGION
+            unset AWS_DEFAULT_REGION
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            unset AWS_SESSION_TOKEN
+            unset AWS_ACCOUNT_ID
+            unset AWS_ACCOUNT_NAME
+            unset AWS_ACCOUNT_ROLE
+            unset AWS_SESSION_ACCESS_KEY_ID
+            unset AWS_SESSION_SECRET_ACCESS_KEY
+            unset AWS_SESSION_SESSION_TOKEN
+            unset AWS_SESSION_SECURITY_TOKEN
+            unset AWS_SESSION_START
+            unset GEO_ENV
+            unset AWS_SECURITY_TOKEN
+            unset ROLE_SESSION_START
 
-        echo "AWS session cleared."
-    else
-        echo "nothing cleared."
-    fi
-}
+            echo "AWS session cleared."
+        else
+            echo "nothing cleared."
+        fi
+    }
 
-function assume-role-clear-role() {
-    if [ "${ROLE_SESSION_START}" ]; then
-        unset AWS_ACCESS_KEY_ID
-        unset AWS_SECRET_ACCESS_KEY
-        unset AWS_SESSION_TOKEN
-        unset AWS_SECURITY_TOKEN
-        unset AWS_ACCOUNT_ID
-        unset AWS_ACCOUNT_NAME
-        unset AWS_ACCOUNT_ROLE
-        unset ROLE_SESSION_START
-        unset GEO_ENV
+    function assume-role-clear-role() {
+        if [ "${ROLE_SESSION_START}" ]; then
+            unset AWS_ACCESS_KEY_ID
+            unset AWS_SECRET_ACCESS_KEY
+            unset AWS_SESSION_TOKEN
+            unset AWS_SECURITY_TOKEN
+            unset AWS_ACCOUNT_ID
+            unset AWS_ACCOUNT_NAME
+            unset AWS_ACCOUNT_ROLE
+            unset ROLE_SESSION_START
+            unset GEO_ENV
 
-        echo "AWS role session cleared."
-    fi
-}
+            echo "AWS role session cleared."
+        fi
+    }
 
-## check session timeout
-function precmd_aws_session_expire_check() {
-    if [ "${ROLE_SESSION_START}" ] && [ "$ROLE_SESSION_TIMEOUT" ]; then
-        diff=$((`date +%s` - ${ROLE_SESSION_START}))
-        [ $diff -ge $ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
-    fi
-}
-add-zsh-hook precmd precmd_aws_session_expire_check
+    ## check session timeout
+    function precmd_aws_session_expire_check() {
+        if [ "${ROLE_SESSION_START}" ] && [ "$ROLE_SESSION_TIMEOUT" ]; then
+            diff=$((`date +%s` - ${ROLE_SESSION_START}))
+            [ $diff -ge $ROLE_SESSION_TIMEOUT ] && assume-role-clear-role
+        fi
+    }
+    add-zsh-hook precmd precmd_aws_session_expire_check
+fi
 
 
 ## ============================================================================
